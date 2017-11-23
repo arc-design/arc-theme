@@ -1,0 +1,28 @@
+Source: arc-theme
+Section: misc
+Priority: extra
+Maintainer: David Mohammed <fossfreedom@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+ dh-buildinfo,
+ dh-autoreconf,
+ pkg-config,
+ libgtk-3-dev
+Standards-Version: 3.9.8
+Vcs-Browser: https://github.com/budgie-remix/arc-theme/tree/debian
+Vcs-Git: https://github.com/budgie-remix/arc-theme -b debian
+Homepage: http://horst3180.deviantart.com
+
+Package: arc-theme
+Architecture: all
+Depends: gnome-themes-standard, 
+ gtk2-engines-murrine,
+ ${misc:Depends}
+Description: Flat theme with transparent elements
+ Arc is a flat theme with transparent elements for GTK+ 3, GTK+ 2 and 
+ GNOME Shell which supports GTK+ 3 and GTK+ 2 based desktop environments 
+ like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
+ Arc also includes a GTK+ theme for Plank.
+ .
+ Arc is available in three variants:
+ Arc, Arc-Darker, Arc-Dark
+

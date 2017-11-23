@@ -1,0 +1,4 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/arc-theme-$1\.tar\.gz/ \
+  https://github.com/horst3180/arc-theme/tags .*/v?(\d\S*)\.tar\.gz
+  

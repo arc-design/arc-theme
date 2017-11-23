@@ -1,0 +1,41 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: arc-theme
+Source: https://github.com/horst3180/arc-theme
+
+Files: *
+Copyright: 2016, horst3180 <email address hidden>
+License: GPL-3+
+
+Files: common/gnome-shell/3.14/gnome-shell.css
+  common/gnome-shell/3.14/sass/_common.scss
+  common/gnome-shell/3.14/gnome-shell-dark.css
+  common/gnome-shell/3.16/gnome-shell.css
+  common/gnome-shell/3.16/sass/_common.scss
+  common/gnome-shell/3.16/gnome-shell-dark.css
+  common/gnome-shell/3.18/gnome-shell.css
+  common/gnome-shell/3.18/sass/_common.scss
+  common/gnome-shell/3.18/gnome-shell-dark.css
+Copyright: 2009, Intel Corporation
+  2009, 2015, Red Hat, Inc
+License: LGPL-2.1
+
+Files: debian/*
+Copyright: 2016, David Mohammed <foss.freedom@gmail.com>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; Version 3, 29 June 2007.
+ .
+ On Debian systems, the complete text of version 3 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-3'.
+
+License: LGPL-2.1
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; Version 2.1, February 1999.
+ .
+ On Debian systems, the complete text of version 2.1 of the GNU Lesser
+ General Public License can be found in
+ '/usr/share/common-licenses/LGPL-2.1'.
