@@ -1,8 +1,8 @@
-arc-theme (20160923-0~xenial) xenial; urgency=medium
+arc-theme (20171105-0ubuntu1) UNRELEASED; urgency=medium
 
-  * xenial rebuild
+  * bump release version
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Sat, 24 Sep 2016 09:37:58 +0100
+ -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 23 Nov 2017 12:52:26 +0000
 
 arc-theme (20160923-0~yakkety) yakkety; urgency=medium
 
