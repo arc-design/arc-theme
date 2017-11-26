@@ -31,7 +31,8 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell w
 | openSUSE | [OBS Repo][obs-repo] |
 | Solus | `arc-gtk-theme` |
 | Ubuntu 15.04 - 15.10 | [OBS Repo][obs-repo] |
-| Ubuntu 16.04 - 18.04 | `arc-theme` from [NicoHood/Fossfreedom][NicoHood-fossfreedom] |
+| Ubuntu 16.10 - 18.04 | `arc-theme`
+| Ubuntu 16.04 - 18.04 | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
 
 **elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki users can install the package for Ubuntu 16.04.
 
