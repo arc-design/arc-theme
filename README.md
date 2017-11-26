@@ -2,7 +2,7 @@
 
 Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, Cinnamon (>=3.4) etc.
 
-## Arc is available in three variants 
+## Arc is available in three variants
 
 ##### Arc
 
@@ -30,8 +30,8 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell w
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
 | openSUSE | [OBS Repo][obs-repo] |
 | Solus | `arc-gtk-theme` |
-| Ubuntu 15.04 - 16.04 | [OBS Repo][obs-repo] |
-| Ubuntu 16.10 | `arc-theme` |
+| Ubuntu 15.04 - 15.10 | [OBS Repo][obs-repo] |
+| Ubuntu 16.04 - 18.04 | `arc-theme` from [NicoHood/Fossfreedom][NicoHood-fossfreedom] |
 
 **elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki users can install the package for Ubuntu 16.04.
 
@@ -43,7 +43,7 @@ A non-transparent version of the theme is available here: [Arc Solid OBS repo](h
 
 ### Manual Installation
 
-To build the theme the follwing packages are required 
+To build the theme the follwing packages are required
 * `autoconf`
 * `automake`
 * `pkg-config` or `pkgconfig` for Fedora
@@ -154,3 +154,4 @@ Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
 
 [obs-repo]: http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme
 [sk-overlay]: https://c.darenet.org/scriptkitties/overlay
+[NicoHood-fossfreedom]: https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily
