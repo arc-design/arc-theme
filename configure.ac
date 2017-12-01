@@ -33,3 +33,10 @@ AC_CONFIG_FILES([
 ])
 
 AC_OUTPUT
+
+# For 3.2 and later add compile resources script
+AS_IF(
+    [test `expr $GNOME_VERSMNR` != "18"],
+    [sed -i '/#GTK32xCOMPILE/r ./common/gtk-3.0/3.20/compile-script.txt' ./common/Makefile]
+    [AC_MSG_RESULT([Adding resource compilation])]
+)
