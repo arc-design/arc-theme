@@ -23,21 +23,14 @@ Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell w
 |Distro|Package Name/Link|
 |:----:|:----:|
 | Arch Linux | `arc-gtk-theme`, [`gtk-theme-arc-git`](https://aur.archlinux.org/packages/gtk-theme-arc-git) (AUR) |
-| Debian 8 | [OBS Repo][obs-repo] |
 | Debian Testing/Unstable | `arc-theme` |
 | Fedora | `arc-theme` |
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
-| openSUSE | [OBS Repo][obs-repo] |
 | Solus | `arc-gtk-theme` |
-| Ubuntu 15.04 - 15.10 | [OBS Repo][obs-repo] |
 | Ubuntu 16.10 - 18.04 | `arc-theme`
 | Ubuntu 16.04 - 18.04 | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
 
-**elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki users can install the package for Ubuntu 16.04.
-
 **AUR Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
-
-A non-transparent version of the theme is available here: [Arc Solid OBS repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme-solid)
 
 --
 
@@ -114,14 +107,8 @@ from the cloned git repository, or
 ### Arc KDE
 A port of Arc for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
 
-### Arc Firefox theme
-A theme for Firefox is available at https://github.com/horst3180/arc-firefox-theme
-
 ### Arc icon theme
 The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
-
-### Chrome/Chromium theme
-To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx or arc-dark-theme.crx file into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
 
 ### Plank theme
 To install the Plank theme, copy the `extra/Arc-Plank` folder to `~/.local/share/plank/themes` or to `/usr/share/plank/themes` for system-wide use.
@@ -152,6 +139,5 @@ Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
 <sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
 
-[obs-repo]: http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme
 [sk-overlay]: https://c.darenet.org/scriptkitties/overlay
 [NicoHood-fossfreedom]: https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily
