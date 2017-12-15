@@ -51,7 +51,7 @@ To build the theme the follwing packages are required
 **Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
 
 For the theme to function properly, install the following
-* GNOME Shell 3.14 - 3.24, GTK 3.14 - 3.22
+* GNOME Shell 3.18 - 3.26, GTK 3.18 - 3.22
 * The `gnome-themes-standard` package
 * The murrine engine. This has different names depending on the distro.
   * `gtk-engine-murrine` (Arch Linux)
@@ -87,10 +87,10 @@ Other options to pass to autogen.sh are
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
 
-    --with-gnome=<version>     build the theme for a specific GNOME version (3.14, 3.16, 3.18, 3.20, 3.22)
+    --with-gnome=<version>     build the theme for a specific GNOME version (3.18, 3.20, 3.22)
                                Note 1: Normally the correct version is detected automatically and this
                                option should not be needed.
-                               Note 2: For GNOME 3.24, use --with-gnome-version=3.22
+                               Note 2: For GNOME 3.24 and 3.26, use --with-gnome-version=3.22
                                (this works for now, the build system will be improved in the future)
 
 After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
@@ -123,11 +123,6 @@ Now open the Plank preferences window by executing `plank --preferences` from a 
 The Arc Dark theme for the Ubuntu Software Center by [mervick](https://github.com/mervick) can be installed from [here](https://github.com/mervick/arc-dark-software-center). It solves readability issues with Arc Dark and the Ubuntu Software Center.
 
 ## Troubleshooting
-
-If you use Ubuntu with a newer GTK/GNOME version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and the theme has to be installed manually as described above.
-This is also true for other distros with a different GTK/GNOME version than the one included by default
-
---
 
 If you get artifacts like black or invisible backgrounds under Unity, disable overlay scrollbars with
 
