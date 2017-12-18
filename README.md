@@ -44,6 +44,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 To build the theme the follwing packages are required
 * `autoconf`
 * `automake`
+* `sassc` (not for Ubuntu 16.04 - this distro assumes you have compiled with gulp)
 * `pkg-config` or `pkgconfig` for Fedora
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` to clone the source directory
@@ -92,6 +93,7 @@ Other options to pass to autogen.sh are
                                option should not be needed.
                                Note 2: For GNOME 3.24 and 3.26, use --with-gnome-version=3.22
                                (this works for now, the build system will be improved in the future)
+    --with-custom=<script>     run the executable script file in the custom subfolder
 
 After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
 
