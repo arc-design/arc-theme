@@ -34,6 +34,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 | Solus | `arc-gtk-theme` |
 | Ubuntu 16.10 - 18.04 | `arc-theme`
 | Ubuntu 16.04 - 18.04 | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
+| FreeBSD | `x11-themes/gtk-arc-themes` |
 
 **AUR Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
 
