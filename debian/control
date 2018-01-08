@@ -6,11 +6,11 @@ Build-Depends: debhelper (>= 9),
  dh-buildinfo,
  dh-autoreconf,
  pkg-config,
- libgtk-3-dev
+ libgtk-3-dev,
+ sassc
 Standards-Version: 3.9.8
-Vcs-Browser: https://github.com/budgie-remix/arc-theme/tree/debian
-Vcs-Git: https://github.com/budgie-remix/arc-theme -b debian
-Homepage: http://horst3180.deviantart.com
+Vcs-Browser: https://github.com/nicohood/arc-theme/tree/debian
+Vcs-Git: https://github.com/nicohood/arc-theme -b debian
 
 Package: arc-theme
 Architecture: all
