@@ -45,7 +45,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 To build the theme the follwing packages are required
 * `autoconf`
 * `automake`
-* `sassc` (not for Ubuntu 16.04 - this distro assumes you have compiled with gulp)
+* `sassc`
 * `pkg-config` or `pkgconfig` for Fedora
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` to clone the source directory

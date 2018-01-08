@@ -148,10 +148,8 @@ if ENABLE_LIGHT
 
 	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedir)/gtk-3.0
 
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		assets \
@@ -165,11 +163,9 @@ if ENABLE_DARKER
 
 	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedarkerdir)/gtk-3.0
 
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-darker.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-darker.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		assets \
@@ -190,10 +186,8 @@ if ENABLE_DARK
 		assets \
 		$(ithemedarkdir)/gtk-3.0
 
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-dark.css \
@@ -203,12 +197,10 @@ endif # ENABLE_DARK
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid.css \
@@ -220,12 +212,10 @@ if ENABLE_LIGHT
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-darker.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-darker.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-darker.css \
@@ -237,10 +227,8 @@ if ENABLE_DARKER
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;\
-		sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;\
-	fi
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
+	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
 		gtk-solid-dark.css \
