@@ -37,6 +37,8 @@ if ENABLE_CINNAMON
 
 	cd $(srcdir)/cinnamon && cp thumbnail.png $(ithemedir)/cinnamon
 
+	sassc $(srcdir)/cinnamon/sass/cinnamon.scss $(srcdir)/cinnamon/cinnamon.css;
+
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
 		light-assets \
@@ -47,6 +49,8 @@ if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/cinnamon
 
 	cd $(srcdir)/cinnamon && cp thumbnail-dark.png $(ithemedarkdir)/cinnamon/thumbnail.png
+
+	sassc $(srcdir)/cinnamon/sass/cinnamon-dark.scss $(srcdir)/cinnamon/cinnamon-dark.css;
 
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
