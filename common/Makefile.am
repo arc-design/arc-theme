@@ -68,6 +68,8 @@ endif # ENABLE_GNOME_SHELL
 if ENABLE_GNOME_SHELL
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
+	sassc $(srcdir)/gnome-shell/$(GNOME_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_VERSION)/gnome-shell.css;
+
 	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
 		common-assets \
 		light-assets \
@@ -76,6 +78,8 @@ if ENABLE_GNOME_SHELL
 
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gnome-shell
+
+	sassc $(srcdir)/gnome-shell/$(GNOME_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_VERSION)/gnome-shell-dark.css;
 
 	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
 		common-assets \
