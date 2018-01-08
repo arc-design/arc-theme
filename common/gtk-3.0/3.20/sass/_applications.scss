@@ -639,11 +639,15 @@ panel-toplevel.background {
 // Xfce Panel
 .xfce4-panel.panel {
   background-color: $panel_bg;
+  font-weight: normal;
 
   text-shadow: none;
   -gtk-icon-shadow: none;
 
   button.flat { @extend %panelbutton; }
+}
+.xfce4-panel.panel menu {
+  font-weight: normal;
 }
 
 #tasklist-button {
