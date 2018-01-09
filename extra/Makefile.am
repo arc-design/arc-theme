@@ -1,2 +1,1 @@
-EXTRA_DIST = $(srcdir)/Chrome \
-	     $(srcdir)/Arc-Plank
+EXTRA_DIST = $(srcdir)/Arc-Plank
