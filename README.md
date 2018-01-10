@@ -66,7 +66,7 @@ Install the theme with the following commands
 
 Clone the git repository with
 
-    git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
+    git clone https://github.com/NicoHood/arc-theme --depth 1 && cd arc-theme
 
 #### 2. Build and install the theme
 
@@ -131,7 +131,7 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 
 ## Bugs
-If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
+If you find a bug, please report it at https://github.com/NicoHood/arc-theme/issues
 
 ## License
 Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
