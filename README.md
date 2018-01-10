@@ -117,7 +117,7 @@ A port of Arc for the Plasma 5 desktop with a few additions and extras. Availabl
 The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
 
 ### Plank theme
-To install the Plank theme, copy the `extra/Arc-Plank` folder to `~/.local/share/plank/themes` or to `/usr/share/plank/themes` for system-wide use.
+As of version `20180114` the plank theme will be installed along with the normal arc gtk theme. You can disable the install by passing `disable-plank` to the configure command.
 Now open the Plank preferences window by executing `plank --preferences` from a terminal and select `Arc-Plank` as the theme.
 
 ### Arc-Dark for Ubuntu Software Center
