@@ -2,8 +2,9 @@
 
 # Setup
 mv gtk.css gtk-main.css
-mv gtk-dark.css gtk-main-dark.css
-
+if [ "$1" != "DARK" ]; then
+    mv gtk-dark.css gtk-main-dark.css
+fi
 
 # Get processed assets lists
 ls ./assets | sort > temp_asset_list.txt
@@ -24,19 +25,28 @@ rm -f temp_asset_list.txt
 
 
 # Write the css file information to the template
-read -d '' RES_PART2 <<"EOF"
+if [ "$1" != "DARK" ]; then
+    read -d '' RES_PART2 <<"EOF"
 <file>gtk-main.css</file>
 <file>gtk-main-dark.css</file>
 </gresource>
 </gresources>
 EOF
+else
+    read -d '' RES_PART2 <<"EOFDARK"
+<file>gtk-main.css</file>
+</gresource>
+</gresources>
+EOFDARK
+fi
 echo $RES_PART2 >> gtk.gresource.xml
 
 # Compile the gresource file
 glib-compile-resources gtk.gresource.xml
 echo '@import url("resource:///org/gnome/arc-theme/gtk-main.css");' > gtk.css
-echo '@import url("resource:///org/gnome/arc-theme/gtk-main-dark.css");' > gtk-dark.css
-
+if [ "$1" != "DARK" ]; then
+    echo '@import url("resource:///org/gnome/arc-theme/gtk-main-dark.css");' > gtk-dark.css
+fi
 
 # Cleanup
 rm -rf assets

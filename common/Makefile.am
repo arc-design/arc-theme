@@ -214,9 +214,9 @@ endif #!ENABLE_TRANSPARENCY
 		cd ../..;\
 		cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -RL compile-gresources.sh $(ithemedarkerdir)/gtk-3.0/compile-gresources.sh;\
 		cd ../..;\
-		cd $(ithemedir)/gtk-3.0/ && ./compile-gresources.sh;\
-		cd $(ithemedarkdir)/gtk-3.0/ && ./compile-gresources.sh;\
-		cd $(ithemedarkerdir)/gtk-3.0/ && ./compile-gresources.sh;\
+		cd $(ithemedir)/gtk-3.0/ && ./compile-gresources.sh LIGHT;\
+		cd $(ithemedarkdir)/gtk-3.0/ && ./compile-gresources.sh DARK;\
+		cd $(ithemedarkerdir)/gtk-3.0/ && ./compile-gresources.sh DARKER;\
 	fi
 
 endif # ENABLE_GTK3
