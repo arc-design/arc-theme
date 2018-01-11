@@ -1601,7 +1601,7 @@ menubar,
 menu,
 .menu {
   $_menu_bg: if($variant=='light', $base_color, $bg_color);
-  $_sp_menu_bg: #dfdfdf;
+
   margin: 4px;
   padding: 0;
   border-radius: 0;
@@ -1617,12 +1617,12 @@ menu,
   separator,
   .csd & separator {
     margin: 2px 0;
-    background-color: $_sp_menu_bg;
+    background-color: $sp_menu;
   }
 
   // Firefox workaround
   .separator:not(label),
-  .csd & .separator:not(label) { color: $_sp_menu_bg; }
+  .csd & .separator:not(label) { color: $sp_menu; }
   // Firefox workaround end
 
   menuitem {

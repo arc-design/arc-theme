@@ -1950,11 +1950,21 @@ style "progressbar" {
 
 style "separator_menu_item" {
   engine "pixmap" {
+
     image {
       function = BOX
       file = "assets/line-h.png"
       border = { 20, 0, 3, 0 }
       stretch = TRUE
+      direction = RTL
+    }
+
+    image {
+      function = BOX
+      file = "assets-dark/line-h.png"
+      border = { 20, 0, 3, 0 }
+      stretch = TRUE
+      direction = LTR
     }
   }
 }
