@@ -2,17 +2,9 @@ This theme uses node-sass/libsass to process the various .scss files. Never edit
 
 #### Editing the CSS based themes in the `common` directory (cinnamon, gnome-shell, gtk-3.0)
 
-* Install `nvm` (https://github.com/creationix/nvm)
-
-* Close and reopen your terminal
-
-* Run `nvm i` and `npm i` from this directory
-
-* Install `gulp` with `npm i -g gulp`
-
 * Edit the `common/*/sass/*.scss` files
 
-* Regenerate all .css files by executing `gulp` from the directory containing `gulpfile.js`. Alternatively execute `gulp --cwd` from any subdirectory containing a folder called `sass` to regenerate the .css files within that specific subdirectory only.
+* Run `make` to generate all css files using sassc (starting with version 20180114). Gulp is no longer required.
 
 --
 

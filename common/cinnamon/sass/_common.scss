@@ -1099,7 +1099,6 @@ StScrollBar {
 //
 .menu {
   &-favorites-box {
-    margin: auto;
     padding: 10px;
     transition-duration: 300;
     background-color: $bg_color;
@@ -1116,7 +1115,6 @@ StScrollBar {
   &-places {
 
     &-box {
-      margin: auto;
       padding: 10px;
       border: 0px solid red;
     }
@@ -1512,6 +1510,16 @@ StScrollBar {
     .panel-left & { border-left-width: 1px; padding-left: 0; }
     .panel-right & { border-right-width: 1px; padding-right: 0; }
   }
+
+  .panel-bottom & {
+    margin-bottom: 0;
+  }
+
+  .panel-top & {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
 }
 
 //
