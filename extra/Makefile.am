@@ -1,26 +1,42 @@
 if !ENABLE_TRANSPARENCY
-plankthemedir   = $(datadir)/plank/themes/Arc-solid
+themedir        = $(datadir)/themes/Arc-solid
+themedarkerdir  = $(datadir)/themes/Arc-Darker-solid
+themedarkdir    = $(datadir)/themes/Arc-Dark-solid
 else
-plankthemedir   = $(datadir)/plank/themes/Arc
+themedir        = $(datadir)/themes/Arc
+themedarkerdir  = $(datadir)/themes/Arc-Darker
+themedarkdir    = $(datadir)/themes/Arc-Dark
 endif
 
-iplankthemedir  = $(DESTDIR)$(plankthemedir)
+ithemedir       = $(DESTDIR)$(themedir)
+ithemedarkerdir = $(DESTDIR)$(themedarkerdir)
+ithemedarkdir   = $(DESTDIR)$(themedarkdir)
+
 
 install-exec-hook:
 
 install-data-local:
 
 if ENABLE_PLANK
-	$(MKDIR_P) $(iplankthemedir)
-	cp -R $(srcdir)/Arc-Plank/. $(iplankthemedir)
+
+if ENABLE_LIGHT
+	$(MKDIR_P) $(ithemedir)
+	cp -R $(srcdir)/Arc-Plank/. $(ithemedir)/plank
+endif # ENABLE_LIGHT
+
+if ENABLE_DARKER
+	$(MKDIR_P) $(ithemedarkerdir)
+	cp -R $(srcdir)/Arc-Plank/. $(ithemedarkerdir)/plank
+endif # ENABLE_DARKER
+
+if ENABLE_DARK
+	$(MKDIR_P) $(ithemedarkdir)
+	cp -R $(srcdir)/Arc-Plank/. $(ithemedarkdir)/plank
+endif # ENABLE_DARK
 endif # ENABLE_PLANK
 
 
 uninstall-local:
-
-if ENABLE_PLANK
-	rm -rf $(iplankthemedir)
-endif # ENABLE_PLANK
 
 
 EXTRA_DIST = $(srcdir)/Arc-Plank
