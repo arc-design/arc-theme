@@ -514,7 +514,7 @@ style "default" {
       function = RESIZE_GRIP
       state = NORMAL
       detail = "statusbar"
-      overlay_file = "assets/null.png"
+      overlay_file = "assets/null.png" 
       overlay_border = { 0,0,0,0 }
       overlay_stretch = FALSE
     }
@@ -1646,7 +1646,7 @@ style "notebook" {
       border = { 0,0,0,0 }
       stretch = TRUE
       gap_side = LEFT
-    }
+    }  
 
     image {
       function = EXTENSION
@@ -1994,7 +1994,7 @@ style "treeview" {
   ythickness = 0
 
 
-}   
+}    
 
 style "scrolled_window" {
 
