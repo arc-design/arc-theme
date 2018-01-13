@@ -9,8 +9,8 @@ themedarkdir    = $(datadir)/themes/Arc-Dark
 endif
 
 ithemedir       = $(DESTDIR)$(themedir)
-ithemedarkerdir   = $(DESTDIR)$(themedarkerdir)
-ithemedarkdir  = $(DESTDIR)$(themedarkdir)
+ithemedarkerdir = $(DESTDIR)$(themedarkerdir)
+ithemedarkdir   = $(DESTDIR)$(themedarkdir)
 
 install-exec-hook:
 
