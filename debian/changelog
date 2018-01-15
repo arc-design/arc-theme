@@ -1,4 +1,10 @@
-arc-theme (20171105-0ubuntu1) UNRELEASED; urgency=medium
+arc-theme (20180114-0ubuntu1) artful; urgency=medium
+
+  * bump release version
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 15 Jan 2018 13:32:16 +0000
+
+arc-theme (20171105-0ubuntu1) artful; urgency=medium
 
   * bump release version
 
