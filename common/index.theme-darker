@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Arc-Darker
+Name=Arc-Pro-Dusk
 Comment=A flat theme with transparent elements
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Arc-Darker
-MetacityTheme=Arc-Darker
+GtkTheme=Arc-Pro-Dusk
+MetacityTheme=Arc-Pro-Dusk
 IconTheme=gnome
 CursorTheme=DMZ-Black
 ButtonLayout=menu:minimize,maximize,close
