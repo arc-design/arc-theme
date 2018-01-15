@@ -15,7 +15,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="checkbox-checked-focused.svg"
    inkscape:export-filename="/home/steffen/.local/share/themes/neu2/gtk-3.0/assets/dark/checkbox-unchecked.png"
    inkscape:export-xdpi="90"
@@ -26,7 +26,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#5294e2;stop-opacity:1;"
+         style="stop-color:#9a9a9a;stop-opacity:1;"
          offset="0"
          id="stop4159" />
     </linearGradient>
@@ -67,21 +67,21 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313709"
-     inkscape:cx="-8.8873943"
-     inkscape:cy="0.45889901"
+     inkscape:cx="4.5476339"
+     inkscape:cy="3.9944328"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g5400-6-68"
      showgrid="true"
      inkscape:snap-bbox="true"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:showpageshadow="false"
      showborder="true"
-     inkscape:window-width="1006"
-     inkscape:window-height="723"
-     inkscape:window-x="358"
-     inkscape:window-y="22"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true">
@@ -179,7 +179,7 @@
             <g
                id="g3981-0-8"
                transform="translate(-3,-4.9999826)"
-               style="fill:#3b3c3e;fill-opacity:1">
+               style="fill:#3d3d3d;fill-opacity:1">
               <rect
                  ry="0.66666085"
                  rx="0.66666085"
@@ -188,7 +188,7 @@
                  height="1.9999826"
                  width="5"
                  id="rect3977-39-90"
-                 style="fill:#2b303b;fill-opacity:1;stroke:none" />
+                 style="fill:#3d3d3d;fill-opacity:1;stroke:none" />
               <rect
                  ry="0"
                  y="1027.3622"
@@ -196,7 +196,7 @@
                  height="7.9999828"
                  width="2"
                  id="rect3979-7-60"
-                 style="fill:#2b303b;fill-opacity:1;stroke:none" />
+                 style="fill:#3d3d3d;fill-opacity:1;stroke:none" />
             </g>
             <rect
                style="fill:#eeeeee;fill-opacity:0;stroke:none"

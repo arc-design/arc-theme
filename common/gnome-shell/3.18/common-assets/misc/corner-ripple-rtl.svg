@@ -14,7 +14,7 @@
    width="52"
    height="52"
    id="svg2"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="corner-ripple-rtl.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -25,20 +25,28 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
-     id="namedview955" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     id="namedview955"
+     showgrid="false"
+     inkscape:zoom="4.6923077"
+     inkscape:cx="6.6065574"
+     inkscape:cy="26"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs4">
     <linearGradient
        id="linearGradient3857">
       <stop
          id="stop3859"
-         style="stop-color:#398dd3;stop-opacity:0"
+         style="stop-color:#7f878d;stop-opacity:0"
          offset="0" />
       <stop
          id="stop3861"
-         style="stop-color:#398cd3;stop-opacity:1"
+         style="stop-color:#868686;stop-opacity:1"
          offset="1" />
     </linearGradient>
     <radialGradient
@@ -67,9 +75,10 @@
      transform="translate(0,-1000.3622)"
      id="layer1">
     <path
-       d="M 52,0 A 52,52 0 1 1 -52,0 52,52 0 1 1 52,0 z"
+       d="M 52,0 A 52,52 0 1 1 -52,0 52,52 0 1 1 52,0 Z"
        transform="translate(52,1000.3622)"
        id="path2991"
-       style="fill:url(#radialGradient3863);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:url(#radialGradient3863);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

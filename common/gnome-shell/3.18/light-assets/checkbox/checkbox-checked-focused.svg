@@ -15,7 +15,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="checkbox-checked-focused.svg"
    inkscape:export-filename="/home/steffen/.local/share/themes/Vertex-git/gtk-3.0/assets/dark/checkbox-checked.png"
    inkscape:export-xdpi="90"
@@ -34,7 +34,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#5294e2;stop-opacity:1;"
+         style="stop-color:#9a9a9a;stop-opacity:1;"
          offset="0"
          id="stop4166" />
     </linearGradient>
@@ -115,10 +115,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313709"
-     inkscape:cx="-12.701718"
-     inkscape:cy="-4.172704"
+     inkscape:cx="4.003679"
+     inkscape:cy="-0.63717025"
      inkscape:document-units="px"
-     inkscape:current-layer="checkbox-checked-dark"
+     inkscape:current-layer="g5400-6"
      showgrid="true"
      inkscape:snap-bbox="true"
      showguides="true"

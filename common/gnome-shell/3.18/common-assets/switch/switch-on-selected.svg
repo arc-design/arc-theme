@@ -15,7 +15,7 @@
    height="20"
    id="svg7539"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="switch-on-selected.svg">
   <defs
      id="defs7541">
@@ -31,7 +31,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#5294e2;stop-opacity:1;"
+         style="stop-color:#9a9a9a;stop-opacity:1;"
          offset="0"
          id="stop4166" />
     </linearGradient>
@@ -154,9 +154,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.666667"
-     inkscape:cx="14.042172"
-     inkscape:cy="11.702892"
-     inkscape:current-layer="layer1"
+     inkscape:cx="41.8136"
+     inkscape:cy="-2.0113933"
+     inkscape:current-layer="g3900-1-87-6"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
@@ -165,9 +165,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1032"
+     inkscape:window-height="1029"
      inkscape:window-x="0"
-     inkscape:window-y="23"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      showguides="true"
@@ -247,10 +247,10 @@
         </g>
       </g>
       <g
-         transform="translate(-1.0003162,0)"
+         transform="translate(-1.0003162)"
          id="g4816-0">
         <rect
-           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+           transform="rotate(45)"
            ry="0.66666085"
            rx="0.66666085"
            y="-456.09485"
@@ -260,7 +260,7 @@
            id="rect3977-39-2-1"
            style="display:inline;opacity:1;fill:url(#linearGradient4168);fill-opacity:1;stroke:none" />
         <rect
-           transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+           transform="rotate(45)"
            ry="0"
            y="-462.09485"
            x="980.54999"

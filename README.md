@@ -2,10 +2,9 @@
 
 Arc Pro is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
 
-Only GTK 3 is somewhat supported at the moment, this theme is very much a work in progress. (Any help is much appreciated.)
+Only GTK 3 (Gnome / Budgie) is somewhat supported at the moment, this theme is very much a work in progress. (Any help is much appreciated.)
 
-This version is a really hacked together one, in an attempt to make it dark gray.
-It's quite the work in progress, so expect most of it to not work properly.
+This version is a basic spin / hack in an attempt to make it dark gray, so expect most of it to not work properly.
 
 ## Arc-Pro will be available in three variants 
 
@@ -13,7 +12,7 @@ It's quite the work in progress, so expect most of it to not work properly.
 
 ##### Arc-Pro-Dusk (TODO)
 
-##### Arc-Pro-Night (Experimental / WIP)
+##### Arc-Pro-Night (Experimental / WIP) - Budgie Screenshot
 
 ![A screenshot of the Arc-Dark theme](https://i.imgur.com/Pf6opUO.png)
 
@@ -56,9 +55,9 @@ Clone the git repository with
 Other options to pass to autogen.sh are
 
     --disable-transparency     disable transparency in the GTK3 theme
-    --disable-light            disable Arc Light support
-    --disable-darker           disable Arc Darker support
-    --disable-dark             disable Arc Dark support
+    --disable-light            disable Arc Pro support
+    --disable-darker           disable Arc Pro Dusk support
+    --disable-dark             disable Arc Pro Night support
     --disable-cinnamon         disable Cinnamon support
     --disable-gnome-shell      disable GNOME Shell support
     --disable-gtk2             disable GTK2 support
@@ -73,9 +72,9 @@ Other options to pass to autogen.sh are
                                Note 2: For GNOME 3.24, use --with-gnome-version=3.22
                                (this works for now, the build system will be improved in the future)
 
-After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
+After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc-Pro`, `Arc-Pro-Dusk` or `Arc-Pro-Night` as Window/GTK+ theme and `Arc-Pro` or `Arc-Pro-Night` as GNOME Shell/Cinnamon theme.
 
-If the `--disable-transparency` option was used, the theme will be installed as `Arc-solid`, `Arc-Darker-solid` and `Arc-Dark-solid`.
+If the `--disable-transparency` option was used, the theme will be installed as `Arc-Pro-solid`, `Arc-Pro-Dusk-solid` and `Arc-Pro-Night-solid`.
 
 ## Uninstall
 
@@ -85,7 +84,7 @@ Run
 
 from the cloned git repository, or
 
-    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+    sudo rm -rf /usr/share/themes/{Arc-Pro,Arc-Pro-Dusk,Arc-Pro-Night}
 
 
 ## Troubleshooting

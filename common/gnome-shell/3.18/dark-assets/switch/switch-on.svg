@@ -15,7 +15,7 @@
    height="20"
    id="svg7539"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="switch-on.svg">
   <defs
      id="defs7541">
@@ -23,7 +23,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#5294e2;stop-opacity:1;"
+         style="stop-color:#9a9a9a;stop-opacity:1;"
          offset="0"
          id="stop4166" />
     </linearGradient>
@@ -119,9 +119,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.666667"
-     inkscape:cx="10.930796"
+     inkscape:cx="-3.4692036"
      inkscape:cy="16.13001"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g4816-8"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
@@ -130,9 +130,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1032"
+     inkscape:window-height="1029"
      inkscape:window-x="0"
-     inkscape:window-y="23"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
      showguides="true"
@@ -203,7 +203,7 @@
                ry="11"
                rx="11" />
             <circle
-               style="fill:#353a47;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               style="fill:#3b3d41;fill-opacity:1;fill-rule:nonzero;stroke:none"
                id="path3759-0-75"
                cx="41"
                cy="1041.3622"
@@ -223,7 +223,7 @@
            height="1.9999826"
            width="5"
            id="rect3977-39-2-13"
-           style="display:inline;opacity:1;fill:#353a47;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:#3e3e3e;fill-opacity:1;stroke:none" />
         <rect
            transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
            ry="0"
@@ -232,7 +232,7 @@
            height="7.9999828"
            width="2"
            id="rect3979-7-0-65"
-           style="display:inline;opacity:1;fill:#353a47;fill-opacity:1;stroke:none" />
+           style="display:inline;opacity:1;fill:#3e3e3e;fill-opacity:1;stroke:none" />
       </g>
     </g>
   </g>
