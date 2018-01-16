@@ -1,23 +1,23 @@
-gtk-color-scheme = "selected_bg_color:#5294E2\nselected_fg_color:#ffffff"
+gtk-color-scheme = "selected_bg_color:#505050\nselected_fg_color:#F3F3F3"
 
 style "notify-window" {
   XfceNotifyWindow::summary-bold = 1
-  XfceNotifyWindow::border-color = "#17191F"
-  XfceNotifyWindow::border-color-hover = "#17191F"
+  XfceNotifyWindow::border-color = "#1C1C1C"
+  XfceNotifyWindow::border-color-hover = "#1C1C1C"
   XfceNotifyWindow::border-radius = 3.0
   XfceNotifyWindow::border-width = 1.0
   XfceNotifyWindow::border-width-hover = 1.0
 
-  bg[NORMAL] = "#292C36"
+  bg[NORMAL] = "#313131"
 }
 
 style "notify-button" {
-  bg[NORMAL] = "#434652"
-  bg[PRELIGHT] = "#5C6070"
+  bg[NORMAL] = "#494949"
+  bg[PRELIGHT] = "#666666"
   bg[ACTIVE] = @selected_bg_color
 
-  fg[NORMAL] = "#BAC3CF"
-  fg[PRELIGHT] = "#BAC3CF"
+  fg[NORMAL] = "#C4C4C4"
+  fg[PRELIGHT] = "#C4C4C4"
   fg[ACTIVE] = @selected_fg_color
 
   engine "murrine" {
@@ -31,9 +31,9 @@ style "notify-button" {
 style "notify-text" {
   GtkWidget::link-color = @selected_bg_color
 
-  fg[NORMAL] = "#BAC3CF"
-  fg[PRELIGHT] = "#BAC3CF"
-  fg[ACTIVE] = "#BAC3CF"
+  fg[NORMAL] = "#C4C4C4"
+  fg[PRELIGHT] = "#C4C4C4"
+  fg[ACTIVE] = "#C4C4C4"
 
   engine "murrine" {
     textstyle = 0
@@ -52,7 +52,7 @@ style "notify-progressbar" {
 
   fg[PRELIGHT] = "#000000"
   bg[NORMAL]   = @selected_bg_color
-  bg[ACTIVE] = "#1D1F26"
+  bg[ACTIVE] = "#212121"
   bg[SELECTED] = @selected_bg_color
 
   engine "murrine" {
