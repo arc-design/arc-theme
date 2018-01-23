@@ -960,7 +960,7 @@ StScrollBar {
       & > .system-status-icon { icon-shadow: none; }
     }
 
-    .system-status-icon { icon-size: 16px; padding: 0 4px; }
+    .system-status-icon { color: $selected_fg_color; icon-size: 16px; padding: 0 4px; }
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
@@ -969,11 +969,16 @@ StScrollBar {
     }
   }
 
+  .panel-button > *{
+    color: $selected_fg_color;
+  }
+
     #panelActivities.panel-button { -natural-hpadding: 12px; }
 
   .panel-status-indicators-box,
   .panel-status-menu-box {
     spacing: 2px;
+    color: $selected_fg_color;
   }
 
   // spacing between power icon and (optional) percentage label
