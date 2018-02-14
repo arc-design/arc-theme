@@ -40,7 +40,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 
 ### Manual Installation
 
-To build the theme the follwing packages are required
+To build the theme the following packages are required
 * `autoconf`
 * `automake`
 * `sassc`
