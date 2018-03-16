@@ -426,7 +426,7 @@ frame.raven-frame > border {
 .raven {
   background-color: $bg_color;
   color: $fg_color;
-  padding: 0;
+  padding: $container_padding 0 0 0;
   border: none;
 
   .raven-header {
