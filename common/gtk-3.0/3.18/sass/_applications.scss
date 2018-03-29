@@ -805,3 +805,15 @@ SwitchboardCategoryView .view:selected,
 SwitchboardCategoryView .view:selected:focus {
   color: $fg_color;
 }
+
+//
+// Chromium
+//
+GtkWindow.background.chromium {
+  // See details in nav_button_provider_gtk3.cc
+  .header-bar.titlebar .button.titlebutton {
+    // move button spacing from padding to margin
+    margin: 0px ((24px - 16px) / 2);
+    padding: 0px;
+  }
+}
