@@ -903,3 +903,17 @@ panel-toplevel.background {
 //SwitchboardCategoryView .view:selected:focus {
 //  color: $fg_color;
 //}
+
+//
+// Chromium
+//
+window.background.chromium {
+  // See details in nav_button_provider_gtk3.cc
+  headerbar.titlebar button.titlebutton {
+    min-width: 16px;
+    min-height: 16px;
+    // move button spacing from padding to margin
+    margin: 0px ((24px - 16px) / 2);
+    padding: 0px;
+  }
+}
