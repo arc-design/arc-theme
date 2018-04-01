@@ -17,21 +17,21 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
   // solid-mode
   // always use dark-color of dark variant
   background-color: $panel_bg;
-  color: white;
+  color: $selected_fg_color;
   font-weight: normal;
 
   // used to indicate unread notifications
   .alert { color: $suggested_color; }
-  
+
   &:backdrop {
-      color: white;
+      color: $selected_fg_color;
       background-color: $panel_bg;
   }
 
   // transparent-mode
   &.transparent {
     background-color: gtkopacity($panel_bg, 0.4);
-    color: white;
+    color: $selected_fg_color;
 
   }
 
@@ -42,7 +42,15 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
     min-width: 16px;
     padding: 0;
     border-radius: 0;
+    color: $selected_fg_color;
+
+    &:hover {
+        box-shadow: gtkalpha($panel_bg, 0.4);
+        background-color: gtkopacity($panel_bg, 0.4);
+        border-color: gtkopacity($panel_bg, 0.4);
+    }
   }
+
 
   &.horizontal button { padding: 0 4px; }
 
@@ -55,10 +63,10 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
   .end-region {
       background-color: rgba(0,0,0,0.3);
       border-radius: 0px;
-      separator { background-color: transparentize(white, 0.85); }
+      separator { background-color: transparentize($selected_fg_color, 0.85); }
       label {
         font-weight: 700;
-        color: white;
+        color: $selected_fg_color;
       }
   }
 }
@@ -331,7 +339,7 @@ button.budgie-menu-launcher {
   // padding: 0 2px;
   color: $base_bg_color;
   border: none;
-  
+
   &:hover {
       background-color: gtkopacity($fg_color, 0.4);
       border: none;
@@ -355,9 +363,9 @@ popover.background.user-menu {
 
 // Raven Trigger
 button.raven-trigger {
-    color: white;
+    color: $selected_fg_color;
     border: none;
-    
+
     &:hover {
       background-color: gtkopacity($fg_color, 0.4);
       border: none;
