@@ -1699,9 +1699,10 @@ StScrollBar {
     height: 4px;
   }
 
-  // Add missing 1px hidden border for finer .show-apps-icon alignment
-  // like %icon_tile
-  .show-apps .overview-icon { border: 1px solid transparent; }
+  // Add missing 1px margin for finer .show-apps-icon alignment
+  // via margin property instead to keep 1px smaller .show-apps-icon size
+  // like standard #dash styling. Better than 1px transparent border.
+  .show-apps .overview-icon { margin: 1px; }
 
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {
