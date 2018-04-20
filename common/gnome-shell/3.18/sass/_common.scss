@@ -1699,6 +1699,10 @@ StScrollBar {
     height: 4px;
   }
 
+  // Add missing 1px hidden border for finer .show-apps-icon alignment
+  // like %icon_tile
+  .show-apps .overview-icon { border: 1px solid transparent; }
+
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {
       background-image: url("common-assets/dash/running#{$var}.svg");
