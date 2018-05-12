@@ -87,6 +87,7 @@ Other options to pass to autogen.sh are
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
     --disable-plank            disable Plank theme support
+    --disable-openbox          disable Openbox support
 
     --with-gnome=<version>     build the theme for a specific GNOME version (3.18, 3.20, 3.22)
                                Note 1: Normally the correct version is detected automatically and this
