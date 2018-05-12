@@ -932,6 +932,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: $_panel_fg_color;
+    text-shadow: none;
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
@@ -943,11 +944,22 @@ StScrollBar {
       margin-right: 0px;
     }
 
+    .system-status-icon,
+    .app-menu-icon > StIcon,
+    .popup-menu-arrow {
+      icon-shadow: none;
+    }
+
     &:hover {
       color: $_panel_fg_color;
       background-color: transparentize(black, 0.83);
       border-bottom-width: 1px;
       border-color: transparent;
+      .system-status-icon,
+      .app-menu-icon > StIcon,
+      .popup-menu-arrow {
+      	icon-shadow: none;
+      }
     }
 
     &:active, &:overview, &:focus, &:checked {
