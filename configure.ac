@@ -24,6 +24,7 @@ ARC_ENABLE([UNITY],         [unity],         [Unity],         [disable])
 ARC_ENABLE([XFWM],          [xfwm],          [XFWM],          [disable])
 ARC_ENABLE([TRANSPARENCY],  [transparency],  [transparency],  [disable])
 ARC_ENABLE([PLANK],         [plank],         [Plank theme],   [disable])
+ARC_ENABLE([OPENBOX],       [openbox],       [Openbox],       [disable])
 
 AS_IF([test "x$ENABLE_GNOME_SHELL$ENABLE_GTK3" != xnono], [ARC_GNOME])
 
