@@ -14,6 +14,9 @@ common/cinnamon/cinnamon-dark.css
 common/cinnamon/cinnamon.css
 common/gnome-shell/3.18/gnome-shell-dark.css
 common/gnome-shell/3.18/gnome-shell.css
+common/gtk-3.0/3.18/gtk-dark.css
+common/gtk-3.0/3.18/gtk-darker.css
+common/gtk-3.0/3.18/gtk.css
 common/gtk-3.0/3.20/gtk-dark.css
 common/gtk-3.0/3.20/gtk-darker.css
 common/gtk-3.0/3.20/gtk.css
