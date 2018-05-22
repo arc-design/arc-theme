@@ -92,7 +92,7 @@ Other options to pass to autogen.sh are
     --with-gnome=<version>     build the theme for a specific GNOME version (3.18, 3.20, 3.22)
                                Note 1: Normally the correct version is detected automatically and this
                                option should not be needed.
-                               Note 2: For GNOME 3.24 and 3.26, use --with-gnome-version=3.22
+                               Note 2: For GNOME 3.24 and 3.26, use --with-gnome=3.22
                                (this works for now, the build system will be improved in the future)
     --with-custom=<script>     run the executable script file in the custom subfolder
 
