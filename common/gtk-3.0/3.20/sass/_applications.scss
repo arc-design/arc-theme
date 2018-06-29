@@ -160,6 +160,21 @@ $disk_space_free: darken($bg_color, 3%);
 }
 
 //
+// Thunar
+//
+.thunar {
+  treeview.view {
+    background: $dark_sidebar_bg;
+    color: $dark_sidebar_fg;
+
+    &:selected, &:active {
+      background: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+  }
+}
+
+//
 // Caja
 //
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
