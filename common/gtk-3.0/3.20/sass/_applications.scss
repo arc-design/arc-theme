@@ -163,6 +163,10 @@ $disk_space_free: darken($bg_color, 3%);
 // Thunar
 //
 .thunar {
+  toolbar.horizontal button image {
+    -gtk-icon-transform: scale(0.8);
+  }
+
   scrolledwindow.sidebar {
     border-top: 1px solid $borders_color;
     treeview.view {
