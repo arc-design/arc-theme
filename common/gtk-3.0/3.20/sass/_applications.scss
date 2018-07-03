@@ -164,20 +164,34 @@ $disk_space_free: darken($bg_color, 3%);
 //
 .thunar {
   toolbar.horizontal button image {
-    -gtk-icon-transform: scale(0.8);
+    -gtk-icon-transform: scale(0.75);
   }
 
-  scrolledwindow.sidebar {
-    border-top: 1px solid $borders_color;
-    treeview.view {
-      @if $darker=='true' { 
-        background: $dark_sidebar_bg;
-        color: $dark_sidebar_fg;
-        
-        &:selected, &:active {
-          background: $selected_bg_color;
-          color: $selected_fg_color;
-        }
+  scrolledwindow.standard-view {
+    border-top-width: 0;
+  }
+
+  toolbar {
+    color: $header_fg;
+    background-color: opacify($header_bg, 1);
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, opacify($header_bg, 1),
+                                             darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+
+    @extend %header_widgets;
+  }
+
+  @if $darker=='true' {
+    
+    scrolledwindow.sidebar treeview.view {
+      background: $dark_sidebar_bg;
+      color: $dark_sidebar_fg;
+      
+      &:selected, &:active {
+        background: $selected_bg_color;
+        color: $selected_fg_color;
       }
     }
   }
