@@ -183,16 +183,13 @@ $disk_space_free: darken($bg_color, 3%);
     @extend %header_widgets;
   }
 
-  @if $darker=='true' {
+  scrolledwindow.sidebar treeview.view {
+    background: $dark_sidebar_bg;
+    color: $dark_sidebar_fg;
     
-    scrolledwindow.sidebar treeview.view {
-      background: $dark_sidebar_bg;
-      color: $dark_sidebar_fg;
-      
-      &:selected, &:active {
-        background: $selected_bg_color;
-        color: $selected_fg_color;
-      }
+    &:selected, &:active {
+      background: $selected_bg_color;
+      color: $selected_fg_color;
     }
   }
 }
