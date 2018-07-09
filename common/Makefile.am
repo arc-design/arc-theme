@@ -95,7 +95,7 @@ endif # ENABLE_GNOME_SHELL
 
 
 if ENABLE_GTK2
-	cd $(srcdir)/gtk-2.0 && mkdir -p assets assets-dark && ./render-assets.sh
+	cd $(srcdir)/gtk-2.0 && $(MKDIR_P) assets assets-dark && ./render-assets.sh
 
 if ENABLE_LIGHT
 	$(MKDIR_P) $(ithemedir)/gtk-2.0
@@ -143,7 +143,7 @@ endif # ENABLE_GTK2
 
 
 if ENABLE_GTK3
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && mkdir -p assets && ./render-assets.sh
+	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && $(MKDIR_P) assets && ./render-assets.sh
 
 if ENABLE_LIGHT
 	$(MKDIR_P) $(ithemedir)/gtk-3.0
@@ -315,7 +315,7 @@ endif # ENABLE_UNITY
 
 
 if ENABLE_XFWM
-	cd $(srcdir)/xfwm4 && mkdir -p assets assets-dark && ./render-assets.sh
+	cd $(srcdir)/xfwm4 && $(MKDIR_P) assets assets-dark && ./render-assets.sh
 
 if ENABLE_LIGHT
 	$(MKDIR_P) $(ithemedir)/xfwm4
