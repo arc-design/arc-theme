@@ -20,3 +20,6 @@ common/gtk-3.0/3.18/gtk.css
 common/gtk-3.0/3.20/gtk-dark.css
 common/gtk-3.0/3.20/gtk-darker.css
 common/gtk-3.0/3.20/gtk.css
+common/gtk-3.0/**/assets/*.png
+common/gtk-2.0/assets*/*.png
+common/xfwm4/assets*/*.png
