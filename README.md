@@ -47,6 +47,7 @@ To build the theme the following packages are required
 * `pkg-config` or `pkgconfig` for Fedora
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` to clone the source directory
+* `optipng`
 
 **Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
 
