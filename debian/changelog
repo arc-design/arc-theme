@@ -1,3 +1,9 @@
+arc-theme (20180114-0ubuntu2) bionic; urgency=medium
+
+  * Revised dependencies
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 12 Jul 2018 09:53:55 +0100
+
 arc-theme (20180114-0ubuntu1) artful; urgency=medium
 
   * bump release version
