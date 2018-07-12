@@ -2,7 +2,7 @@
 
 Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Pantheon, Xfce, MATE, Cinnamon (>=3.4), Budgie Desktop (10.4 for GTK+3.22) etc.
 
-The NicoHood/arc-theme repository is a soft-fork of the upstream horst3180/arc-theme repository.
+The NicoHood/arc-theme repository is a fork of the horst3180/arc-theme repository  which as been umaintained since March 2017.
 Its aim is to continue the maintenance of arc-theme. The two maintainers are the Arch-Linux and Debian & Ubuntu packaging maintainers.
 
 It is strongly encouraged to submit pull-requests to suggest fixes and enhancements.
@@ -53,7 +53,7 @@ To build the theme the following packages are required
 
 For the theme to function properly, install the following
 * GNOME Shell 3.18 - 3.26, GTK 3.18 - 3.22
-* The `gnome-themes-standard` package
+* The `gnome-themes-extra` package
 * The murrine engine. This has different names depending on the distro.
   * `gtk-engine-murrine` (Arch Linux)
   * `gtk2-engines-murrine` (Debian, Ubuntu, elementary OS)
