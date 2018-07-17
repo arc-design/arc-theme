@@ -22,4 +22,5 @@ common/gtk-3.0/3.20/gtk-darker.css
 common/gtk-3.0/3.20/gtk.css
 common/gtk-3.0/**/assets/*.png
 common/gtk-2.0/assets*/*.png
+common/gtk-2.0/menubar-toolbar/*.png
 common/xfwm4/assets*/*.png
