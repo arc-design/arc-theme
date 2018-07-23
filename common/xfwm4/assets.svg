@@ -1609,7 +1609,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="right-active"
-       width="1"
+       width="2"
        height="16"
        x="-37"
        y="734.36212"
@@ -1618,7 +1618,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="right-inactive"
-       width="1"
+       width="2"
        height="16"
        x="-39"
        y="734.36212"
@@ -1627,7 +1627,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="bottom-inactive"
-       width="2.9999716"
+       width="2"
        height="16"
        x="-750.36212"
        y="-60"
@@ -1636,7 +1636,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="left-active"
-       width="1"
+       width="2"
        height="16"
        x="-33"
        y="734.36212"
@@ -1645,7 +1645,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="left-inactive"
-       width="1"
+       width="2"
        height="16"
        x="-35"
        y="734.36212"
@@ -1654,7 +1654,7 @@
     <rect
        style="opacity:1;fill:#e7e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="bottom-active"
-       width="3.0000284"
+       width="2"
        height="16"
        x="-746.36212"
        y="-60"
