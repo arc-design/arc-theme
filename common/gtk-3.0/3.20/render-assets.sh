@@ -1,34 +1,12 @@
-#! /bin/bash
+#!/bin/bash
+set -ueo pipefail
 
-INKSCAPE="/usr/bin/inkscape"
-OPTIPNG="/usr/bin/optipng"
-
-SRC_FILE="assets.svg"
-ASSETS_DIR="assets"
-INDEX="assets.txt"
-
-for i in `cat $INDEX`
-do 
-if [ -f $ASSETS_DIR/$i.png ]; then
-    echo $ASSETS_DIR/$i.png exists.
+# Make sure that parallel is GNU parallel and not moreutils.
+# Otherwise, it fails silently. There's no smooth way to detect this.
+if [[ "$(which parallel 2> /dev/null)" ]]; then
+  cmd=(parallel)
 else
-    echo
-    echo Rendering $ASSETS_DIR/$i.png
-    $INKSCAPE --export-id=$i \
-              --export-id-only \
-              --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
+  cmd=(xargs -n1)
 fi
-if [ -f $ASSETS_DIR/$i@2.png ]; then
-    echo $ASSETS_DIR/$i@2.png exists.
-else
-    echo
-    echo Rendering $ASSETS_DIR/$i@2.png
-    $INKSCAPE --export-id=$i \
-              --export-dpi=180 \
-              --export-id-only \
-              --export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null \
-    && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
-fi
-done
-exit 0
+
+"${cmd[@]}" ./render-asset.sh < assets.txt
