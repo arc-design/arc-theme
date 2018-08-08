@@ -7,7 +7,9 @@
 
 $base_color: if($variant =='light', %TXT_BG%, %MENU_BG2%);
 $base_bg_color: %BG%;
-$text_color: if($variant == 'light', %TXT_FG%, %MENU_FG%);
+// not implemented for GTK+2 theme:
+//$text_color: if($variant == 'light', %TXT_FG%, %MENU_FG%);
+$text_color: if($variant == 'light', %FG%, %MENU_FG%);
 $bg_color: if($variant =='light', $base_bg_color, %MENU_BG%);
 $fg_color: if($variant =='light', %FG%, %MENU_FG%);
 
