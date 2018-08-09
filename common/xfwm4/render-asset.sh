@@ -15,7 +15,7 @@ if [[ -f "${result_file}" ]] ; then
 	echo "${result_file} already exists."
 else
 	echo "Rendering '${result_file}'"
-	if [[ "$OPTION_GTK2_HIDPI" != "true" ]]; then
+	if [[ "${OPTION_GTK2_HIDPI:-false}" != "true" ]]; then
 		"$INKSCAPE" --export-id="$i" \
 					--export-id-only \
 					--export-png="${result_file}" "$SRC_FILE" >/dev/null
