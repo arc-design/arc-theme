@@ -44,6 +44,10 @@ titlebutton-maximize
 titlebutton-maximize-backdrop
 titlebutton-maximize-hover
 titlebutton-maximize-active
+titlebutton-unmaximize
+titlebutton-unmaximize-backdrop
+titlebutton-unmaximize-hover
+titlebutton-unmaximize-active
 titlebutton-minimize
 titlebutton-minimize-backdrop
 titlebutton-minimize-hover
@@ -78,6 +82,10 @@ titlebutton-maximize-dark
 titlebutton-maximize-backdrop-dark
 titlebutton-maximize-hover-dark
 titlebutton-maximize-active-dark
+titlebutton-unmaximize-dark
+titlebutton-unmaximize-backdrop-dark
+titlebutton-unmaximize-hover-dark
+titlebutton-unmaximize-active-dark
 titlebutton-minimize-dark
 titlebutton-minimize-backdrop-dark
 titlebutton-minimize-hover-dark
