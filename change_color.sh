@@ -86,6 +86,10 @@ fi
 ARC_TRANSPARENCY=$(tr '[:upper:]' '[:lower:]' <<< "${ARC_TRANSPARENCY-True}")
 ARC_WIDGET_BORDER_COLOR=${ARC_WIDGET_BORDER_COLOR-$(mix ${BG} ${FG} 0.75)}
 
+TXT_FG=$FG
+BTN_FG=$FG
+HDR_BTN_FG=$MENU_FG
+
 ACCENT_BG=${ACCENT_BG-$SEL_BG}
 HDR_BTN_BG=${HDR_BTN_BG-$BTN_BG}
 # Not implemented yet:
@@ -140,6 +144,7 @@ for FILEPATH in "${PATHLIST[@]}"; do
 		find "$FILEPATH" -type f -exec sed -i'' \
 			-e 's/#cfd6e6/%ARC_WIDGET_BORDER_COLOR%/gI' \
 			-e 's/#f5f6f7/%BG%/gI' \
+			-e 's/#dde3e9/%BG_DARKER%/gI' \
 			-e 's/#3b3e45/%FG%/gI' \
 			-e 's/#FFFFFF/%TXT_BG%/gI' \
 			-e 's/#3b3e45/%TXT_FG%/gI' \
@@ -150,8 +155,7 @@ for FILEPATH in "${PATHLIST[@]}"; do
 			-e 's/#D3DAE3/%MENU_FG%/gI' \
 			-e 's/#fbfcfc/%INACTIVE_BG%/gI' \
 			-e 's/#a9acb2/%INACTIVE_FG%/gI' \
-			-e 's/#e2e7ef/%INACTIVE_FG%/gI' \
-			-e 's/#fbfcfc/%INACTIVE_TXT_BG%/gI' \
+			-e 's/#e2e7ef/%BG_DARKER%/gI' \
 			-e 's/#F04A50/%TERMINAL_COLOR1%/gI' \
 			-e 's/#F08437/%TERMINAL_COLOR3%/gI' \
 			-e 's/#FC4138/%TERMINAL_COLOR9%/gI' \
@@ -170,7 +174,6 @@ for FILEPATH in "${PATHLIST[@]}"; do
 			-e 's/#fdfdfd/%MENU_FG%/gI' \
 			-e 's/#454C5C/%MENU_FG%/gI' \
 			-e 's/#D1D3DA/%MENU_FG%/gI' \
-			-e 's/#262932/%MENU_FG%/gI' \
 			-e 's/#90949E/%MENU_FG%/gI' \
 			-e 's/#90939B/%MENU_FG%/gI' \
 			-e 's/#B6B8C0/%INACTIVE_MENU_FG%/gI' \
@@ -184,6 +187,13 @@ for FILEPATH in "${PATHLIST[@]}"; do
 			-e 's/#383C4A/%MENU_BG%/gI' \
 			-e 's/#5c616c/%FG%/gI' \
 			-e 's/#d3d8e2/%SEL_BG%/gI' \
+			-e 's/#b7c0d3/%SEL_BG%/gI' \
+			-e 's/#cbd2e3/%ARC_WIDGET_BORDER_COLOR%/gI' \
+			-e 's/#fcfcfc/%TXT_BG%/gI' \
+			-e 's/#dbdfe3/%INACTIVE_TXT_BG%/gI' \
+			-e 's/#eaebed/%INACTIVE_TXT_BG%/gI' \
+			-e 's/#d7d8dd/%MENU_BG2%/gI' \
+			-e 's/#262932/%MENU_BG2%/gI' \
 			{} \; ;
 done
 
@@ -225,11 +235,10 @@ for FILEPATH in "${PATHLIST[@]}"; do
 	find "$FILEPATH" -type f -exec sed -i'' \
 		-e 's/%ARC_WIDGET_BORDER_COLOR%/#'"$ARC_WIDGET_BORDER_COLOR"'/g' \
 		-e 's/%BG%/#'"$BG"'/g' \
-		-e 's/%BG2%/#'"$(darker $BG)"'/g' \
+		-e 's/%BG_DARKER%/#'"$(darker $BG)"'/g' \
 		-e 's/%FG%/#'"$FG"'/g' \
 		-e 's/%ACCENT_BG%/#'"$ACCENT_BG"'/g' \
 		-e 's/%SEL_BG%/#'"$SEL_BG"'/g' \
-		-e 's/%SEL_BG2%/#'"$(darker $SEL_BG -20)"'/g' \
 		-e 's/%SEL_FG%/#'"$SEL_FG"'/g' \
 		-e 's/%TXT_BG%/#'"$TXT_BG"'/g' \
 		-e 's/%TXT_FG%/#'"$TXT_FG"'/g' \
@@ -290,8 +299,16 @@ if [[ "$ARC_TRANSPARENCY" == "false" ]]; then
 else
 	mv ./distrib/share/themes/Arc-Darker "${DEST_PATH}"
 fi
-echo "== The theme was installed to ${DEST_PATH}"
 
+
+cd "${DEST_PATH}"
+cp ./gtk-2.0/assets/focus-line.png ./gtk-2.0/assets/frame.png
+cp ./gtk-2.0/assets/null.png ./gtk-2.0/assets/frame-gap-start.png
+cp ./gtk-2.0/assets/null.png ./gtk-2.0/assets/frame-gap-end.png
+cp ./gtk-2.0/assets/null.png ./gtk-2.0/assets/line-v.png
+cp ./gtk-2.0/assets/null.png ./gtk-2.0/assets/line-h.png
+
+
+echo "== The theme was installed to ${DEST_PATH}"
 echo
-echo "== SUCCESS"
 exit 0
