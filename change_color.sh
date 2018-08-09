@@ -114,6 +114,7 @@ INACTIVE_FG=$(mix "$FG" "$BG" 0.75)
 INACTIVE_BG=$(mix "$BG" "$FG" 0.75)
 INACTIVE_MENU_FG=$(mix "$MENU_FG" "$MENU_BG" 0.75)
 INACTIVE_MENU_BG=$(mix "$MENU_BG" "$MENU_FG" 0.75)
+INACTIVE_TXT_MIX=$(mix "$TXT_FG" "$TXT_BG")
 INACTIVE_TXT_FG=$(mix "$TXT_FG" "$TXT_BG" 0.75)
 INACTIVE_TXT_BG=$(mix "$TXT_BG" "$BG" 0.75)
 
@@ -192,6 +193,8 @@ for FILEPATH in "${PATHLIST[@]}"; do
 			-e 's/#fcfcfc/%TXT_BG%/gI' \
 			-e 's/#dbdfe3/%INACTIVE_TXT_BG%/gI' \
 			-e 's/#eaebed/%INACTIVE_TXT_BG%/gI' \
+			-e 's/#b8babf/%INACTIVE_TXT_MIX%/gI' \
+			-e 's/#d3d4d8/%INACTIVE_TXT_FG%/gI' \
 			-e 's/#d7d8dd/%MENU_BG2%/gI' \
 			-e 's/#262932/%MENU_BG2%/gI' \
 			{} \; ;
@@ -202,7 +205,6 @@ done
 			#-e 's/%WM_BORDER_FOCUS%/'"$WM_BORDER_FOCUS"'/g' \
 			#-e 's/%WM_BORDER_UNFOCUS%/'"$WM_BORDER_UNFOCUS"'/g' \
 			#-e 's/%SPACING%/'"$SPACING"'/g' \
-			#-e 's/%INACTIVE_TXT_FG%/'"$INACTIVE_TXT_FG"'/g' \
 			#-e 's/%INACTIVE_MENU_FG%/'"$INACTIVE_MENU_FG"'/g' \
 			#-e 's/#01A299/%ACCENT_BG%/g' \
 
@@ -254,6 +256,7 @@ for FILEPATH in "${PATHLIST[@]}"; do
 		-e 's/%SPACING%/'"$SPACING"'/g' \
 		-e 's/%INACTIVE_FG%/#'"$INACTIVE_FG"'/g' \
 		-e 's/%INACTIVE_BG%/#'"$INACTIVE_BG"'/g' \
+		-e 's/%INACTIVE_TXT_MIX%/#'"$INACTIVE_TXT_MIX"'/g' \
 		-e 's/%INACTIVE_TXT_FG%/#'"$INACTIVE_TXT_FG"'/g' \
 		-e 's/%INACTIVE_TXT_BG%/#'"$INACTIVE_TXT_BG"'/g' \
 		-e 's/%INACTIVE_MENU_FG%/#'"$INACTIVE_MENU_FG"'/g' \
