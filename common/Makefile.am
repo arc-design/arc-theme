@@ -199,6 +199,8 @@ endif # ENABLE_DARK
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
+	mv $(ithemedir)/gnome-shell/light-assets/menu/menu-solid.svg $(ithemedir)/gnome-shell/light-assets/menu/menu.svg
+
 	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid.css;
 	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
 	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
@@ -229,6 +231,8 @@ if ENABLE_DARKER
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
+	mv $(ithemedarkdir)/gnome-shell/dark-assets/menu/menu-solid.svg $(ithemedarkdir)/gnome-shell/dark-assets/menu/menu.svg
+
 	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
 	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
 
@@ -237,6 +241,9 @@ if ENABLE_DARK
 		$(ithemedarkdir)/gtk-3.0/gtk.css
 endif # ENABLE_DARK
 
+else
+	rm $(ithemedir)/gnome-shell/light-assets/menu/menu-solid.svg 
+	rm $(ithemedarkdir)/gnome-shell/dark-assets/menu/menu-solid.svg
 endif #!ENABLE_TRANSPARENCY
 
 endif # ENABLE_GTK3
