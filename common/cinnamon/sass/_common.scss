@@ -206,7 +206,7 @@ StScrollBar {
 
   StLabel {
     padding-top: 4px;
-    font-size: 0.9em;
+    @include fontsize($font-size);
     box-shadow: none;
   }
 
@@ -259,7 +259,7 @@ StScrollBar {
   padding: 5px 12px;
   background-color: $osd_bg_color;
   color: $osd_fg_color;
-  font-size: 1em;
+  @include fontsize($font-size);
   font-weight: normal;
   text-align: center;
 }
@@ -417,7 +417,7 @@ StScrollBar {
 
   &-top, &-bottom, &-left, &-right {
     color: $_panel_fg_color;
-    font-size: 1em;
+    @include fontsize($font-size);
     padding: 0px;
   }
 
@@ -470,7 +470,7 @@ StScrollBar {
   color: $osd_fg_color;
   spacing: 25px;
   border-radius: 2px;
-  font-size: 9pt;
+  @include fontsize($font-size);
   padding: 5px 8px;
   -cinnamon-caption-spacing: 4px;
 
@@ -486,7 +486,7 @@ StScrollBar {
 .expo-workspaces-name-entry#selected {
   height: 15px;
   border-radius: 2px;
-  font-size: 9pt;
+  @include fontsize($font-size);
   padding: 5px 8px;
   -cinnamon-caption-spacing: 4px;
   @include entry(osd);
@@ -593,11 +593,11 @@ StScrollBar {
     padding-bottom: 10px;
   }
   &-title {
-    font-size: 2em;
+    @include fontsize($font-size * 2);
     font-weight: bold;
   }
   &-uuid {
-    font-size: 10px;
+    @include fontsize($font-size * 0.83);
     color: #888;
   }
   &-icon {
@@ -623,7 +623,7 @@ StScrollBar {
   }
   &-version {
     padding-left: 7px;
-    font-size: 10px;
+    @include fontsize($font-size * 0.83);
     color: #888;
   }
 }
@@ -693,7 +693,7 @@ StScrollBar {
 }
 
 .calendar-day-base {
-  font-size: 80%;
+  @include fontsize($font-size * 0.875);
   text-align: center;
   width: 25px;
   height: 25px;
@@ -705,7 +705,7 @@ StScrollBar {
 .calendar-day-heading {
   color: transparentize($fg_color, 0.15);
   margin-top: 1em;
-  font-size: 70%;
+  @include fontsize($font-size * 0.75);
 }
 
 .calendar-day {
@@ -744,7 +744,7 @@ StScrollBar {
 
 .calendar-week-number {
   color: transparentize($fg_color, 0.3);
-  font-size: 80%;
+  @include fontsize($font-size * 0.75);
 }
 
 //
@@ -955,7 +955,7 @@ StScrollBar {
   }
   &-completion-box {
     padding-left: 15px;
-    font-size: 10px;
+    @include fontsize($font-size * 0.83);
   }
   &-entry {
     width: 21em;
@@ -1030,7 +1030,7 @@ StScrollBar {
     &-icon:ltr { padding-right: 17px; }
     &-icon:rtl { padding-left: 17px; }
 
-    &-name { font-size: 1.1em; }
+    &-name { @include fontsize($font-size * 1.1); }
   }
 }
 
@@ -1065,7 +1065,7 @@ StScrollBar {
 .keyboard-key {
   min-height: 2em;
   min-width: 2em;
-  font-size: 14pt;
+  @include fontsize($font-size * 1.56);
   font-weight: bold;
   border-radius: 3px;
   box-shadow: none;
@@ -1234,7 +1234,7 @@ StScrollBar {
   border-radius: 5px;
   border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
 
-.osd-monitor-label { font-size: 3em; }
+.osd-monitor-label { @include fontsize($font-size * 3); }
 
   .level {
     padding: 0;
@@ -1602,7 +1602,7 @@ StScrollBar {
 
 .user-label {
     color: $fg_color;
-    font-size: 1em;
+    @include fontsize($font-size);
     font-weight: bold;
     margin: 0px;
 }
@@ -1643,7 +1643,7 @@ StScrollBar {
   &-header {
     border-image: url("common-assets/misc/desklet-header.svg") 9 9 9 9;
     color: $osd_fg_color;
-    font-size: 1em;
+    @include fontsize($font-size);
     padding: 12px;
     padding-bottom: 6px;
   }
@@ -1668,7 +1668,7 @@ StScrollBar {
   /*color: red;*/
   text-shadow: black 5px 5px 5px;
   font-weight: bold;
-  font-size: 48pt;
+  @include fontsize($font-size * 5.33);
 }
 
 //
