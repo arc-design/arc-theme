@@ -124,6 +124,15 @@ The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
 As of version `20180114` the plank theme will be installed along with the normal arc gtk theme. You can disable the install by passing `disable-plank` to the autogen command.
 Now open the Plank preferences window by executing `plank --preferences` from a terminal and select `Gtk+` as the theme.
 
+### FirefoxColor theme
+Arc color palettes for FirefoxColor testpilot project
+
+1.[Arc](https://color.firefox.com/?theme=XQAAAALsAAAAAAAAAABBqYhm849SCiazH1KEGccwS-xNVAWBveAusLC2VAlvlSjJ6UJSeqAgCYbdusEoPO6gs3O7v6uHbeft01vfMj--IcmWccV5ZVhbS5pAY21H4rQoo83UfS5UcAgLsFRnmMUloj0SFmW1HehCUMDfDxPPF1kUuA9qWMRgNi28lIsiXLMPZZcTMJdrmyjo335zNimxUcokvCK-KCKaas3H1WasbB4OVMJidW2cC2pVrAp_-pQmAA)
+
+2.[Arc-Dark](https://color.firefox.com/?theme=XQAAAALsAAAAAAAAAABBqYhm849SCiazH1KEGccwS-xNVAVYwOBtiY0uPWyYE7WQD-5SgdZ71r2F-lXEQxrGAEzv_buK8bCyok70SsUy0GeciWa6veHgAFpeOvR5esr0TgHrmzAVtbaluSV2pYGKFkF03u_F69WpX-5y0OWddI2Y12nn6XZrfhTCe6wjAGRgrpfgKzbG8oTgp9v362NBpHcLnPzzzzC_3PGq4PfhQJimy-2PSgzHFoG6322X_-hAUAA)
+
+3.[Arc-Darker](https://color.firefox.com/?theme=XQAAAALsAAAAAAAAAABBqYhm849SCiazH1KEGccwS-xNVAWBveAusLC2VAlvlSjJ6UJSeqAgCYbdusEoPO6gs3O7v6uHbeft01vfMkT1y4Tf1nzX1xYaRp0u6XBPage606lAwQt0F0O7Q6pf8R-lAjw8ljDMgG2fgvNk2K-ZUhapxWWNnKLb0LTrm1yLUWJYMgTx2cr9o4MWazvWLg9DPQcdumiH0qiUFROpAtIMassKweMS9iAEenpp0qT_Et_AAA)
+
 ### Arc-Dark for Ubuntu Software Center
 The Arc Dark theme for the Ubuntu Software Center by [mervick](https://github.com/mervick) can be installed from [here](https://github.com/mervick/arc-dark-software-center). It solves readability issues with Arc Dark and the Ubuntu Software Center.
 
