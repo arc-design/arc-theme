@@ -17,6 +17,7 @@ $selected_fg_color: %SEL_FG%;
 $selected_bg_color: %SEL_BG%;
 $selected_borders_color: darken($selected_bg_color, 20%);
 $borders_color: if($variant =='light', darken($bg_color,9%), darken($bg_color,6%));
+$horizontal_separators_color: if($variant == 'light', $borders_color, darken($fg_color,50%));
 
 $link_color: if($variant == 'light', darken($selected_bg_color,10%),
                                      lighten($selected_bg_color,20%));
