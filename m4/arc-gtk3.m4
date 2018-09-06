@@ -11,10 +11,10 @@ AC_DEFUN([ARC_GTK3], [
         )],
         [GTK3_VERSION="$withval"],
         [PKG_CHECK_EXISTS(
-             [gtk+-3.0],
-             [GTK3_VERSION=`$PKG_CONFIG --modversion gtk+-3.0`],
-             [AC_MSG_ERROR([Could not determine GTK3 version. Install GTK3 and its development files (libgtk-3-dev for Debian/Ubuntu based distros and gtk3-devel for RPM based distros).])]
-         )]
+            [gtk+-3.0],
+            [GTK3_VERSION=`$PKG_CONFIG --modversion gtk+-3.0`],
+            [AC_MSG_ERROR([Could not determine GTK3 version. Install GTK3 and its development files (libgtk-3-dev for Debian/Ubuntu based distros and gtk3-devel for RPM based distros).])]
+        )]
     )
 
     # Trim version extras

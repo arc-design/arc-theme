@@ -11,10 +11,10 @@ AC_DEFUN([ARC_GNOME_SHELL], [
         )],
         [GNOME_SHELL_VERSION="$withval"],
         [PKG_CHECK_EXISTS(
-             [libmutter-3],
-             [GNOME_SHELL_VERSION=`$PKG_CONFIG --modversion libmutter-3`],
-             [AC_MSG_ERROR([Could not determine gnome-shell version. Install mutter and its development files (libmutter-dev for Debian/Ubuntu based distros and mutter-devel for RPM based distros).])]
-         )]
+            [libmutter-3],
+            [GNOME_SHELL_VERSION=`$PKG_CONFIG --modversion libmutter-3`],
+            [AC_MSG_ERROR([Could not determine gnome-shell version. Install mutter and its development files (libmutter-dev for Debian/Ubuntu based distros and mutter-devel for RPM based distros).])]
+        )]
     )
 
     # Trim version extras
