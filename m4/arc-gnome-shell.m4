@@ -2,7 +2,6 @@
 # ---------------
 AC_DEFUN([ARC_GNOME_SHELL], [
     GNOME_SHELL_DIR="$srcdir/common/gnome-shell"
-    PKG_PROG_PKG_CONFIG()
     AC_ARG_WITH(
         [gnome-shell],
         [AS_HELP_STRING(
@@ -10,10 +9,20 @@ AC_DEFUN([ARC_GNOME_SHELL], [
             [gnome-shell minor version]
         )],
         [GNOME_SHELL_VERSION="$withval"],
-        [PKG_CHECK_EXISTS(
-            [libmutter-3],
-            [GNOME_SHELL_VERSION=`$PKG_CONFIG --modversion libmutter-3`],
-            [AC_MSG_ERROR([Could not determine gnome-shell version. Install mutter and its development files (libmutter-dev for Debian/Ubuntu based distros and mutter-devel for RPM based distros).])]
+        [AC_CHECK_PROG(
+            [GNOME_SHELL_FOUND],
+            [gnome-shell],
+            [yes],
+            [no]
+        )
+        AS_IF(
+            [test "x$GNOME_SHELL_FOUND" = xyes],
+            [GNOME_SHELL_VERSION=`gnome-shell --version | cut -d' ' -f3`],
+            [AC_MSG_ERROR([Could not find gnome-shell from \$PATH.])]
+        )
+        AS_IF(
+            [test -z "$GNOME_SHELL_VERSION"],
+            [AC_MSG_ERROR([Could not determine gnome-shell version.])]
         )]
     )
 
