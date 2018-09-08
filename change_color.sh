@@ -299,8 +299,20 @@ echo
 rm -fr "${DEST_PATH}"
 if [[ "$ARC_TRANSPARENCY" == "false" ]]; then
 	mv ./distrib/share/themes/Arc-Darker-solid "${DEST_PATH}"
+	if [[ -d ./distrib/share/themes/Arc-solid/cinnamon ]] ; then
+		mv ./distrib/share/themes/Arc-solid/cinnamon "${DEST_PATH}"/cinnamon
+	fi
+	if [[ -d ./distrib/share/themes/Arc-solid/gnome-shell ]] ; then
+		mv ./distrib/share/themes/Arc-solid/gnome-shell "${DEST_PATH}"/gnome-shell
+	fi
 else
 	mv ./distrib/share/themes/Arc-Darker "${DEST_PATH}"
+	if [[ -d ./distrib/share/themes/Arc/cinnamon ]] ; then
+		mv ./distrib/share/themes/Arc/cinnamon "${DEST_PATH}"/cinnamon
+	fi
+	if [[ -d ./distrib/share/themes/Arc/gnome-shell ]] ; then
+		mv ./distrib/share/themes/Arc/gnome-shell "${DEST_PATH}"/gnome-shell
+	fi
 fi
 
 
