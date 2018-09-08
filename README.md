@@ -77,26 +77,25 @@ Clone the git repository with
 
 Other options to pass to autogen.sh are
 
-    --disable-transparency     disable transparency in the GTK3 theme
-    --disable-light            disable Arc Light support
-    --disable-darker           disable Arc Darker support
-    --disable-dark             disable Arc Dark support
-    --disable-cinnamon         disable Cinnamon support
-    --disable-gnome-shell      disable GNOME Shell support
-    --disable-gtk2             disable GTK2 support
-    --disable-gtk3             disable GTK3 support
-    --disable-metacity         disable Metacity support
-    --disable-unity            disable Unity support
-    --disable-xfwm             disable XFWM support
-    --disable-plank            disable Plank theme support
-    --disable-openbox          disable Openbox support
+    --disable-transparency         disable transparency in the GTK3 theme
+    --disable-light                disable Arc Light support
+    --disable-darker               disable Arc Darker support
+    --disable-dark                 disable Arc Dark support
+    --disable-cinnamon             disable Cinnamon support
+    --disable-gnome-shell          disable GNOME Shell support
+    --disable-gtk2                 disable GTK2 support
+    --disable-gtk3                 disable GTK3 support
+    --disable-metacity             disable Metacity support
+    --disable-unity                disable Unity support
+    --disable-xfwm                 disable XFWM support
+    --disable-plank                disable Plank theme support
+    --disable-openbox              disable Openbox support
 
-    --with-gnome=<version>     build the theme for a specific GNOME version (3.18, 3.20, 3.22)
-                               Note 1: Normally the correct version is detected automatically and this
-                               option should not be needed.
-                               Note 2: For GNOME 3.24 and 3.26, use --with-gnome=3.22
-                               (this works for now, the build system will be improved in the future)
-    --with-custom=<script>     run the executable script file in the custom subfolder
+    --with-gnome-shell=<version>   build the gnome-shell theme for a specific version
+    --with-gtk3=<version>          build the GTK3 theme for a specific version
+                                   Note: Normally the correct version is detected automatically
+                                   and these options should not be needed.
+    --with-custom=<script>         run the executable script file in the custom subfolder
 
 After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
 
