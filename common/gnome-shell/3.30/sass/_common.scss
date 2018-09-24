@@ -727,13 +727,9 @@ StScrollBar {
   .level {
     padding: 0;
     height: 4px;
-    background-color: transparentize(black, 0.5);
-    border-radius: 2px;
-    color: $selected_bg_color;
-  }
-  .level-bar {
-    background-color: $selected_bg_color;
-    border-radius: 2px;
+    -barlevel-height: 4px;
+    -barlevel-background-color: transparentize(black, 0.5);
+    -barlevel-active-background-color: $selected_bg_color;
   }
 }
 
