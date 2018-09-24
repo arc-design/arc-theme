@@ -143,6 +143,9 @@ StScrollBar {
   -barlevel-border-color: transparentize(black, 1);             //trough border color
   -barlevel-active-background-color: $selected_bg_color;        //active trough fill
   -barlevel-active-border-color: transparentize(black, 1);      //active trough border
+  -barlevel-overdrive-color: $destructive_color;
+  -barlevel-overdrive-border-color: transparentize(black, 1); 
+  -barlevel-overdrive-separator-width: 1px;
   -barlevel-border-width: 0;
   -slider-handle-radius: 0px;
   height: 18px;
@@ -730,6 +733,8 @@ StScrollBar {
     -barlevel-height: 4px;
     -barlevel-background-color: transparentize(black, 0.5);
     -barlevel-active-background-color: $selected_bg_color;
+    -barlevel-overdrive-color: $destructive_color;
+    -barlevel-overdrive-separator-width: 1px;
   }
 }
 
