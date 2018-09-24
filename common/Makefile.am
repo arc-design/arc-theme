@@ -70,7 +70,7 @@ if ENABLE_GNOME_SHELL
 
 	sassc $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell.css;
 
-	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		light-assets \
 		gnome-shell.css \
@@ -81,7 +81,7 @@ if ENABLE_DARK
 
 	sassc $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-dark.css;
 
-	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		dark-assets \
 		$(ithemedarkdir)/gnome-shell
