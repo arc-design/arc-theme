@@ -514,7 +514,7 @@ style "default" {
       function = RESIZE_GRIP
       state = NORMAL
       detail = "statusbar"
-      overlay_file = "assets/null.png"	
+      overlay_file = "assets/null.png"  
       overlay_border = { 0,0,0,0 }
       overlay_stretch = FALSE
     }
@@ -708,7 +708,7 @@ style "menu_framed_box" {
 style "menu_item"
 {
   xthickness = 2
-  ythickness = 5
+  ythickness = 2
 
   # HACK: Gtk doesn't actually read this value
   # while rendering the menu items, but Libreoffice
@@ -1646,7 +1646,7 @@ style "notebook" {
       border = { 0,0,0,0 }
       stretch = TRUE
       gap_side = LEFT
-    }	
+    }  
 
     image {
       function = EXTENSION
@@ -1951,12 +1951,20 @@ style "progressbar" {
 style "separator_menu_item" {
 
   engine "pixmap" {
+    image {
+      function = BOX
+      file = "assets/line-h.png"
+      border = { 20, 0, 3, 0 }
+      stretch = TRUE
+      direction = RTL
+    }
 
     image {
       function = BOX
-      file = "assets/null.png"
-      border = { 0, 0, 1, 0 }
+      file = "assets-dark/line-h.png"
+      border = { 20, 0, 3, 0 }
       stretch = TRUE
+      direction = LTR
     }
   }
 }
@@ -2343,7 +2351,7 @@ widget "xfwm4-tabwin*GtkButton*"                                    style "xfwm-
 
 # Fixes ugly text shadows for insensitive text
 widget_class "*<GtkLabel>"                                          style "text"
-widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text" 
+widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text"
 widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
 widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
 widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"

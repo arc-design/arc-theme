@@ -1616,18 +1616,18 @@ menu,
   separator,
   .csd & separator {
     margin: 2px 0;
-    background-color: $_menu_bg;
+    background-color: $sp_menu;
   }
 
   // Firefox workaround
   .separator:not(label),
-  .csd & .separator:not(label) { color: $_menu_bg; }
+  .csd & .separator:not(label) { color: $sp_menu; }
   // Firefox workaround end
 
   menuitem {
-    min-height: 16px;
+    min-height: 13px;
     min-width: 40px;
-    padding: 5px;
+    padding: 2px;
     &:hover {
       color: $selected_fg_color;
       background-color: $selected_bg_color;
