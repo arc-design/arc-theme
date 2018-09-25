@@ -35,3 +35,5 @@ Because this theme is heavily based on the pixmap engine, a lot of the styling c
 * Save `assets.svg` and delete the images corresponding to the edited .svg objects from the `assets` folder (or just delete everything in the `assets` folder)
 
 * Run `./render-assets.sh` or `./render-dark-assets.sh` from a terminal
+
+* N.B. If you are making color changes then remove the contents of the folders gtk-2.0/assets/* gtk-2.0/assets-dark and the assets folder under the GTK+3 folder that the theme is compiled for
