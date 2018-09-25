@@ -239,13 +239,12 @@ endif # ENABLE_DARK
 
 endif #!ENABLE_TRANSPARENCY
 
-	pwd
-	@if [ "$(GNOME_VERSION)" != "3.18" ]; then \
-		cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -RL compile-gresources.sh $(ithemedir)/gtk-3.0/compile-gresources.sh;\
+	@if [ "$(GTK_VERSION)" != "3.18" ]; then \
+		cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -RL compile-gresources.sh $(ithemedir)/gtk-3.0/compile-gresources.sh;\
 		cd ../..;\
-		cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -RL compile-gresources.sh $(ithemedarkdir)/gtk-3.0/compile-gresources.sh;\
+		cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -RL compile-gresources.sh $(ithemedarkdir)/gtk-3.0/compile-gresources.sh;\
 		cd ../..;\
-		cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -RL compile-gresources.sh $(ithemedarkerdir)/gtk-3.0/compile-gresources.sh;\
+		cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -RL compile-gresources.sh $(ithemedarkerdir)/gtk-3.0/compile-gresources.sh;\
 		cd ../..;\
 		cd $(ithemedir)/gtk-3.0/ && ./compile-gresources.sh LIGHT;\
 		cd $(ithemedarkdir)/gtk-3.0/ && ./compile-gresources.sh DARK;\
