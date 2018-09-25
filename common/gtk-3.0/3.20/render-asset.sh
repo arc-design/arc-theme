@@ -9,15 +9,20 @@ ASSETS_DIR="assets"
 
 i="$1"
 
-echo "Rendering '$ASSETS_DIR/$i.png'"
-"$INKSCAPE" --export-id="$i" \
-            --export-id-only \
-            --export-png="$ASSETS_DIR/$i.png" "$SRC_FILE" >/dev/null \
-&& "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i.png"
+result_file="$ASSETS_DIR/$i.png"
+if [[ -f "${result_file}" ]] ; then
+	echo "${result_file} already exists."
+else
+	echo "Rendering '$ASSETS_DIR/$i.png'"
+	"$INKSCAPE" --export-id="$i" \
+	            --export-id-only \
+	            --export-png="$ASSETS_DIR/$i.png" "$SRC_FILE" >/dev/null \
+	&& "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i.png"
 
-echo "Rendering '$ASSETS_DIR/$i@2.png'"
-"$INKSCAPE" --export-id="$i" \
-            --export-id-only \
-            --export-dpi=192 \
-            --export-png="$ASSETS_DIR/$i@2.png" "$SRC_FILE" >/dev/null \
-&& "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i@2.png"
+	echo "Rendering '$ASSETS_DIR/$i@2.png'"
+	"$INKSCAPE" --export-id="$i" \
+	            --export-id-only \
+	            --export-dpi=192 \
+	            --export-png="$ASSETS_DIR/$i@2.png" "$SRC_FILE" >/dev/null \
+	&& "$OPTIPNG" -o7 --quiet "$ASSETS_DIR/$i@2.png"
+fi
