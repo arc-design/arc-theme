@@ -932,6 +932,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: $_panel_fg_color;
+    text-shadow: none;
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
@@ -943,11 +944,23 @@ StScrollBar {
       margin-right: 0px;
     }
 
+    .system-status-icon,
+    .app-menu-icon > StIcon,
+    .popup-menu-arrow {
+      icon-shadow: none;
+    }
+
     &:hover {
       color: $_panel_fg_color;
       background-color: transparentize(black, 0.83);
       border-bottom-width: 1px;
       border-color: transparent;
+
+      .system-status-icon,
+      .app-menu-icon > StIcon,
+      .popup-menu-arrow {
+        icon-shadow: none;
+      }
     }
 
     &:active, &:overview, &:focus, &:checked {
@@ -960,7 +973,7 @@ StScrollBar {
       & > .system-status-icon { icon-shadow: none; }
     }
 
-    .system-status-icon { icon-size: 16px; padding: 0 4px; }
+    .system-status-icon { color: $selected_fg_color; icon-size: 16px; padding: 0 4px; }
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
@@ -969,11 +982,16 @@ StScrollBar {
     }
   }
 
+  .panel-button > *{
+    color: $selected_fg_color;
+  }
+
     #panelActivities.panel-button { -natural-hpadding: 12px; }
 
   .panel-status-indicators-box,
   .panel-status-menu-box {
     spacing: 2px;
+    color: $selected_fg_color;
   }
 
   // spacing between power icon and (optional) percentage label
@@ -1693,6 +1711,11 @@ StScrollBar {
     width: 28px;
     height: 4px;
   }
+
+  // Add missing 1px margin for finer .show-apps-icon alignment
+  // via margin property instead to keep 1px smaller .show-apps-icon size
+  // like standard #dash styling. Better than 1px transparent border.
+  .show-apps .overview-icon { margin: 1px; }
 
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {

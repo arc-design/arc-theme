@@ -160,6 +160,41 @@ $disk_space_free: darken($bg_color, 3%);
 }
 
 //
+// Thunar
+//
+.thunar {
+  toolbar.horizontal button image {
+    -gtk-icon-transform: scale(0.75);
+  }
+
+  scrolledwindow.standard-view {
+    border-top-width: 0;
+  }
+
+  toolbar {
+    color: $header_fg;
+    background-color: opacify($header_bg, 1);
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, opacify($header_bg, 1),
+                                             darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+
+    @extend %header_widgets;
+  }
+
+  scrolledwindow.sidebar treeview.view {
+    background: $dark_sidebar_bg;
+    color: $dark_sidebar_fg;
+    
+    &:selected, &:active {
+      background: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+  }
+}
+
+//
 // Caja
 //
 .caja-desktop { @extend .nautilus-desktop.nautilus-canvas-item; }
@@ -639,11 +674,15 @@ panel-toplevel.background {
 // Xfce Panel
 .xfce4-panel.panel {
   background-color: $panel_bg;
+  font-weight: normal;
 
   text-shadow: none;
   -gtk-icon-shadow: none;
 
   button.flat { @extend %panelbutton; }
+}
+.xfce4-panel.panel menu {
+  font-weight: normal;
 }
 
 #tasklist-button {
@@ -825,6 +864,38 @@ panel-toplevel.background {
 .panel .menu .spinner,
 .menu .spinner { opacity: 1 } // Fixes sound indicator buttons
 
+/********************
+ * Mate-Screensaver *
+ ********************/
+
+.lock-dialog {
+    background-color: $panel_bg;
+    color: white;
+
+    & entry, entry:focus textview text {
+        background-color: transparent;
+        color: white;
+        border-style: none;
+        border-bottom: 1px solid $borders_color;
+        border-radius: 1px;
+    }
+
+    frame > border {
+            border-style: none;
+            border-width: 0px;
+        }
+
+    & notebook {
+        color: white;
+        background-color: gtkopacity($panel_bg, 0.8);
+    }
+
+    & button {
+        @extend %selected-button;
+    }
+}
+
+
 //
 // Wingpanel Popover
 //
@@ -867,3 +938,17 @@ panel-toplevel.background {
 //SwitchboardCategoryView .view:selected:focus {
 //  color: $fg_color;
 //}
+
+//
+// Chromium
+//
+window.background.chromium {
+  // See details in nav_button_provider_gtk3.cc
+  headerbar.titlebar button.titlebutton {
+    min-width: 16px;
+    min-height: 16px;
+    // move button spacing from padding to margin
+    margin: 0px ((24px - 16px) / 2);
+    padding: 0px;
+  }
+}

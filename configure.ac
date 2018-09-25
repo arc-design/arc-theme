@@ -1,9 +1,9 @@
 AC_INIT(
     [arc-theme],
-    [20161119],
-    [https://github.com/horst3180/Arc-theme/issues],
+    [20180114],
+    [https://github.com/NicoHood/arc-theme/issues],
     [arc-theme],
-    [https://github.com/horst3180/Arc-theme],
+    [https://github.com/NicoHood/arc-theme],
     []
 )
 
@@ -23,8 +23,11 @@ ARC_ENABLE([METACITY],      [metacity],      [Metacity],      [disable])
 ARC_ENABLE([UNITY],         [unity],         [Unity],         [disable])
 ARC_ENABLE([XFWM],          [xfwm],          [XFWM],          [disable])
 ARC_ENABLE([TRANSPARENCY],  [transparency],  [transparency],  [disable])
+ARC_ENABLE([PLANK],         [plank],         [Plank theme],   [disable])
+ARC_ENABLE([OPENBOX],       [openbox],       [Openbox],       [disable])
 
-AS_IF([test "x$ENABLE_GNOME_SHELL$ENABLE_GTK3" != xnono], [ARC_GNOME])
+AS_IF([test "x$ENABLE_GTK3" != xno], [ARC_GTK3])
+AS_IF([test "x$ENABLE_GNOME_SHELL" != xno], [ARC_GNOME_SHELL])
 
 AC_CONFIG_FILES([
     common/Makefile
