@@ -117,7 +117,7 @@ from the cloned git repository, or
 A port of Arc for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
 
 ### Arc icon theme
-The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
+The Arc icon theme is available at https://github.com/NicoHood/arc-icon-theme
 
 ### Plank theme
 As of version `20180114` the plank theme will be installed along with the normal arc gtk theme. You can disable the install by passing `disable-plank` to the autogen command.
@@ -150,7 +150,7 @@ Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
 
 ## Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
-<sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+<sub>Screenshot Details: Icons: [Arc](https://github.com/NicoHood/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
 
-[sk-overlay]: https://c.darenet.org/scriptkitties/overlay
+[sk-overlay]: https://github.com/fkmclane/overlay/tree/master/x11-themes/arc-theme
 [NicoHood-fossfreedom]: https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily
