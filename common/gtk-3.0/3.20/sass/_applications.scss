@@ -183,6 +183,10 @@ $disk_space_free: darken($bg_color, 3%);
     @extend %header_widgets;
   }
 
+  scrolledwindow.sidebar {
+    border-top-color: darken($dark_sidebar_bg, 6%);
+  }
+
   scrolledwindow.sidebar treeview.view {
     background: $dark_sidebar_bg;
     color: $dark_sidebar_fg;
