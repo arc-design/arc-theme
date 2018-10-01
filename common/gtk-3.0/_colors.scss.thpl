@@ -1,0 +1,110 @@
+// When color definition differs for dark and light variant,
+// it gets @if ed depending on $variant
+
+@function gtkopacity($c, $a) {
+  @return scale-color($c, $alpha: percentage(-1 + $a));
+}
+
+$base_color: if($variant =='light', %TXT_BG%, %MENU_BG2%);
+$base_bg_color: %BG%;
+// not implemented for GTK+2 theme:
+//$text_color: if($variant == 'light', %TXT_FG%, %MENU_FG%);
+$text_color: if($variant == 'light', %FG%, %MENU_FG%);
+$bg_color: if($variant =='light', $base_bg_color, %MENU_BG%);
+$fg_color: if($variant =='light', %FG%, %MENU_FG%);
+
+$selected_fg_color: %SEL_FG%;
+$selected_bg_color: %SEL_BG%;
+$selected_borders_color: darken($selected_bg_color, 20%);
+$borders_color: if($variant =='light', darken($bg_color,9%), darken($bg_color,6%));
+$horizontal_separators_color: if($variant == 'light', $borders_color, darken($fg_color,50%));
+
+$link_color: if($variant == 'light', darken($selected_bg_color,10%),
+                                     lighten($selected_bg_color,20%));
+$link_visited_color: if($variant == 'light', darken($selected_bg_color,20%),
+                                     lighten($selected_bg_color,10%));
+
+$selection_mode_bg: if($transparency == 'true', transparentize($selected_bg_color, 0.05), $selected_bg_color);
+$selection_mode_fg: $selected_fg_color;
+$warning_color: %TERMINAL_COLOR11%;
+$error_color: %TERMINAL_COLOR9%;
+$warning_fg_color: white;
+$error_fg_color: white;
+$success_color: %TERMINAL_COLOR10%;
+$destructive_color: %TERMINAL_COLOR1%;
+$suggested_color: %TERMINAL_COLOR12%;
+$destructive_fg_color: white;
+$suggested_fg_color: white;
+
+$drop_target_color: %TERMINAL_COLOR3%;
+
+//insensitive state derived colors
+$insensitive_fg_color: if($variant == 'light', transparentize($fg_color, 0.45), transparentize($fg_color, 0.55));
+$insensitive_bg_color: if($variant == 'light', mix($bg_color, $base_color, 40%), lighten($bg_color, 2%));
+
+$header_bg: red;
+@if $transparency=='true' and $variant=='light' { $header_bg: transparentize(%MENU_BG%, 0.05); }
+@if $transparency=='false' and $variant=='light' { $header_bg: %MENU_BG%; }
+@if $transparency=='true' and ($variant=='dark' or $darker=='true') { $header_bg: transparentize(%MENU_BG%, 0.03); }
+@if $transparency=='false' and ($variant=='dark' or $darker=='true') { $header_bg: %MENU_BG%; }
+
+$header_bg_backdrop: if($darker == 'true' or $variant == 'dark', lighten($header_bg, 1.5%), lighten($header_bg, 3%));
+
+$header_border: if($variant == 'light' and $darker=='false', darken($header_bg, 7%), darken($header_bg, 4%));
+
+$header_fg: if($variant == 'light', saturate(transparentize($fg_color, 0.2), 10%), saturate(transparentize($fg_color, 0.2), 10%));
+$header_fg: if($darker == 'true', saturate(transparentize(%MENU_FG%, 0.2), 10%), $header_fg);
+
+$dark_sidebar_bg: if($transparency == 'true', transparentize(%MENU_BG2%, 0.05), %MENU_BG2%);
+$dark_sidebar_fg: %MENU_FG%;
+$dark_sidebar_border: if($variant == 'light', $dark_sidebar_bg, darken($dark_sidebar_bg, 5%));
+
+$osd_fg_color: $dark_sidebar_fg;
+$osd_bg_color: $dark_sidebar_bg;
+
+$osd_button_bg: transparentize(lighten($osd_bg_color, 22%), 0.6);
+$osd_button_border: transparentize(darken($osd_bg_color, 12%), 0.6);
+
+$osd_entry_bg: transparentize(lighten($osd_bg_color, 22%), 0.6);
+$osd_entry_border: transparentize(darken($osd_bg_color, 12%), 0.6);
+
+$osd_insensitive_bg_color: darken($osd_bg_color, 3%);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 30%);
+$osd_borders_color: transparentize(black, 0.3);
+
+$panel_bg: darken($dark_sidebar_bg, 4.7%);
+$panel_fg: $dark_sidebar_fg;
+
+$entry_bg: if($variant=='light', $base_color, lighten($base_color, 0%));
+$entry_border: if($variant == 'light', %ARC_WIDGET_BORDER_COLOR%, darken($borders_color, 0%));
+
+$header_entry_bg: if($darker == 'true' or $variant == 'dark', transparentize(lighten($header_bg, 22%), 0.6), transparentize($base_color, 0.1));
+$header_entry_border: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 12%), 0.6), transparentize($header_fg, 0.7));
+
+$button_bg: if($variant=='light', %BTN_BG%, %HDR_BTN_BG%);
+$button_border: $entry_border;
+
+$header_button_bg: %HDR_BTN_BG%;
+$header_button_border: if($darker == 'true' or $variant == 'dark', transparentize(darken($header_bg, 12%), 0.6), transparentize($header_fg, 0.7));
+
+//WM Buttons
+
+// Close
+$wm_button_close_bg: if($variant == 'light' and $darker == 'false', %TERMINAL_COLOR9%, %TERMINAL_COLOR9%);
+$wm_button_close_hover_bg: if($variant == 'light' and $darker == 'false', %TERMINAL_COLOR9_LIGHTER%, %TERMINAL_COLOR9_LIGHTER%);
+$wm_button_close_active_bg: if($variant == 'light' and $darker == 'false', %TERMINAL_COLOR9_DARKER%, %TERMINAL_COLOR9_DARKER%);
+
+$wm_icon_close_bg: if($variant == 'light' and $darker == 'false',%MENU_FG% , %MENU_BG%);
+
+// Minimize, Maximize
+$wm_button_hover_bg: if($variant == 'light' and $darker == 'false', %MENU_FG%, %MENU_FG%);
+$wm_button_active_bg: $selected_bg_color;
+
+$wm_button_hover_border: if($variant == 'light' and $darker == 'false', %MENU_FG%, %MENU_FG%);
+
+$wm_icon_bg: if($variant == 'light' and $darker == 'false', %MENU_FG%, %MENU_FG%);
+$wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', %INACTIVE_MENU_FG%, %INACTIVE_MENU_FG%);
+$wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', %INACTIVE_MENU_FG%, %INACTIVE_MENU_FG%);
+$wm_icon_active_bg: $selected_fg_color;
+
+/* vim: set ft=scss: */

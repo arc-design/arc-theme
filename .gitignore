@@ -21,3 +21,4 @@ common/gtk-3.0/**/assets/*.png
 common/gtk-2.0/assets*/*.png
 common/gtk-2.0/menubar-toolbar/*.png
 common/xfwm4/assets*/*.png
+common/compile-gresources.sh
