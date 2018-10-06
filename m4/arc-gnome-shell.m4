@@ -16,13 +16,15 @@ AC_DEFUN([ARC_GNOME_SHELL], [
             [no]
         )
         AS_IF(
+            # Couldn't find gnome-shell from $PATH
             [test "x$GNOME_SHELL_FOUND" = xyes],
             [GNOME_SHELL_VERSION=`gnome-shell --version | cut -d' ' -f3`],
-            [AC_MSG_ERROR([Could not find gnome-shell from \$PATH.])]
+            [AC_MSG_ERROR([Could not determine GNOME Shell version. Install gnome-shell, or specify the version using '--with-gnome-shell=<version>' option.])]
         )
         AS_IF(
+            # Found gnome-shell, but couldn't determine the version
             [test -z "$GNOME_SHELL_VERSION"],
-            [AC_MSG_ERROR([Could not determine gnome-shell version.])]
+            [AC_MSG_ERROR([Could not determine GNOME Shell version. Try specifying the version using '--with-gnome-shell=<version>' option.])]
         )]
     )
 
