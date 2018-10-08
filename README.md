@@ -45,15 +45,19 @@ To build the theme the following packages are required
 * `automake`
 * `sassc`
 * `pkg-config` or `pkgconfig` for Fedora
-* `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` to clone the source directory
 * `optipng`
-*  `inkscape`
+* `inkscape`
+
+The following packages are optionally required
+* `parallel` for speeding up build by rendering assets in parallel
+* `gnome-shell`for auto-detecting the GNOME Shell version
+* `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros, for auto-detecting the GTK3 version
 
 **Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
 
 For the theme to function properly, install the following
-* GNOME Shell 3.18 - 3.26, GTK 3.18 - 3.22
+* GNOME Shell 3.18 - 3.30, GTK 3.18 - 3.24
 * The `gnome-themes-extra` package
 * The murrine engine. This has different names depending on the distro.
   * `gtk-engine-murrine` (Arch Linux)
