@@ -1546,8 +1546,8 @@ StScrollBar {
 
 .window-caption, .window-caption:hover {
   spacing: 25px;
-  color: $osd_fg_color;
-  background-color: transparentize(black, 0.3);
+  color: $selected_fg_color;
+  background-color: $selected_bg_color;
   border-radius: 2px;
   padding: 4px 12px;
   -shell-caption-spacing: 12px;
