@@ -623,9 +623,15 @@ StScrollBar {
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
-    background: none;
-    box-shadow: none;
-    border-image: url("#{$asset_path}/menu/submenu.svg") 9 9 9 9;
+    background: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
+    box-shadow: inset 0 -1px if($variant=='light', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15));
+    margin: 0 4px;
+
+    .popup-menu-item.selected {
+      background-color: $selected_bg_color;
+      border-image: none;
+      margin: 0;
+    }
   }
 
   .popup-menu-content { padding: 1em 0em 1em 0em; }
