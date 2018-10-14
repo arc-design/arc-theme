@@ -67,12 +67,12 @@ terminal-window,
 }
 
 // Pathbar for nautilus >=3.30
-.nautilus-window .path-bar-box {
+.nautilus-window .path-bar-box.width-maximized {
+  border: 1px $header_button_border solid;
   border-radius: 3px;
 
-  &.frame {
+  &:not(:backdrop) {
     background-color: $header_button_bg;
-    border-color: $header_button_border;
   }
 }
 .nautilus-window .path-bar > box > button {
