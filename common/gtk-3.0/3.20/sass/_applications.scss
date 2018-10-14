@@ -70,6 +70,8 @@ terminal-window,
 .nautilus-window .path-bar-box.width-maximized {
   border: 1px $header_button_border solid;
   border-radius: 3px;
+  transition: border $backdrop_transition;
+  transition: background-color $backdrop_transition;
 
   &:not(:backdrop) {
     background-color: $header_button_bg;
