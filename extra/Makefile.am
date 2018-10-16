@@ -29,4 +29,5 @@ endif # ENABLE_PLANK
 uninstall-local:
 
 
-EXTRA_DIST = $(srcdir)/Arc-Plank
+EXTRA_DIST = \
+	Arc-Plank

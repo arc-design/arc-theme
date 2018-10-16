@@ -358,13 +358,14 @@ if ENABLE_DARK
 endif # ENABLE_DARK
 
 
-EXTRA_DIST = $(srcdir)/cinnamon \
-	     $(srcdir)/gnome-shell \
-	     $(srcdir)/gtk-2.0 \
-	     $(srcdir)/gtk-3.0 \
-	     $(srcdir)/metacity-1 \
-	     $(srcdir)/unity \
-	     $(srcdir)/xfwm4 \
-	     $(srcdir)/index.theme \
-	     $(srcdir)/index.theme-darker \
-	     $(srcdir)/index.theme-dark
+EXTRA_DIST = \
+	cinnamon \
+	gnome-shell \
+	gtk-2.0 \
+	gtk-3.0 \
+	metacity-1 \
+	unity \
+	xfwm4 \
+	index.theme \
+	index.theme-darker \
+	index.theme-dark
