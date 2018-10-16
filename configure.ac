@@ -53,6 +53,9 @@ AS_IF([test "x$ENABLE_GTK3" != xno -o "x$ENABLE_CINNAMON" != xno -o "x$ENABLE_GN
 
 AC_CONFIG_FILES([
     common/gtk-2.0/Makefile
+    common/gtk-3.0/Makefile
+    common/gtk-3.0/3.18/Makefile
+    common/gtk-3.0/3.20/Makefile
     common/xfwm4/Makefile
     common/Makefile
     extra/Makefile

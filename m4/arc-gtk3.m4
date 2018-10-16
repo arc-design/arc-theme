@@ -32,5 +32,8 @@ AC_DEFUN([ARC_GTK3], [
         [AC_MSG_ERROR([GTK3 version too new: $GTK3_VERSION])]
     )
     AC_SUBST([GTK3_VERSION])
+    AC_SUBST([gtk3themedir], [${themedir}/gtk-3.0])
+    AC_SUBST([gtk3themedarkerdir], [${themedarkerdir}/gtk-3.0])
+    AC_SUBST([gtk3themedarkdir], [${themedarkdir}/gtk-3.0])
     AC_MSG_RESULT([Building for GTK3 $GTK3_VERSION])
 ])

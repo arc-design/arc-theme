@@ -50,7 +50,6 @@ To build the theme the following packages are required
 * `inkscape`
 
 The following packages are optionally required
-* `parallel` for speeding up build by rendering assets in parallel
 * `gnome-shell`for auto-detecting the GNOME Shell version
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros, for auto-detecting the GTK3 version
 
