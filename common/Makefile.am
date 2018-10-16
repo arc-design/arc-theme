@@ -1,8 +1,12 @@
+if ENABLE_GTK2
+GTK2_SUBDIR = gtk-2.0
+endif
+
 if ENABLE_XFWM
 XFWM_SUBDIR = xfwm4
 endif
 
-SUBDIRS = $(XFWM_SUBDIR)
+SUBDIRS = $(GTK2_SUBDIR) $(XFWM_SUBDIR)
 
 if ENABLE_LIGHT
 theme_DATA = $(srcdir)/index/light/index.theme
@@ -84,54 +88,6 @@ if ENABLE_DARK
 endif # ENABLE_DARK
 
 endif # ENABLE_GNOME_SHELL
-
-
-if ENABLE_GTK2
-	cd $(srcdir)/gtk-2.0 && $(MKDIR_P) assets assets-dark && ./render-assets.sh
-
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets \
-		menubar-toolbar \
-		*.rc \
-		gtkrc \
-		$(ithemedir)/gtk-2.0
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets \
-		menubar-toolbar \
-		*.rc \
-		$(ithemedarkerdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		gtkrc-darker \
-		$(ithemedarkerdir)/gtk-2.0/gtkrc
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		menubar-toolbar \
-		*.rc \
-		$(ithemedarkdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets-dark \
-		$(ithemedarkdir)/gtk-2.0/assets
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		gtkrc-dark \
-		$(ithemedarkdir)/gtk-2.0/gtkrc
-endif # ENABLE_DARK
-
-endif # ENABLE_GTK2
 
 
 if ENABLE_GTK3
@@ -333,7 +289,6 @@ endif # ENABLE_DARK
 EXTRA_DIST = \
 	cinnamon \
 	gnome-shell \
-	gtk-2.0 \
 	gtk-3.0 \
 	index \
 	metacity-1 \
