@@ -24,14 +24,12 @@ AC_DEFUN([ARC_GTK3], [
     GTK3_VERSMJR=`echo $GTK3_VERSION | cut -d. -f1`
     GTK3_VERSMNR=`echo $GTK3_VERSION | cut -d. -f2`
 
-    # Evenize the minor version for stable versions
     AS_IF(
-        [test `expr $GTK3_VERSMNR % 2` != "0"],
-        [GTK3_VERSION="$GTK3_VERSMJR.`expr $GTK3_VERSMNR + 1`"]
-    )
-    AS_IF(
-        [! test -e "$GTK3DIR/$GTK3_VERSION"],
-        [AC_MSG_ERROR([Invalid GTK3 version: $GTK3_VERSION])]
+        [test "x$GTK3_VERSMJR" != x3], [AC_MSG_ERROR([Invalid GTK3 version: $GTK3_VERSION])],
+        [test "0$GTK3_VERSMNR" -lt 17], [AC_MSG_ERROR([GTK3 version too old: $GTK3_VERSION])],
+        [test "0$GTK3_VERSMNR" -lt 19], [GTK3_VERSION=3.18],
+        [test "0$GTK3_VERSMNR" -lt 25], [GTK3_VERSION=3.20],
+        [AC_MSG_ERROR([GTK3 version too new: $GTK3_VERSION])]
     )
     AC_SUBST([GTK3_VERSION])
     AC_MSG_RESULT([Building for GTK3 $GTK3_VERSION])
