@@ -7,19 +7,16 @@ install-exec-hook:
 install-data-local:
 
 if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)
-	cp $(srcdir)/index.theme $(ithemedir)
-endif # ENABLE_LIGHT
+theme_DATA = $(srcdir)/index/light/index.theme
+endif
 
 if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)
-	cp $(srcdir)/index.theme-darker $(ithemedarkerdir)/index.theme
-endif # ENABLE_LIGHT
+themedarker_DATA = $(srcdir)/index/darker/index.theme
+endif
 
 if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)
-	cp $(srcdir)/index.theme-dark $(ithemedarkdir)/index.theme
-endif # ENABLE_DARK
+themedark_DATA = $(srcdir)/index/dark/index.theme
+endif
 
 
 if ENABLE_CINNAMON
@@ -363,9 +360,7 @@ EXTRA_DIST = \
 	gnome-shell \
 	gtk-2.0 \
 	gtk-3.0 \
+	index \
 	metacity-1 \
 	unity \
-	xfwm4 \
-	index.theme \
-	index.theme-darker \
-	index.theme-dark
+	xfwm4
