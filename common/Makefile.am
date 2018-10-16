@@ -1,10 +1,8 @@
-ithemedir       = $(DESTDIR)$(themedir)
-ithemedarkerdir = $(DESTDIR)$(themedarkerdir)
-ithemedarkdir   = $(DESTDIR)$(themedarkdir)
+if ENABLE_XFWM
+XFWM_SUBDIR = xfwm4
+endif
 
-install-exec-hook:
-
-install-data-local:
+SUBDIRS = $(XFWM_SUBDIR)
 
 if ENABLE_LIGHT
 theme_DATA = $(srcdir)/index/light/index.theme
@@ -18,6 +16,13 @@ if ENABLE_DARK
 themedark_DATA = $(srcdir)/index/dark/index.theme
 endif
 
+ithemedir       = $(DESTDIR)$(themedir)
+ithemedarkerdir = $(DESTDIR)$(themedarkerdir)
+ithemedarkdir   = $(DESTDIR)$(themedarkdir)
+
+install-exec-hook:
+
+install-data-local:
 
 if ENABLE_CINNAMON
 	$(MKDIR_P) $(ithemedir)/cinnamon
@@ -313,36 +318,6 @@ endif # ENABLE_DARK
 endif # ENABLE_UNITY
 
 
-if ENABLE_XFWM
-	cd $(srcdir)/xfwm4 && $(MKDIR_P) assets assets-dark && ./render-assets.sh
-
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets/*.png $(ithemedir)/xfwm4 && \
-		cp themerc $(ithemedir)/xfwm4/themerc
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets-dark/*.png $(ithemedarkerdir)/xfwm4 && \
-		cp themerc-dark $(ithemedarkerdir)/xfwm4/themerc
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets-dark/*.png $(ithemedarkdir)/xfwm4 && \
-		cp themerc-dark $(ithemedarkdir)/xfwm4/themerc
-endif # ENABLE_DARK
-
-endif # ENABLE_XFWM
-
-
 uninstall-local:
 	rm -rf $(ithemedir)
 
@@ -362,5 +337,4 @@ EXTRA_DIST = \
 	gtk-3.0 \
 	index \
 	metacity-1 \
-	unity \
-	xfwm4
+	unity
