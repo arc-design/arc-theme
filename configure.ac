@@ -26,6 +26,16 @@ ARC_ENABLE([TRANSPARENCY],  [transparency],  [transparency],  [disable])
 ARC_ENABLE([PLANK],         [plank],         [Plank theme],   [disable])
 ARC_ENABLE([OPENBOX],       [openbox],       [Openbox],       [disable])
 
+AS_IF([test "x$ENABLE_TRANSPARENCY" != xno], [
+    AC_SUBST([themedir], [${datadir}/themes/Arc])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/Arc-Darker])
+    AC_SUBST([themedarkdir], [${datadir}/themes/Arc-Dark])
+], [
+    AC_SUBST([themedir], [${datadir}/themes/Arc-solid])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/Arc-Darker-solid])
+    AC_SUBST([themedarkdir], [${datadir}/themes/Arc-Dark-solid])
+])
+
 AS_IF([test "x$ENABLE_GTK3" != xno], [ARC_GTK3])
 AS_IF([test "x$ENABLE_GNOME_SHELL" != xno], [ARC_GNOME_SHELL])
 
