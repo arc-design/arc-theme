@@ -37,7 +37,7 @@ if ENABLE_CINNAMON
 
 	cd $(srcdir)/cinnamon && cp thumbnail.png $(ithemedir)/cinnamon
 
-	sassc $(srcdir)/cinnamon/sass/cinnamon.scss $(srcdir)/cinnamon/cinnamon.css;
+	$(SASSC) $(srcdir)/cinnamon/sass/cinnamon.scss $(srcdir)/cinnamon/cinnamon.css;
 
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
@@ -50,7 +50,7 @@ if ENABLE_DARK
 
 	cd $(srcdir)/cinnamon && cp thumbnail-dark.png $(ithemedarkdir)/cinnamon/thumbnail.png
 
-	sassc $(srcdir)/cinnamon/sass/cinnamon-dark.scss $(srcdir)/cinnamon/cinnamon-dark.css;
+	$(SASSC) $(srcdir)/cinnamon/sass/cinnamon-dark.scss $(srcdir)/cinnamon/cinnamon-dark.css;
 
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
@@ -68,7 +68,7 @@ endif # ENABLE_GNOME_SHELL
 if ENABLE_GNOME_SHELL
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
-	sassc $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell.css;
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell.css;
 
 	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
@@ -79,7 +79,7 @@ if ENABLE_GNOME_SHELL
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gnome-shell
 
-	sassc $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-dark.css;
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-dark.css;
 
 	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
@@ -150,8 +150,8 @@ if ENABLE_LIGHT
 
 	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedir)/gtk-3.0
 
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		assets \
@@ -165,9 +165,9 @@ if ENABLE_DARKER
 
 	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedarkerdir)/gtk-3.0
 
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-darker.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-darker.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-darker.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-darker.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		assets \
@@ -188,8 +188,8 @@ if ENABLE_DARK
 		assets \
 		$(ithemedarkdir)/gtk-3.0
 
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		gtk-dark.css \
@@ -199,10 +199,10 @@ endif # ENABLE_DARK
 if !ENABLE_TRANSPARENCY
 
 if ENABLE_LIGHT
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		gtk-solid.css \
@@ -214,10 +214,10 @@ if ENABLE_LIGHT
 endif # ENABLE_LIGHT
 
 if ENABLE_DARKER
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-darker.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-darker.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-darker.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-darker.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-dark.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		gtk-solid-darker.css \
@@ -229,8 +229,8 @@ if ENABLE_DARKER
 endif # ENABLE_DARKER
 
 if ENABLE_DARK
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk-solid-dark.css;
+	$(SASSC) $(srcdir)/gtk-3.0/$(GTK3_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GTK3_VERSION)/gtk.css;
 
 	cd $(srcdir)/gtk-3.0/$(GTK3_VERSION) && cp -R \
 		gtk-solid-dark.css \
