@@ -67,9 +67,27 @@ terminal-window,
 }
 
 // Pathbar for nautilus >=3.30
+.nautilus-window .path-bar-box.width-maximized {
+  border: 1px $header_button_border solid;
+  border-radius: 3px;
+  transition: border $backdrop_transition;
+  transition: background-color $backdrop_transition;
+
+  &:not(:backdrop) {
+    background-color: $header_button_bg;
+  }
+}
 .nautilus-window .path-bar > box > button {
-  margin: 0 4px;
-  padding: 2px;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: $header_fg;
+  margin: 0 2px;
+  padding: 1px;
+
+  &:not(:backdrop):hover {
+    box-shadow: 0 -3px $selected_bg_color inset;
+  }
 }
 
 button.nautilus-circular-button.image-button {
