@@ -10,6 +10,7 @@ AC_INIT(
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([no-dist-gzip dist-xz foreign])
+AC_PROG_LN_S
 AC_PROG_MKDIR_P
 
 ARC_ENABLE([LIGHT],         [light],         [Arc Light],     [disable])
