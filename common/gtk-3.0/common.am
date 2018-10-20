@@ -1,0 +1,39 @@
+VPATH =
+
+targets := $(shell cat $(srcdir)/assets.txt)
+normal := $(patsubst %,assets/%.png,$(targets))
+hidpi := $(patsubst %,assets/%@2.png,$(targets))
+
+normal: $(normal)
+hidpi: $(hidpi)
+
+assets light dark darker:
+	$(MKDIR_P) "$@"/
+
+clean:
+	rm -rf assets/ light/ dark/ darker/
+
+$(normal): $(srcdir)/assets.svg | assets
+	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(basename $(notdir $@))" --export-dpi=96 "$<" >/dev/null
+	$(OPTIPNG) -o7 --quiet "$@"
+
+$(hidpi): $(srcdir)/assets.svg | assets
+	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(patsubst %@2,%,$(basename $(notdir $@)))" --export-dpi=192 "$<" >/dev/null
+	$(OPTIPNG) -o7 --quiet "$@"
+
+.PHONY: normal hidpi clean
+
+if ENABLE_TRANSPARENCY
+%.css: $(srcdir)/sass/%.scss
+	$(SASSC) "$<" "$@"
+else
+gtk.css: $(srcdir)/sass/gtk-solid.scss
+	$(SASSC) "$<" "$@"
+gtk-%.css: $(srcdir)/sass/gtk-solid-%.scss
+	$(SASSC) "$<" "$@"
+endif
+
+EXTRA_DIST = \
+	assets.txt \
+	assets.svg \
+	sass

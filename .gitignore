@@ -14,11 +14,12 @@ common/cinnamon/cinnamon-dark.css
 common/cinnamon/cinnamon.css
 common/gnome-shell/**/gnome-shell-dark.css
 common/gnome-shell/**/gnome-shell.css
-common/gtk-3.0/**/gtk-dark.css
-common/gtk-3.0/**/gtk-darker.css
-common/gtk-3.0/**/gtk.css
+common/gtk-3.0/**/*.css
+common/gtk-3.0/**/light/
+common/gtk-3.0/**/darker/
+common/gtk-3.0/**/dark/
 common/gtk-3.0/**/assets/*.png
-common/gtk-2.0/assets*/*.png
+common/gtk-2.0/*/assets/*.png
 common/gtk-2.0/menubar-toolbar/*.png
-common/xfwm4/assets*/*.png
+common/xfwm4/*/assets/*.png
 common/compile-gresources.sh
