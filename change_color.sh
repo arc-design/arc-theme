@@ -223,8 +223,8 @@ for template_file in $(find ./common -name '*.thpl') ; do
 done
 
 ASSETS_FILES=(
-	'./common/gtk-2.0/assets.svg'
-	'./common/gtk-2.0/assets-dark.svg'
+	'./common/gtk-2.0/light/assets.svg'
+	'./common/gtk-2.0/dark/assets.svg'
 	'./common/gtk-3.0/3.18/assets.svg'
 	'./common/gtk-3.0/3.20/assets.svg'
 )
