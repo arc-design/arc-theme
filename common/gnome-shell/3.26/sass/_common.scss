@@ -138,15 +138,12 @@ StScrollBar {
 // Slider
 //
 .slider {
-  -barlevel-height: 4px;
-  -barlevel-background-color: $button_border;                   //background of the trough
-  -barlevel-border-color: transparentize(black, 1);             //trough border color
-  -barlevel-active-background-color: $selected_bg_color;        //active trough fill
-  -barlevel-active-border-color: transparentize(black, 1);      //active trough border
-  -barlevel-overdrive-color: $destructive_color;
-  -barlevel-overdrive-border-color: transparentize(black, 1); 
-  -barlevel-overdrive-separator-width: 1px;
-  -barlevel-border-width: 0;
+  -slider-height: 4px;
+  -slider-background-color: $button_border;                   //background of the trough
+  -slider-border-color: transparentize(black, 1);             //trough border color
+  -slider-active-background-color: $selected_bg_color;        //active trough fill
+  -slider-active-border-color: transparentize(black, 1);      //active trough border
+  -slider-border-width: 0;
   -slider-handle-radius: 0px;
   height: 18px;
   border: 0 solid transparent;
@@ -155,8 +152,8 @@ StScrollBar {
   color: transparent;
 
   .popup-menu-item.selected & {
-    -barlevel-background-color: transparentize(black, 0.8);
-    -barlevel-active-background-color: $selected_fg_color;
+    -slider-background-color: transparentize(black, 0.8);
+    -slider-active-background-color: $selected_fg_color;
   }
 }
 
@@ -623,15 +620,9 @@ StScrollBar {
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
-    background: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
-    box-shadow: inset 0 -1px if($variant=='light', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15));
-    margin: 0 4px;
-
-    .popup-menu-item.selected {
-      background-color: $selected_bg_color;
-      border-image: none;
-      margin: 0;
-    }
+    background: none;
+    box-shadow: none;
+    border-image: url("#{$asset_path}/menu/submenu.svg") 9 9 9 9;
   }
 
   .popup-menu-content { padding: 1em 0em 1em 0em; }
@@ -736,11 +727,13 @@ StScrollBar {
   .level {
     padding: 0;
     height: 4px;
-    -barlevel-height: 4px;
-    -barlevel-background-color: transparentize(black, 0.5);
-    -barlevel-active-background-color: $selected_bg_color;
-    -barlevel-overdrive-color: $destructive_color;
-    -barlevel-overdrive-separator-width: 1px;
+    background-color: transparentize(black, 0.5);
+    border-radius: 2px;
+    color: $selected_bg_color;
+  }
+  .level-bar {
+    background-color: $selected_bg_color;
+    border-radius: 2px;
   }
 }
 
