@@ -19,17 +19,18 @@ is_dark() {
 
 
 print_usage() {
-	echo "usage: $0 [-o OUTPUT_THEME_NAME] [-a AUTOGEN_OPTS] PATH_TO_PRESET"
+	echo "usage: $0 [-o OUTPUT_THEME_NAME] [-a AUTOGEN_OPTS] [-j JOBS] PATH_TO_PRESET"
 	echo
 	echo "examples:"
 	# shellcheck disable=SC2028 # This is meant to be usage text.
 	echo "	$0 --output my-theme-name <(echo -e \"BG=d8d8d8\\nFG=101010\\nMENU_BG=3c3c3c\\nMENU_FG=e6e6e6\\nSEL_BG=ad7fa8\\nSEL_FG=ffffff\\nTXT_BG=ffffff\\nTXT_FG=1a1a1a\\nBTN_BG=f5f5f5\\nBTN_FG=111111\\n\")"
 	echo "	$0 ../colors/retro/twg"
-	echo "	$0 --autogen-opts '--disable-cinnamon --disable-gnome-shell' ../colors/retro/clearlooks"
+	echo "	$0 --autogen-opts '--disable-cinnamon --disable-gnome-shell' --jobs 4 ../colors/retro/clearlooks"
 	exit 1
 }
 
 AUTOGEN_OPTS=""
+unset JOBS
 
 while [[ "$#" -gt 0 ]]; do
 	case "$1" in
@@ -43,6 +44,10 @@ while [[ "$#" -gt 0 ]]; do
 			;;
 		-a|--autogen-opts)
 			AUTOGEN_OPTS="${2}"
+			shift
+			;;
+		-j|--jobs)
+			JOBS="${2}"
 			shift
 		;;
 		*)
@@ -223,8 +228,8 @@ for template_file in $(find ./common -name '*.thpl') ; do
 done
 
 ASSETS_FILES=(
-	'./common/gtk-2.0/assets.svg'
-	'./common/gtk-2.0/assets-dark.svg'
+	'./common/gtk-2.0/light/assets.svg'
+	'./common/gtk-2.0/dark/assets.svg'
 	'./common/gtk-3.0/3.18/assets.svg'
 	'./common/gtk-3.0/3.20/assets.svg'
 )
@@ -292,7 +297,7 @@ fi
 echo "== Making theme..."
 mkdir distrib
 ./autogen.sh --prefix=$(readlink -e ./distrib/) --disable-light --disable-dark ${AUTOGEN_OPTS}
-make install
+make --jobs="${JOBS:-$(nproc || echo 1)}" install
 echo
 
 echo

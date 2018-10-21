@@ -43,11 +43,11 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 To build the theme the following packages are required
 * `autoconf`
 * `automake`
-* `sassc`
+* `sassc` for GTK 3, Cinnamon, or GNOME Shell
 * `pkg-config` or `pkgconfig` for Fedora
 * `git` to clone the source directory
-* `optipng`
-* `inkscape`
+* `optipng` for GTK 2, GTK 3, or XFWM
+* `inkscape` for GTK 2, GTK 3, or XFWM
 
 The following packages are optionally required
 * `gnome-shell`for auto-detecting the GNOME Shell version

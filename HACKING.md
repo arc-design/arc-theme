@@ -12,7 +12,7 @@ This theme uses node-sass/libsass to process the various .scss files. Never edit
 
 * Go to `common/gtk-2.0`
 
-* The colors and includes are defined in `gtkrc`, `gtkrc-dark` and `gtkrc-darker` for each theme variant
+* The colors and includes are defined in `light/gtkrc`, `dark/gtkrc` and `darker/gtkrc` for each theme variant
 
 * `main.rc` contains the major part of the theme
 
@@ -20,20 +20,16 @@ This theme uses node-sass/libsass to process the various .scss files. Never edit
 
 * `apps.rc` contains some application specific rules
 
-Because this theme is heavily based on the pixmap engine, a lot of the styling comes from the images in the `assets` and `assets-dark` folders. Don't edit these images directly. See the next section.
+Because this theme is heavily based on the pixmap engine, a lot of the styling comes from the images in the `light/assets` and `dark/assets` folders. Don't edit these images directly. See the next section.
 
 --
 
 #### Editing the images for the GTK 2 and GTK 3 themes
 
-* Go to the `common/gtk-2.0` or `common/gtk-3.0/$gtk-version` directory
+* Go to the `common/gtk-2.0/light`, `common/gtk-2.0/dark`, or `common/gtk-3.0/$gtk-version` directory.
 
-* Open the `assets.svg` or `assets-dark.svg` file in inkscape. Each object in the .svg file corresponds to an image in the `assets` or `assets-dark` folder
+* Open the `assets.svg` file in inkscape. Each object in the .svg file corresponds to an image in the `assets` folder.
 
 * Find the object you want to edit and make your changes. Important: Don't change the object id!
 
-* Save `assets.svg` and delete the images corresponding to the edited .svg objects from the `assets` folder (or just delete everything in the `assets` folder)
-
-* Run `./render-assets.sh` or `./render-dark-assets.sh` from a terminal
-
-* N.B. If you are making color changes then remove the contents of the folders gtk-2.0/assets/* gtk-2.0/assets-dark and the assets folder under the GTK+3 folder that the theme is compiled for
+* Save `assets.svg` and run `make` (or `make -j$(nproc)` if you're in a hurry) from a terminal in the parent directory.
