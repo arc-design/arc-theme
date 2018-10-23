@@ -33,7 +33,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
 | Solus | `arc-gtk-theme` |
 | Ubuntu 16.10 - 18.04 | `arc-theme`
-| Ubuntu 16.04 - 18.04 | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
+| Ubuntu 16.04 - 18.10 | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
 | FreeBSD | `x11-themes/gtk-arc-themes` |
 
 --
