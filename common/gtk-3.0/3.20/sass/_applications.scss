@@ -753,7 +753,7 @@ panel-toplevel.background {
 //
 // Floating Bar
 //
-.nautilus-window .floating-bar {
+.nautilus-window .floating-bar, .nemo-window .floating-bar {
   padding: 1px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;
