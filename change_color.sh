@@ -131,6 +131,10 @@ if [[ "$SRC_PATH" == "$DEST_PATH" ]]; then
 	exit 1
 fi
 
+if [[ ! -d "$(dirname "${DEST_PATH}")" ]] ; then
+	mkdir -p "${DEST_PATH}"
+fi
+
 
 tempdir=$(mktemp -d)
 post_clean_up() {
