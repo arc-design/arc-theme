@@ -131,6 +131,10 @@ if [[ "$SRC_PATH" == "$DEST_PATH" ]]; then
 	exit 1
 fi
 
+if [[ ! -d "$(dirname "${DEST_PATH}")" ]] ; then
+	mkdir -p "${DEST_PATH}"
+fi
+
 
 tempdir=$(mktemp -d)
 post_clean_up() {
@@ -224,7 +228,7 @@ if [[ "${DEBUG:-}" ]]; then
 fi
 
 for template_file in $(find ./common -name '*.thpl') ; do
-	cat ${template_file} >> ${template_file::-5}
+	cat "${template_file}" >> "${template_file::-5}"
 done
 
 ASSETS_FILES=(
@@ -234,7 +238,7 @@ ASSETS_FILES=(
 	'./common/gtk-3.0/3.20/assets.svg'
 )
 for assets_file in "${ASSETS_FILES[@]}"; do
-	sed -i'' -e 's/%SEL_BG%/%ACCENT_BG%/g' ${assets_file}
+	sed -i'' -e 's/%SEL_BG%/%ACCENT_BG%/g' "${assets_file}"
 done
 
 echo "== Filling the template with the new colorscheme..."
@@ -296,7 +300,7 @@ fi
 
 echo "== Making theme..."
 mkdir distrib
-./autogen.sh --prefix=$(readlink -e ./distrib/) --disable-light --disable-dark ${AUTOGEN_OPTS}
+./autogen.sh --prefix="$(readlink -e ./distrib/)" --disable-light --disable-dark "${AUTOGEN_OPTS}"
 make --jobs="${JOBS:-$(nproc || echo 1)}" install
 echo
 
