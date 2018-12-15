@@ -41,6 +41,9 @@ AS_IF([test "x$ENABLE_GTK3" != xno], [ARC_GTK3])
 AS_IF([test "x$ENABLE_GNOME_SHELL" != xno], [ARC_GNOME_SHELL])
 
 AS_IF([test "x$ENABLE_GTK2" != xno -o "x$ENABLE_GTK3" != xno -o "x$ENABLE_XFWM" != xno], [
+    AC_PATH_PROG([RENDERSVG], [rendersvg])
+    AS_IF([test "x$ac_cv_path_RENDERSVG" = x], [AC_MSG_WARN([rendersvg not found, using inkscape instead])])
+    AM_CONDITIONAL([RENDERSVG], [test ! "x$ac_cv_path_RENDERSVG" = x])
     AC_PATH_PROG([INKSCAPE], [inkscape])
     AS_IF([test "x$ac_cv_path_INKSCAPE" = x], [AC_MSG_ERROR([inkscape not found])])
     AC_PATH_PROG([OPTIPNG], [optipng])

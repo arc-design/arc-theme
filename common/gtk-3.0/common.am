@@ -13,13 +13,27 @@ assets light dark darker:
 clean:
 	rm -rf assets/ light/ dark/ darker/
 
+
+if RENDERSVG
+
+$(normal): $(srcdir)/assets.svg | assets
+	$(RENDERSVG) --export-id "$(basename $(notdir $@))" --dpi 96 "$<" "$@"
+	$(OPTIPNG) -o7 --quiet "$@"
+$(hidpi): $(srcdir)/assets.svg | assets
+	$(RENDERSVG) --export-id "$(patsubst %@2,%,$(basename $(notdir $@)))" --dpi 192 "$<" "$@"
+	$(OPTIPNG) -o7 --quiet "$@"
+
+else
+
 $(normal): $(srcdir)/assets.svg | assets
 	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(basename $(notdir $@))" --export-dpi=96 "$<" >/dev/null
 	$(OPTIPNG) -o7 --quiet "$@"
-
 $(hidpi): $(srcdir)/assets.svg | assets
 	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(patsubst %@2,%,$(basename $(notdir $@)))" --export-dpi=192 "$<" >/dev/null
 	$(OPTIPNG) -o7 --quiet "$@"
+
+endif
+
 
 .PHONY: normal hidpi clean
 
