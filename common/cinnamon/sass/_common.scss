@@ -1608,41 +1608,26 @@ StScrollBar {
 //
 // Panel Launchers Applet (panelLaunchers.js)
 //
-#panel-launchers-box {
-  padding-left: 7px;
-
-  &.vertical {
-    padding: 2px 0;
+.panel-launchers {
+    padding: 0 4px;
+    .launcher {
+        padding: 0 4px;
+        transition-duration: 200;
+        background-image: none;
+    }
+    &.vertical {
+        padding: 4px 0;
+        .launcher {
+            padding: 4px 0;
+        }
+    }
+    .launcher:hover {
+    
+       .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
+       .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
+       .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
+       .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
   }
-}
-
-.panel-launcher,
-.launcher {
-  margin: 1px;
-  padding: 1px;
-  transition-duration: 200;
-
-  &:hover {
-    background-gradient-direction: none;
-    border: 0px solid $selected_bg_color;
-
-    .panel-bottom & { border-bottom-width: 1px; }
-    .panel-top & { border-top-width: 1px; }
-    .panel-left & { border-left-width: 1px; padding-left: 0; }
-    .panel-right & { border-right-width: 1px; padding-right: 0; }
-  }
-
-  .panel-bottom & {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .panel-top & {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-  }
-
 }
 
 //
