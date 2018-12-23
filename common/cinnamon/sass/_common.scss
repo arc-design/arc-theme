@@ -1272,6 +1272,10 @@ StScrollBar {
 
     .panel-bottom & { padding-top: 1px; }
     .panel-top & { padding-bottom: 1px; }
+    
+    .progress {
+       background-color: transparentize($success_color, 0.8);
+     }
 
     &.vertical {
       spacing: 4px;
