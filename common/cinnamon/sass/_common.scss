@@ -1281,6 +1281,16 @@ StScrollBar {
     &:highlight { background-color: transparentize($error_color, 0.5); }
   }
 
+  &-preview {
+    spacing: 8px;
+    color: $osd_fg_color;
+    background: none;
+    border: none;
+    border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+    border-radius: 3px;
+    padding: 16px;
+  }
+  
   &-item-label {
     font-weight: bold;
     width: 15em;
