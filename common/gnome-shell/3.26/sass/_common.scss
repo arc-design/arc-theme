@@ -892,7 +892,9 @@ StScrollBar {
   background-gradient-direction: none;
   background-color: transparent;
   border-bottom-width: 0;
-  border-image: url('common-assets/panel/panel.svg') 1 1 1 1;
+  border-image: none;
+
+  &.solid { border-image: url('common-assets/panel/panel.svg') 1 1 1 1; }
 
   // Fix dynamic top bar extension
   &.dynamic-top-bar-white-btn { border-image: none; }
@@ -904,7 +906,7 @@ StScrollBar {
     border-image: none;
   }
 
-  &:overview { border-image: url('common-assets/panel/panel-overview.svg') 1 1 1 1; }
+  &:overview { border-image: none; }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such
     spacing: 8px;
