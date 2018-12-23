@@ -482,6 +482,15 @@ StScrollBar {
   }
 }
 
+.overview-empty-placeholder {
+  text-align: center;
+  font-weight: bold;
+  spacing: 1em;
+  padding: 16px;
+  color: $_shell_fg_color;
+  border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
+}
+
 .expo-workspaces-name-entry,
 .expo-workspaces-name-entry#selected {
   height: 15px;
