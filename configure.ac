@@ -47,7 +47,7 @@ AS_IF([test "x$ENABLE_GTK2" != xno -o "x$ENABLE_GTK3" != xno -o "x$ENABLE_XFWM" 
     AC_PATH_PROG([INKSCAPE], [inkscape])
     AS_IF([test "x$ac_cv_path_INKSCAPE" = x && test "x$ac_cv_path_RENDERSVG" = x], [AC_MSG_ERROR([inkscape not found])])
     AC_PATH_PROG([OPTIPNG], [optipng])
-    AS_IF([test "x$ac_cv_path_OPTIPNG" = x], [AC_MSG_ERROR([optipng not found])])
+    AS_IF([test "x$ac_cv_path_OPTIPNG" = x], [AC_MSG_WARN([optipng not found])])
 ])
 
 AS_IF([test "x$ENABLE_GTK3" != xno -o "x$ENABLE_CINNAMON" != xno -o "x$ENABLE_GNOME_SHELL" != xno], [
