@@ -1775,12 +1775,13 @@ StScrollBar {
 //
 // Workspace OSD
 //
-/*FIXME*/
 .workspace-osd {
-  /*color: red;*/
-  text-shadow: black 5px 5px 5px;
+  text-align: center;
   font-weight: bold;
-  font-size: 48pt;
+  spacing: 1em;
+  padding: 16px;
+  color: $_shell_fg_color;
+  border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
 }
 
 //
