@@ -1259,6 +1259,9 @@ StScrollBar {
     border-radius: 2px;
     color: $selected_bg_color;
   }
+  .level-bar {
+    background-color: $selected_bg_color;
+  }
 }
 
 //
