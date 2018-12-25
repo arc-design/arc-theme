@@ -1354,7 +1354,7 @@ StScrollBar {
     }
     /// May need to revise depending on upstream GWL developments
     &-button-label {
-      padding: 0;
+      padding: 3px;
     }
     &-badge {
       border-radius: 256px;
@@ -1365,12 +1365,11 @@ StScrollBar {
     }
     &-item-box {
       transition-duration: 100;
-      spacing: 4px;
       font-weight: bold;
       background-image: none;
       color: transparentize($_shell_fg_color, 0.4);
+      &:hover, &:active:hover { color: $_shell_fg_color; }
       &:hover, &:active, &:active:hover {
-        color: $_shell_fg_color;
             
         .panel-bottom & { border-image: url("common-assets/panel/window-list-hover-bottom.svg") 3 3 1 3; }
         .panel-top & { border-image: url("common-assets/panel/window-list-hover-top.svg") 3 3 3 1; }
