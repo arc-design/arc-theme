@@ -1346,52 +1346,52 @@ StScrollBar {
 //
 .grouped-window-list {
     &-thumbnail-label {
-        padding-left: 3px;
+      padding-left: 3px;
     }
     &-number-label {
-        z-index: 99;
-        color: $_shell_fg_color;
+      z-index: 99;
+      color: $_shell_fg_color;
     }
     /// May need to revise depending on upstream GWL developments
     &-button-label {
-        padding: 0;
+      padding: 0;
     }
     &-badge {
-        border-radius: 256px;
-        background-color: $panel_bg; 
+      border-radius: 256px;
+      background-color: $panel_bg; 
     }
     &-thumbnail-alert {
-        background-color: $warning_color;
+      background-color: $warning_color;
     }
     &-item-box {
-        transition-duration: 100;
-        spacing: 4px;
-        font-weight: bold;
-        background-image: none;
-        color: transparentize($_shell_fg_color, 0.4);
-        &:hover, &:active, &:active:hover {
-            color: $_shell_fg_color;
+      transition-duration: 100;
+      spacing: 4px;
+      font-weight: bold;
+      background-image: none;
+      color: transparentize($_shell_fg_color, 0.4);
+      &:hover, &:active, &:active:hover {
+        color: $_shell_fg_color;
             
-            .panel-bottom & { border-image: url("common-assets/panel/window-list-hover-bottom.svg") 3 3 1 3; }
-            .panel-top & { border-image: url("common-assets/panel/window-list-hover-top.svg") 3 3 3 1; }
-            .panel-left & { border-image: url("common-assets/panel/window-list-hover-left.svg") 3 1 3 3; }
-            .panel-right & { border-image: url("common-assets/panel/window-list-hover-right.svg") 1 3 3 3; }
-        }
-        &:focus, &:focus:hover {
-            color: $_shell_fg_color;
+        .panel-bottom & { border-image: url("common-assets/panel/window-list-hover-bottom.svg") 3 3 1 3; }
+        .panel-top & { border-image: url("common-assets/panel/window-list-hover-top.svg") 3 3 3 1; }
+        .panel-left & { border-image: url("common-assets/panel/window-list-hover-left.svg") 3 1 3 3; }
+        .panel-right & { border-image: url("common-assets/panel/window-list-hover-right.svg") 1 3 3 3; }
+      }
+      &:focus, &:focus:hover {
+        color: $_shell_fg_color;
 
-            .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
-            .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
-            .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
-            .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
-        }
+        .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
+        .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
+        .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
+        .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
+      }
         .progress {
-            background-color: transparentize($success_color, 0.8);
+          background-color: transparentize($success_color, 0.8);
         }
     }
     &-item-demands-attention {
-        background-gradient-start: $warning_color;
-        background-gradient-end: $warning_color;
+      background-gradient-start: $warning_color;
+      background-gradient-end: $warning_color;
     }
     &-thumbnail-menu {
       color: $osd_fg_color;
@@ -1399,34 +1399,31 @@ StScrollBar {
       border: none;
       border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
       border-radius: 3px;
-      padding: 20px;
+      padding: 10px 20px;
       
-        > StBoxLayout {
-           padding: 10px;
+      .item-box {
+        margin: 8px;
+        border-radius: 2px;
+        border: 1px solid none;
+        &:outlined {
+          border: 1px solid $selected_bg_color;
         }
-        .item-box {
-            padding: 8px;
-            border-radius: 2px;
-            spacing: 8px;
-            &:outlined {
-                border: 1px solid $selected_bg_color;
-            }
-            &:selected {
-                background-color: $selected_bg_color;
-                border: 0px solid $selected_bg_color;
-                color: $selected_fg_color;
-            }
+        &:selected {
+          background-color: $selected_bg_color;
+          border: 1px solid $selected_bg_color;
+          color: $selected_fg_color;
         }
+      }
         .thumbnail-box {
-            padding: 2px;
-            spacing: 4px;
+          padding: 2px;
+          spacing: 4px;
         }
         .thumbnail {
-            width: 256px;
+          width: 256px;
         }
         .separator {
-            width: 1px;
-            background: $selected_bg_color;
+          width: 1px;
+          background: $selected_bg_color;
         }
     }
 }
