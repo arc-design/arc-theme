@@ -489,23 +489,26 @@ StScrollBar {
   border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
 }
 
-.expo-workspaces-name-entry,
-.expo-workspaces-name-entry#selected {
-  height: 15px;
+.expo-workspaces-name-entry {
+  height: 1.5em;
   border-radius: 2px;
   font-size: 9pt;
   padding: 5px 8px;
   -cinnamon-caption-spacing: 4px;
+  transition-duration: 300;
   @include entry(osd);
 
-  &:focus {
+  &:focus, &#selected {
     border: 1px solid $selected_bg_color;
     background-color: $selected_bg_color;
     color: $selected_fg_color;
     font-style: italic;
-    transition-duration: 300;
     selection-background-color: $selected_fg_color;
     selected-color: $selected_bg_color;
+  }
+  
+  &:hover {
+    border: 1px solid $selected_bg_color;
   }
 }
 
