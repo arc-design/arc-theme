@@ -108,7 +108,7 @@ WM_BORDER_UNFOCUS=${WM_BORDER_UNFOCUS-$HDR_BG}
 SPACING=${SPACING-3}
 GRADIENT=${GRADIENT-0}
 ROUNDNESS=${ROUNDNESS-2}
-ROUNDNESS_GTK2_HIDPI=$(( ROUNDNESS * 2 ))
+#ROUNDNESS_GTK2_HIDPI=$(( ROUNDNESS * 2 ))
 
 TERMINAL_COLOR1=${TERMINAL_COLOR1:-F04A50}
 TERMINAL_COLOR3=${TERMINAL_COLOR3:-F08437}
@@ -231,9 +231,10 @@ if [[ "${DEBUG:-}" ]]; then
 	fi
 fi
 
-for template_file in $(find ./common -name '*.thpl') ; do
+while IFS= read -r -d '' template_file
+do
 	cat "${template_file}" >> "${template_file::-5}"
-done
+done < <(find ./common -name '*.thpl' -print0)
 
 ASSETS_FILES=(
 	'./common/gtk-2.0/light/assets.svg'
@@ -279,8 +280,8 @@ for FILEPATH in "${PATHLIST[@]}"; do
 		-e 's/%TERMINAL_COLOR4%/#'"$TERMINAL_COLOR4"'/g' \
 		-e 's/%TERMINAL_COLOR5%/#'"$TERMINAL_COLOR5"'/g' \
 		-e 's/%TERMINAL_COLOR9%/#'"$TERMINAL_COLOR9"'/g' \
-		-e 's/%TERMINAL_COLOR9_DARKER%/#'"$(darker $TERMINAL_COLOR9 10)"'/g' \
-		-e 's/%TERMINAL_COLOR9_LIGHTER%/#'"$(darker $TERMINAL_COLOR9 -10)"'/g' \
+		-e 's/%TERMINAL_COLOR9_DARKER%/#'"$(darker "$TERMINAL_COLOR9" 10)"'/g' \
+		-e 's/%TERMINAL_COLOR9_LIGHTER%/#'"$(darker "$TERMINAL_COLOR9" -10)"'/g' \
 		-e 's/%TERMINAL_COLOR10%/#'"$TERMINAL_COLOR10"'/g' \
 		-e 's/%TERMINAL_COLOR11%/#'"$TERMINAL_COLOR11"'/g' \
 		-e 's/%TERMINAL_COLOR12%/#'"$TERMINAL_COLOR12"'/g' \
