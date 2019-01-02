@@ -37,7 +37,7 @@ $(dark): $(srcdir)/dark/assets.svg | dark/assets
 if RENDERSVG
 
 $(light) $(dark):
-	$(RENDERSVG) --export-id "$(basename $(notdir $@))" --dpi $(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) "$<" "$@"
+	$(RENDERSVG) --export-id "$(basename $(notdir $@))" --dpi $(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) --zoom $(if $(filter $(OPTION_GTK2_HIDPI),true),2,1) "$<" "$@"
 if OPTIPNG
 	$(OPTIPNG) -o7 --quiet "$@"
 endif
