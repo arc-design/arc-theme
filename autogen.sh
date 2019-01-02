@@ -12,4 +12,5 @@ mkdir -p m4
 autoreconf --verbose --force --install
 
 cd "$cwd"
-"$srcdir/configure" "$@"
+# shellcheck disable=SC2068
+"$srcdir/configure" $@
