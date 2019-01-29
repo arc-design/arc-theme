@@ -1,4 +1,4 @@
-Source: arc-theme
+Source: arc-solid-theme
 Section: misc
 Priority: extra
 Maintainer: David Mohammed <fossfreedom@ubuntu.com>
@@ -12,10 +12,10 @@ Build-Depends: debhelper (>= 9),
  optipng,
  gnome-shell
 Standards-Version: 3.9.8
-Vcs-Browser: https://github.com/nicohood/arc-theme/tree/debian
-Vcs-Git: https://github.com/nicohood/arc-theme -b debian
+Vcs-Browser: https://github.com/nicohood/arc-theme/tree/debian-solid
+Vcs-Git: https://github.com/nicohood/arc-theme -b debian-solid
 
-Package: arc-theme
+Package: arc-solid-theme
 Architecture: all
 Depends: gnome-themes-extra | gnome-themes-standard, 
  gtk2-engines-murrine,
@@ -26,6 +26,6 @@ Description: Flat theme with transparent elements
  like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
  Arc also includes a GTK+ theme for Plank.
  .
- Arc is available in three variants:
- Arc, Arc-Darker, Arc-Dark
+ Arc-solid is available in three variants:
+ Arc-solid, Arc-solid-Darker, Arc-solid-Dark
 
