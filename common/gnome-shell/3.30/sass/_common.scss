@@ -25,7 +25,7 @@ $asset_path: if($variant == 'dark', dark-assets, light-assets);
 //
 // Globals
 //
-$font-size: 9;
+$font-size: 10;
 $font-family: Futura Bk bt, Cantarell, Sans-Serif;
 $_bubble_bg_color: opacify($osd_bg_color,0.25);
 $_bubble_fg_color: $osd_fg_color;
@@ -210,7 +210,7 @@ StScrollBar {
 //
 // Modal Dialogs
 //
-.headline { font-size: 110%; }
+.headline { @include fontsize($font-size * 1.1); }
 .lightbox { background-color: black; }
 .flashspot { background-color: white; }
 
@@ -731,7 +731,7 @@ StScrollBar {
   border-radius: 5px;
   border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
 
-.osd-monitor-label { font-size: 3em; }
+.osd-monitor-label { @include fontsize($font-size * 3); }
 
   .level {
     padding: 0;
@@ -813,7 +813,7 @@ StScrollBar {
 }
 
 .input-source-switcher-symbol {
-  font-size: 34pt;
+  @include fontsize($font-size * 4);
   width: 96px;
   height: 96px;
 }
@@ -1146,7 +1146,7 @@ StScrollBar {
 }
 
 .datemenu-today-button .date-label {
-  font-size: 1.5em;
+  @include fontsize($font-size * 1.5);
 }
 
 .world-clocks-header,
@@ -1221,7 +1221,7 @@ StScrollBar {
 }
 
 .calendar-day-base {
-  font-size: 80%;
+  @include fontsize($font-size * 0.875);
   text-align: center;
   width: 25px; height: 25px;
   padding: 0.1em;
@@ -1239,7 +1239,7 @@ StScrollBar {
   &.calendar-day-heading {  //day of week heading
     color: transparentize($fg_color, 0.15);
     margin-top: 1em;
-    font-size: 70%;
+    @include fontsize($font-size * 0.75);
   }
 }
 
@@ -1283,7 +1283,7 @@ StScrollBar {
 }
 
 .calendar-week-number {
-  font-size: 70%;
+  @include fontsize($font-size * 0.75);
   font-weight: bold;
   width: 2.3em; height: 1.8em;
   border-radius: 2px;
@@ -1368,7 +1368,7 @@ StScrollBar {
   &-secondary-bin,
   &-secondary-bin > .event-time {
     color: transparentize($fg_color, 0.4);
-    font-size: 0.9em;
+    @include fontsize($font-size * 0.9);
 
     &:ltr { padding-left: 8px; }
     &:rtl { padding-right: 8px; }
@@ -1384,14 +1384,14 @@ StScrollBar {
   &-title {
     color: inherit;
     font-weight: bold;
-    font-size: 1em;
+    @include fontsize($font-size);
     padding: 2px 0 2px 0;
   }
 
   &-content {
     color: inherit;
     padding: 8px;
-    font-size: 1em;
+    @include fontsize($font-size);
   }
 }
 
@@ -1488,7 +1488,7 @@ StScrollBar {
   &-airplane-box { spacing: 12px; }
 
   &-airplane-headline {
-    font-size: 1.1em;
+    @include fontsize($font-size * 1.1);
     font-weight: bold;
     text-align: center;
   }
@@ -1505,11 +1505,11 @@ StScrollBar {
 
   &-header {
     font-weight: bold;
-    font-size: 1.2em;
+    @include fontsize($font-size * 1.2);
   }
 
   &-item {
-    font-size: 1em;
+    @include fontsize($font-size);
     border-bottom: 0px solid;
     padding: 12px;
     spacing: 0px;
@@ -1639,7 +1639,7 @@ StScrollBar {
 // Dash
 //
 #dash {
-  font-size: 1em;
+  @include fontsize($font-size);
   color: $osd_fg_color;
   background-color: $dark_sidebar_bg;
   border-color: rgba(0,0,0,0.4);
@@ -1948,7 +1948,7 @@ StScrollBar {
 }
 
 %status_text {
-  font-size: 2em;
+  @include fontsize($font-size * 2);
   font-weight: bold;
   color: $fg_color;
 }
@@ -1962,7 +1962,7 @@ StScrollBar {
 .notification-banner,
 .notification-banner:hover,
 .notification-banner:focus {
-  font-size: 1em;
+  @include fontsize($font-size);
   width: 34em;
   margin: 5px;
   padding: 10px;
@@ -2012,7 +2012,7 @@ StScrollBar {
 
 .chat-meta-message {
   padding-left: 4px;
-  font-size: 9pt;
+  @include fontsize($font-size);
   font-weight: bold;
   color: transparentize($fg_color, 0.4);
 
@@ -2126,7 +2126,7 @@ $legacy_icon_size: 24px;
 .keyboard-key {
   min-height: 2em;
   min-width: 2em;
-  font-size: 14pt;
+  @include fontsize($font-size * 1.56);
   font-weight: bold;
   border-radius: 3px;
   box-shadow: none;
@@ -2158,7 +2158,7 @@ $legacy_icon_size: 24px;
   padding: 0.5em;
   spacing: 0.3em;
   color: $osd_fg_color;
-  font-size: 1.15em;
+  @include fontsize($font-size * 1.15);
 }
 
   .candidate-index {
@@ -2242,7 +2242,7 @@ $legacy_icon_size: 24px;
     }
   }
   .login-dialog-not-listed-label {
-    font-size: 90%;
+    @include fontsize($font-size * 0.9);
     font-weight: bold;
     color: darken($osd_fg_color,30%);
     padding-top: 1em;
@@ -2274,7 +2274,7 @@ $legacy_icon_size: 24px;
   .login-dialog-username,
   .user-widget-label {
     color: $osd_fg_color;
-    font-size: 120%;
+    @include fontsize($font-size * 1.2);
     font-weight: bold;
     text-align: left;
     padding-left: 15px;
@@ -2293,7 +2293,7 @@ $legacy_icon_size: 24px;
 
   .login-dialog-prompt-label {
     color: darken($osd_fg_color, 20%);
-    font-size: 110%;
+    @include fontsize($font-size * 1.1);
     padding-top: 1em;
   }
 
@@ -2331,11 +2331,11 @@ $legacy_icon_size: 24px;
 }
 
 .screen-shield-clock-time {
-  font-size: 72pt;
+  @include fontsize($font-size * 8);
   text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
 }
 
-.screen-shield-clock-date { font-size: 28pt; }
+.screen-shield-clock-date { @include fontsize($font-size * 3); }
 
 .screen-shield-notifications-container {
   spacing: 6px;
@@ -2451,7 +2451,7 @@ $legacy_icon_size: 24px;
 }
 
 .lg-completions-text {
-  font-size: .9em;
+  @include fontsize($font-size * 0.9);
   font-style: italic;
 }
 
