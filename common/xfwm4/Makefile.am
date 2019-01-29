@@ -16,9 +16,23 @@ clean:
 $(light): $(srcdir)/light/assets.svg | light/assets
 $(dark): $(srcdir)/dark/assets.svg | dark/assets
 
+if RENDERSVG
+
+$(light) $(dark):
+	$(RENDERSVG) --export-id "$(basename $(notdir $@))" --dpi $(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) "$<" "$@"
+if OPTIPNG
+	$(OPTIPNG) -o7 --quiet "$@"
+endif
+
+else
+
 $(light) $(dark):
 	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(basename $(notdir $@))" --export-dpi=$(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) "$<" >/dev/null
+if OPTIPNG
 	$(OPTIPNG) -o7 --quiet "$@"
+endif
+
+endif
 
 .PHONY: light dark clean
 
