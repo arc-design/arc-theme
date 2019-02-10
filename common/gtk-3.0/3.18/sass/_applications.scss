@@ -196,6 +196,11 @@ NemoWindow {
         &:last-child:hover { box-shadow: inset 1px 0 $_linked_separator_color; }
     }
   }
+  
+  .nemo-inactive-pane .view, .nemo-inactive-pane iconview {
+    color: $insensitive_fg_color;
+    background-color: $base_color;
+  }
 }
 
 //
