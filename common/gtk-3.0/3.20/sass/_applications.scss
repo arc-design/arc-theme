@@ -181,6 +181,13 @@ $disk_space_free: darken($bg_color, 3%);
 
     @include pathbar_linking_rules($sep_color:$header_button_border);
   }
+  
+  // Nemo dual pane inactive pane
+  
+  .nemo-inactive-pane .view {
+    color: $insensitive_fg_color;
+    background-color: $base_color;
+  }
 }
 
 //
