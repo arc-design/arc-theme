@@ -705,19 +705,19 @@ StScrollBar {
 .calendar-day-base {
   font-size: 80%;
   text-align: center;
-  width: 25px;
-  height: 25px;
+  width: 2.5em;
+  height: 2.5em;
   padding: 0.1em;
-  margin: 2px;
-  border-radius: 12.5px;
+  margin: 0.1em;
+  border-radius: 999px;
 }
 
 .calendar-day-heading {
   color: transparentize($fg_color, 0.15);
   margin-top: 1em;
   font-size: 70%;
-  width: 25px;
-  height: 20px;
+  width: 2.5em;
+  height: 2em;
 }
 
 .calendar-day {
@@ -758,9 +758,9 @@ StScrollBar {
 .calendar-week-number {
   color: transparentize($fg_color, 0.3);
   font-size: 80%;
-  width: 25px;
-  height: 20px;
-  padding: 0.8em 0 0;
+  width: 2.5em;
+  height: 2em;
+  padding: 0.7em 0 0;
   text-align: center;
 }
 
