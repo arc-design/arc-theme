@@ -1114,13 +1114,13 @@ StScrollBar {
     transition-duration: 300;
     background-color: $bg_color;
     border: 1px solid $borders_color;
-    spacing: 1em;
+    spacing: 0.5em;
   }
   
   &-favorites-scrollbox {
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     border-bottom: 1px solid;
-    border-color: $borders_color;
+    border-color: $selected_bg_color;
   }
   
   &-favorites-button {
