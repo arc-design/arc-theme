@@ -334,11 +334,11 @@ StScrollBar {
 .popup-combobox-item { spacing: 1em; }
 
 .popup-separator-menu-item {
-  -gradient-height: 2px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
-  -margin-horizontal: 1.5em;
-  height: 1em;
+  -gradient-height: 1px;
+  -gradient-start: $selected_bg_color;
+  -gradient-end: $selected_bg_color;
+  -margin-horizontal: 0;
+  height: 0.5em;
 }
 
 .popup-alternating-menu-item:alternate {
