@@ -289,7 +289,7 @@ StScrollBar {
     }
   }
 
-  .popup-menu-content { padding: 1em 0em 1em 0em; }
+  .popup-menu-content { padding: 1em 1px; }
   .popup-menu-item {
     padding: .4em 1.75em;
     spacing: 1em;
@@ -334,11 +334,11 @@ StScrollBar {
 .popup-combobox-item { spacing: 1em; }
 
 .popup-separator-menu-item {
-  -gradient-height: 2px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
-  -margin-horizontal: 1.5em;
-  height: 1em;
+  -gradient-height: 1px;
+  -gradient-start: $selected_bg_color;
+  -gradient-end: $selected_bg_color;
+  -margin-horizontal: 0;
+  height: 0.5em;
 }
 
 .popup-alternating-menu-item:alternate {
@@ -1230,7 +1230,7 @@ StScrollBar {
 
 /* Context menu (at the moment only for favorites) */
 .menu-context-menu {
-  padding: 1em 0.6em;
+  padding: 1em 1px;
 }
 
 //
