@@ -335,8 +335,8 @@ StScrollBar {
 
 .popup-separator-menu-item {
   -gradient-height: 1px;
-  -gradient-start: $selected_bg_color;
-  -gradient-end: $selected_bg_color;
+  -gradient-start: $borders_color;
+  -gradient-end: $borders_color;
   -margin-horizontal: 0;
   height: 0.5em;
 }
