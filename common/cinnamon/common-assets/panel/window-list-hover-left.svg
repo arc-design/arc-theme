@@ -17,8 +17,8 @@
    height="28"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="window-list-active-left.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="window-list-hover-left.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new">
@@ -31,18 +31,18 @@
      borderopacity="1"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.884764"
-     inkscape:cx="6.9544689"
-     inkscape:cy="5.3696817"
+     inkscape:zoom="27.958335"
+     inkscape:cx="-13.236949"
+     inkscape:cy="20.863897"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="true"
-     inkscape:window-width="1600"
-     inkscape:window-height="851"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -78,6 +78,14 @@
   <defs
      id="defs3">
     <linearGradient
+       id="linearGradient819"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#5294e2;stop-opacity:1;"
+         offset="0"
+         id="stop817" />
+    </linearGradient>
+    <linearGradient
        id="selected_bg_color"
        osb:paint="solid">
       <stop
@@ -87,14 +95,14 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#selected_bg_color"
-       id="linearGradient4139"
-       x1="14"
-       y1="298"
-       x2="14"
-       y2="300"
+       xlink:href="#linearGradient819"
+       id="linearGradient821"
+       x1="274"
+       y1="-1.5"
+       x2="298"
+       y2="-1.5"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(272,-300)" />
+       gradientTransform="matrix(1.1666667,0,0,0.66666667,-47.666667,0)" />
   </defs>
   <metadata
      id="metadata4">
@@ -153,12 +161,12 @@
      id="layer1"
      transform="translate(0,-272)">
     <rect
-       style="opacity:1;fill:url(#linearGradient4139);fill-opacity:1;stroke:none"
+       style="opacity:1;fill:url(#linearGradient821);fill-opacity:1;stroke:none;stroke-width:1.08012342"
        id="rect4270-9"
-       width="24"
+       width="28"
        height="2"
-       x="274"
+       x="272"
        y="-2"
-       transform="matrix(0,1,-1,0,0,0)" />
+       transform="rotate(90)" />
   </g>
 </svg>
