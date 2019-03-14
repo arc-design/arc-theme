@@ -104,16 +104,11 @@
     <distance name="button_height" value="0"/>
 </frame_geometry>
 
-<frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="1" rounded_top_right="1" parent="small">
+<frame_geometry name="modal" title_scale="small" hide_buttons="false" rounded_top_left="1" rounded_top_right="1" parent="small">
 	<distance name="title_vertical_pad" value="5"/>
 </frame_geometry>
 
-<!--chromium save dialog-->
-<frame_geometry name="attached" title_scale="small" has_title="false"  hide_buttons="true" rounded_top_left="1" rounded_top_right="1" rounded_bottom_left="0" rounded_bottom_right="0" parent="normal">
-	<distance name="title_vertical_pad" value="0"/>
-	<distance name="bottom_height" value="1"/>
-	<distance name="left_width" value="1"/>
-	<distance name="right_width" value="1"/>
+<frame_geometry name="attached" title_scale="small" hide_buttons="true" rounded_top_left="1" rounded_top_right="1" parent="small">
 </frame_geometry>
 
 <!-- drawing operations -->
@@ -733,6 +728,8 @@
 <frame_style name="attached_focused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
 	<piece position="titlebar" draw_ops="titlebar_focused" />
+	<piece position="title" draw_ops="title_focused" />
+	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
 	<button function="maximize" state="normal"><draw_ops></draw_ops></button>
@@ -758,6 +755,8 @@
 <frame_style name="attached_unfocused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
 	<piece position="titlebar" draw_ops="titlebar_unfocused" />
+	<piece position="title" draw_ops="title_unfocused" />
+	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
 	<button function="maximize" state="normal"><draw_ops></draw_ops></button>
