@@ -1127,7 +1127,7 @@ StScrollBar {
   &-favorites-scrollbox {
     padding-bottom: 0.5em;
     border-bottom: 1px solid;
-    border-color: $selected_bg_color;
+    border-color: $borders_color;
   }
   
   &-favorites-button {
