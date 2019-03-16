@@ -1,3 +1,9 @@
+arc-theme (20190214-0ubuntu1) disco; urgency=medium
+
+  * Bump release version to be later than upstream
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sat, 16 Mar 2019 21:44:24 +0000
+
 arc-theme (20181023-0ubuntu1) cosmic; urgency=medium
 
   * Bump release version to be later than upstream
