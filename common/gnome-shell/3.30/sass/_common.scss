@@ -1009,7 +1009,7 @@ StScrollBar {
   .screencast-indicator { color: $error_color; }
 
   .clock-display > * > *:last-child {
-    color: $selected_bg_color;
+    color: $selected_fg_color;
     margin-left: .3em;
   }
 
