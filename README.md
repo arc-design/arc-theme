@@ -56,7 +56,7 @@ The following packages are optionally required
 **Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
 
 For the theme to function properly, install the following
-* GNOME Shell 3.18 - 3.30, GTK 3.18 - 3.24
+* GNOME Shell 3.18 - 3.32, GTK 3.18 - 3.24
 * The `gnome-themes-extra` package
 * The murrine engine. This has different names depending on the distro.
   * `gtk-engine-murrine` (Arch Linux)
