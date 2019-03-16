@@ -1,3 +1,9 @@
+arc-solid-theme (20190214-0ubuntu1) disco; urgency=medium
+
+  * Bump release to be later than current release
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sat, 16 Mar 2019 21:46:25 +0000
+
 arc-solid-theme (20181023-0ubuntu1) cosmic; urgency=medium
 
   * Initial release of the solid version of the theme
