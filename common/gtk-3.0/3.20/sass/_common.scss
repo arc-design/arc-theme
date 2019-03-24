@@ -1211,12 +1211,12 @@ headerbar {
   // Linking stuff
 
   // Disconnect linked buttons
-  .linked:not(.vertical):not(.path-bar):not(.stack-switcher) {
+  .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar):not(.stack-switcher) {
     button:not(:last-child):not(:only-child) { margin-right: 1px; }
   }
 
   // Reset buttons
-  .linked:not(.vertical):not(.path-bar) > button {
+  .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button {
     &, &:hover, &:active, &:checked, &:disabled {
       border-radius: 3px;
       border-style: solid;
