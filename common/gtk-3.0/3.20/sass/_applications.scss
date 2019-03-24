@@ -67,16 +67,21 @@ terminal-window,
 }
 
 // Pathbar for nautilus >=3.30
-.nautilus-window .path-bar-box.width-maximized {
-  border: 1px $header_button_border solid;
+.nautilus-window .path-bar-box {
   border-radius: 3px;
-  transition: border $backdrop_transition;
-  transition: background-color $backdrop_transition;
 
-  &:not(:backdrop) {
-    background-color: $header_button_bg;
+  &.width-maximized {
+    border: 1px $header_button_border solid;
+    transition: border $backdrop_transition;
+    transition: background-color $backdrop_transition;
+
+    &:not(:backdrop) {
+      background-color: $header_button_bg;
+    }
   }
 }
+
+// path-bar buttons for nautilus 3.30
 .nautilus-window .path-bar > box > button {
   background-color: transparent;
   border-color: transparent;
@@ -89,6 +94,44 @@ terminal-window,
     box-shadow: 0 -3px $selected_bg_color inset;
   }
 }
+
+// path-bar buttons for nautilus >=3.32
+.nautilus-path-bar > button {
+  margin: 0;
+  border: 1px $header_button_border solid;
+  background-color: $header_button_bg;
+
+  @extend %linked;
+
+  // from .linked:not(.vertical).path-bar > button:hover in _common.scss
+  &:hover { background-color: lighten($header_button_bg, 15%); }
+
+  &:active, &:checked { @include button(header-active); }
+
+  .nautilus-window .path-bar-box.width-maximized > & {
+    border-width: 0px 1px 0px 0px;
+
+    &:only-child {
+      border-radius: 3px 0px 0px 3px;
+    }
+
+    &:not(:first-child) {
+      border-radius: 0;
+    }
+  }
+
+  // workaround for button separator glitches
+  &:hover:not(:backdrop),
+  &:hover:backdrop,
+  &:not(:last-child) {
+    border-right-style: solid;
+  }
+
+  // workaround jumpy button labels
+  & > box > label { padding: 0 1px; }
+  &:only-child > box > label { padding: 0 2px; }
+}
+
 
 button.nautilus-circular-button.image-button {
   @extend button.circular;
