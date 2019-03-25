@@ -1445,27 +1445,31 @@ StScrollBar {
 //
 .window-close {
   background-image: url("common-assets/misc/close.svg");
-  background-size: 26px;
-  height: 26px;
-  width: 26px;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  border: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent;
 
   &:hover {
     background-image: url("common-assets/misc/close-hover.svg");
-    background-size: 26px;
-    height: 26px;
-    width: 26px;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
   }
 
   &:active {
     background-image: url("common-assets/misc/close-active.svg");
-    background-size: 26px;
-    height: 26px;
-    width: 26px;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
   }
 }
 
 .window-close {
-  -shell-close-overlap: 11px;
+  -shell-close-overlap: 14px;
 }
 
 //
