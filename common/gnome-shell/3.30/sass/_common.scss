@@ -1282,10 +1282,10 @@ StScrollBar {
 .calendar-week-number {
   @include fontsize($font-size * 0.75);
   font-weight: bold;
-  width: 2.3em; height: 1.8em;
+  width: 2.0em; height: 1.5em;
   border-radius: 2px;
-  padding: 0.5em 0 0;
-  margin: 6px;
+  padding: 0.4em 0 0;
+  margin: 2px 6px;
   background-color: transparentize($fg_color,0.7);
   color: $bg_color;
 }
