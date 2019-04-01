@@ -109,7 +109,11 @@ terminal-window,
   &:active, &:checked { @include button(header-active); }
 
   .nautilus-window .path-bar-box.width-maximized > & {
-    border-width: 0px 1px 0px 0px;
+    border-width: 0;
+
+    &:last-child {
+      border-width: 0px 1px 0px 0px;
+    }
 
     &:only-child {
       border-radius: 3px 0px 0px 3px;
@@ -118,13 +122,6 @@ terminal-window,
     &:not(:first-child) {
       border-radius: 0;
     }
-  }
-
-  // workaround for button separator glitches
-  &:hover:not(:backdrop),
-  &:hover:backdrop,
-  &:not(:last-child) {
-    border-right-style: solid;
   }
 
   // workaround jumpy button labels
