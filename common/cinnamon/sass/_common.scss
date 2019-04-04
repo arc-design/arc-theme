@@ -355,7 +355,6 @@ StScrollBar {
 // Panel
 //
 #panel {
-  font-weight: bold;
   height: 27px;
   width: 32px;
 
@@ -703,7 +702,7 @@ StScrollBar {
 }
 
 .calendar-day-base {
-  font-size: 80%;
+  font-size: 8pt;
   text-align: center;
   width: 2.5em;
   height: 2.5em;
@@ -715,7 +714,7 @@ StScrollBar {
 .calendar-day-heading {
   color: transparentize($fg_color, 0.15);
   margin-top: 1em;
-  font-size: 70%;
+  font-size: 6pt;
   width: 2.5em;
   height: 2em;
 }
@@ -757,10 +756,10 @@ StScrollBar {
 
 .calendar-week-number {
   color: transparentize($fg_color, 0.3);
-  font-size: 80%;
+  font-size: 6pt;
   width: 2.5em;
   height: 2em;
-  padding: 0.7em 0 0;
+  padding: 1.2em 0 0;
   text-align: center;
 }
 
@@ -1308,13 +1307,11 @@ StScrollBar {
   }
   
   &-item-label {
-    font-weight: bold;
     width: 15em;
     min-width: 5px;
   }
 
   &-item-box {
-    font-weight: bold;
     background-image: none;
     padding-top: 0;
     padding-left: 8px;
@@ -1323,17 +1320,30 @@ StScrollBar {
     transition-duration: 100;
     color: transparentize($_shell_fg_color, 0.4);
 
-    &:hover {color: $_shell_fg_color;}
-
+    &:hover,
+    &:focus:hover {
+      color: $_shell_fg_color;
+      background-color: $selected_bg_color;
+      }
+      
+    &:focus:hover {
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $_shell_fg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $_shell_fg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $_shell_fg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $_shell_fg_color inset; }
+      }
+      
     &:active,
     &:checked,
     &:focus {
       color: $_shell_fg_color;
+      background-color: transparentize($osd_fg_color,.6);
+      font-weight: bold;
 
-      .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
-      .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
-      .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
-      .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $selected_bg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $selected_bg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $selected_bg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $selected_bg_color inset; }
     }
 
     &.right, &.left {
@@ -1372,24 +1382,42 @@ StScrollBar {
   }
   &-item-box {
     transition-duration: 100;
-    font-weight: bold;
     background-image: none;
     color: transparentize($_shell_fg_color, 0.4);
-    &:hover, &:active:hover { color: $_shell_fg_color; }
-    &:hover, &:active, &:active:hover {
-            
-      .panel-bottom & { border-image: url("common-assets/panel/window-list-hover-bottom.svg") 3 3 1 3; }
-      .panel-top & { border-image: url("common-assets/panel/window-list-hover-top.svg") 3 3 3 1; }
-      .panel-left & { border-image: url("common-assets/panel/window-list-hover-left.svg") 3 1 3 3; }
-      .panel-right & { border-image: url("common-assets/panel/window-list-hover-right.svg") 1 3 3 3; }
+    &:hover, &:active:hover { 
+      color: $_shell_fg_color; 
+      background-color: $selected_bg_color;
+      }
+    &:active {
+       background-color: rgba(0,0,0,0.01);    
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $selected_bg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $selected_bg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $selected_bg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $selected_bg_color inset; }
     }
-    &:focus, &:focus:hover {
+    &:active:hover {   
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $_shell_fg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $_shell_fg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $_shell_fg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $_shell_fg_color inset; }
+    }
+    &:focus {
       color: $_shell_fg_color;
+      background-color: transparentize($osd_fg_color,.6);
+      font-weight: bold;
 
-      .panel-bottom & { border-image: url("common-assets/panel/window-list-active-bottom.svg") 3 3 1 3; }
-      .panel-top & { border-image: url("common-assets/panel/window-list-active-top.svg") 3 3 3 1; }
-      .panel-left & { border-image: url("common-assets/panel/window-list-active-left.svg") 3 1 3 3; }
-      .panel-right & { border-image: url("common-assets/panel/window-list-active-right.svg") 1 3 3 3; }
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $selected_bg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $selected_bg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $selected_bg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $selected_bg_color inset; }
+    }
+    &:focus:hover {
+      background-color: $selected_bg_color;
+
+      .panel-bottom & { box-shadow: 0 -2px 0 0 $_shell_fg_color inset; }
+      .panel-top & { box-shadow: 0 2px 0 0 $_shell_fg_color inset;  }
+      .panel-left & { box-shadow: 2px 0 0 0 $_shell_fg_color inset;  }
+      .panel-right & { box-shadow: -2px 0 0 0 $_shell_fg_color inset; }
     }
       .progress {
          background-color: $selected_bg_color;
@@ -1636,11 +1664,7 @@ StScrollBar {
         }
     }
     .launcher:hover {
-    
-       .panel-bottom & { border-image: url("common-assets/panel/window-list-hover-bottom.svg") 3 3 1 3; }
-       .panel-top & { border-image: url("common-assets/panel/window-list-hover-top.svg") 3 3 3 1; }
-       .panel-left & { border-image: url("common-assets/panel/window-list-hover-left.svg") 3 1 3 3; }
-       .panel-right & { border-image: url("common-assets/panel/window-list-hover-right.svg") 1 3 3 3; }
+         background-color: $selected_bg_color;
   }
 }
 
