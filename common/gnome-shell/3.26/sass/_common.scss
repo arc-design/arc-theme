@@ -1658,13 +1658,9 @@ StScrollBar {
 
 .dash-item-container > StWidget {
 
-  &, &:rtl, .right & {
-    margin: 4px 8px;
-    padding: 0; }
+  &, &:rtl, .right & { padding: 4px 8px; }
 
-  .top &, .bottom & {
-    margin: 6px;
-    padding: 0; }
+  .top &, .bottom & { padding: 6px; }
 }
 
 //osd tooltip
@@ -1685,25 +1681,11 @@ StScrollBar {
 // Dash Buttons
 #dash .app-well-app {
 
-  &:hover,
-  .right &:hover,
-  .bottom &:hover,
-  .top &:hover {
-    background-color: $selected_bg_color;
-  }
-
-  &:active,
-  .right &:active,
-  .bottom &:active,
-  .top &:active {
-    background-color: darken($selected_bg_color, 10%);
-  }
-
   &:hover .overview-icon,
   .right &:hover .overview-icon,
   .bottom &:hover .overview-icon,
   .top &:hover .overview-icon {
-    background-color: transparent;
+    background-color: $selected_bg_color;
   }
 
   &:active .overview-icon,
@@ -1711,7 +1693,7 @@ StScrollBar {
   .bottom &:active .overview-icon,
   .top &:active .overview-icon {
     box-shadow: none;
-    background-color: transparent;
+    background-color: darken($selected_bg_color, 10%);
   }
 
   &-running-dot {
@@ -1719,11 +1701,6 @@ StScrollBar {
     height: 2px;
     margin-bottom: 2px;
     background-color: $selected_bg_color;
-  }
-
-  &:hover .app-well-app-running-dot,
-  &:active .app-well-app-running-dot {
-    background-color: #ffffff;
   }
 }
 
@@ -1734,10 +1711,6 @@ StScrollBar {
     height: 4px;
   }
 
-  .app-well-app:hover .app-well-app-running-dot,
-  .app-well-app:active .app-well-app-running-dot {
-    background-color: transparent;
-  }
   // Add missing 1px margin for finer .show-apps-icon alignment
   // via margin property instead to keep 1px smaller .show-apps-icon size
   // like standard #dash styling. Better than 1px transparent border.
@@ -1746,18 +1719,6 @@ StScrollBar {
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {
       background-image: url("common-assets/dash/running#{$var}.svg");
-    }
-    .running#{$var}:hover .app-well-app-running-dot {
-      background-image: url("common-assets/dash/running#{$var}-hover.svg");
-    }
-  }
-
-  &.shrink {
-    .dash-item-container > StWidget, .dash-item-container > StWidget:rtl, .right .dash-item-container > StWidget {
-      margin: 0;
-    }
-    .top .dash-item-container > StWidget, .bottom .dash-item-container > StWidget {
-      margin: 0;
     }
   }
 }
