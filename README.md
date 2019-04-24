@@ -31,6 +31,7 @@ It is strongly encouraged to submit pull-requests to suggest fixes and enhanceme
 | Debian | `arc-theme` |
 | Fedora | `arc-theme` |
 | Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
+| Sabayon | `arc-theme`
 | Solus | `arc-gtk-theme` |
 | Ubuntu 16.10 and later | `arc-theme`
 | Ubuntu 16.04 and later | `arc-theme` from [fossfreedom/arc-gtk-theme-daily](https://launchpad.net/~fossfreedom/+archive/ubuntu/arc-gtk-theme-daily) |
