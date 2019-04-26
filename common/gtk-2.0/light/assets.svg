@@ -5324,16 +5324,14 @@
        x="441.00043"
        y="-87.637817"
        inkscape:label="#rect6297" />
-    <image
-       y="-39.637821"
-       x="421.00043"
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#dfdfdf;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="frame"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABmJLR0QA/wD/AP+gvaeTAAAACXBI WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wECFwQljtRB1wAAAB1pVFh0Q29tbWVudAAAAAAAQ3Jl YXRlZCB3aXRoIEdJTVBkLmUHAAAAKklEQVQY02O8f//+fwYiAAsDAwODgoICXkUPHjxgYGIgEoxM hSywcCIEABzqCVThoNl8AAAAAElFTkSuQmCC "
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="10"
-       width="10"
-       inkscape:label="#image6307" />
+       width="9"
+       height="9"
+       x="423.5"
+       y="-40.137821"
+       inkscape:label="#rect5010" />
     <image
        y="-37.637821"
        x="436.00043"
