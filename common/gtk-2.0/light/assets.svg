@@ -4879,16 +4879,22 @@
          id="rect5648-1-9"
          style="display:inline;opacity:1;fill:#5c616c;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
-    <image
-       y="-179.63782"
-       x="287.00043"
-       id="line-h"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI WXMAAAsRAAALEQF/ZF+RAAAAB3RJTUUH3wECFwIHDe6ntQAAABVJREFUCNdjYIACxvv37/9nYGBg AAAXYQOeFmwcNwAAAABJRU5ErkJggg== "
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="2"
-       width="2"
-       inkscape:label="#image5739" />
+    <g id="line-h">
+      <rect
+         y="-179.63782"
+         x="287.00043"
+         height="2"
+         width="2"
+         id="line-h-pad"
+         style="display:inline;opacity:0;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         y="-179.63782"
+         x="287.00043"
+         height="1"
+         width="2"
+         id="line-h-line"
+         style="display:inline;opacity:1;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
     <image
        y="-179.63782"
        x="283.0004"
