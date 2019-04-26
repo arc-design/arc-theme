@@ -5348,16 +5348,22 @@
          x="437.00043"
          y="-37.637821" />
     </g>
-    <image
-       y="-34.637821"
-       x="436.00043"
-       id="frame-gap-start"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wECFwUNonrYbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3Jl YXRlZCB3aXRoIEdJTVBkLmUHAAAAEUlEQVQI12O8cfOGAzsb+34AFAwDnr/nIb8AAAAASUVORK5C YII= "
-       style="image-rendering:optimizeSpeed"
-       preserveAspectRatio="none"
-       height="1"
-       width="2"
-       inkscape:label="#image6329" />
+    <g id="frame-gap-start">
+      <rect
+         style="opacity:1;fill:#d7d7d7;fill-opacity:0.25;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="frame-gap-start-left"
+         width="1"
+         height="1"
+         x="436.00043"
+         y="-34.637821" />
+      <rect
+         style="opacity:1;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="frame-gap-start-right"
+         width="1"
+         height="1"
+         x="437.00043"
+         y="-34.637821" />
+    </g>
     <g
        id="menubar_button"
        inkscape:label="#g5032"
