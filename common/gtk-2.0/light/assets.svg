@@ -4886,14 +4886,14 @@
          height="2"
          width="2"
          id="line-h-pad"
-         style="display:inline;opacity:0;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:0;fill:none;fill-opacity:1;stroke:none;" />
       <rect
          y="-178.63782"
          x="287.00043"
          height="1"
          width="2"
          id="line-h-line"
-         style="display:inline;opacity:1;fill:#dfdfdf;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#dfdfdf;fill-opacity:1;stroke:none;" />
     </g>
     <g id="line-v">
       <rect
