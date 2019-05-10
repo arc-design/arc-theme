@@ -2391,12 +2391,13 @@ $legacy_icon_size: 24px;
 // Looking Glass
 //
 #LookingGlassDialog {
+  margin-top: 4px;
   spacing: 4px;
   padding: 8px 8px 10px 8px;
-  background-color: transparentize(black, 0.3);
-  border: 1px solid black;
-  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+  background-color: $switcher_bg_color;
+  border: 1px solid $switcher_borders_color;
   border-radius: 2px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   color: $osd_fg_color;
 
   & > #Toolbar {
