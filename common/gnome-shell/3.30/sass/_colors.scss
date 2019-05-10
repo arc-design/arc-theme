@@ -109,9 +109,9 @@ $panelmenu_bg_color: if($variant =='light', #ffffff, #383C4A);
 $panelmenu_borders_color: $borders_color;
 
 // OSD popup colors
-$popup_bg_color: if($transparency == 'true', transparentize(#252A36, 0.05), #252A36);
-$popup_borders_color: if($transparency == 'true', transparentize(#0F1016, 0.3), #0F1016);
+$popup_bg_color: transparentize(#252A36, 0.05);
+$popup_borders_color: transparentize(#0F1016, 0.3);
 
 // Switcher colors
-$switcher_bg_color: if($transparency == 'true', transparentize(#363945, 0.05), #363945);
-$switcher_borders_color: if($transparency == 'true', transparentize(#161A26, 0.19), #363945);
+$switcher_bg_color: transparentize(#363945, 0.05);
+$switcher_borders_color: transparentize(#161A26, 0.19);
