@@ -1339,24 +1339,28 @@ StScrollBar {
 }
 
 .message {
-  padding: 4px;
+  padding: 0;
   color: $fg_color;
-  border-image: url("#{$asset_path}/misc/message.svg") 9 9 9 9;
+  background-color: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
+  border: 1px solid if($variant=='light', rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.30));
+  border-radius: 3px;
 
   &:hover, &:focus {
     color: $fg_color;
-    border-image: url("#{$asset_path}/misc/message-hover.svg") 9 9 9 9;
+    border-color: $selected_bg_color;
   }
 
   &:active {
     color: $selected_fg_color;
-    border-image: url("#{$asset_path}/misc/message-active.svg") 9 9 9 9;
+    background-color: $selected_bg_color;
+    border-color: $selected_bg_color;
   }
 
   &-icon-bin {
-    padding: 8px 0px 8px 8px;
+    padding: 12px 0px 12px 12px;
+    border-image: url("common-assets/misc/message-icon.svg") 9 9 9 9;
 
-    &:rtl { padding: 8px 8px 8px 0px; }
+    &:rtl { padding: 12px 12px 12px 0px; }
 
     > StIcon {
       //icon-size: 32px;
@@ -1962,11 +1966,11 @@ StScrollBar {
   @include fontsize($font-size);
   width: 34em;
   margin: 5px;
-  padding: 10px;
+  padding: 6px 4px;
   color: $fg_color;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
+  background-color: $panelmenu_bg_color;
+  border: 1px solid $panelmenu_borders_color;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
   .notification-icon { padding: 5px; }
 
