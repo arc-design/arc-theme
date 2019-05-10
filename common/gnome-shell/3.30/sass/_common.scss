@@ -1965,7 +1965,7 @@ StScrollBar {
 .notification-banner:focus {
   @include fontsize($font-size);
   width: 34em;
-  margin: 5px;
+  margin: 10px;
   padding: 6px 4px;
   color: $fg_color;
   background-color: $panelmenu_bg_color;
