@@ -215,11 +215,11 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
+  border-radius: 3px;
   color: $fg_color;
-  background-color: transparentize($bg_color, 1);
-  border: none;
-  border-image: url("#{$asset_path}/misc/modal.svg") 9 9 9 67;
-  padding: 0 5px 6px 5px;
+  background-color: $modal_bg_color;
+  border: 1px solid $modal_borders_color;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
   .modal-dialog-content-box {
     padding: 20px 10px 10px 10px;
