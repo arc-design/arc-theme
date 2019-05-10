@@ -726,10 +726,10 @@ StScrollBar {
   min-height: 64px;
 
   color: $_shell_fg_color;
-  background: none;
-  border: none;
+  background: $popup_bg_color;
+  border: 1px solid $popup_borders_color;
   border-radius: 5px;
-  border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
 .osd-monitor-label { @include fontsize($font-size * 3); }
 
