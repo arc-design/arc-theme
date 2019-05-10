@@ -837,8 +837,10 @@ StScrollBar {
   &-group { padding: 12px; }
 
   &-container {
-    border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+    background-color: $switcher_bg_color;
+    border: 1px solid $switcher_borders_color;
     border-radius: 3px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
     padding-bottom: 24px;
   }
