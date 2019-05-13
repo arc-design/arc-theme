@@ -99,3 +99,19 @@ $wm_icon_bg: if($variant == 'light' and $darker == 'false', #90949E, #90939B);
 $wm_icon_unfocused_bg: if($variant == 'light' and $darker == 'false', #B6B8C0, #666A74);
 $wm_icon_hover_bg: if($variant == 'light' and $darker == 'false', #7A7F8B, #C4C7CC);
 $wm_icon_active_bg: $selected_fg_color;
+
+// Modal dialog colors
+$modal_bg_color: if($variant =='light', #f5f6f7, #323644);
+$modal_borders_color: $borders_color;
+
+// Panel button dropdown menu colors
+$panelmenu_bg_color: if($variant =='light', #ffffff, #383C4A);
+$panelmenu_borders_color: $borders_color;
+
+// OSD popup colors
+$popup_bg_color: transparentize(#252A36, 0.05);
+$popup_borders_color: transparentize(#0F1016, 0.3);
+
+// Switcher colors
+$switcher_bg_color: transparentize(#363945, 0.05);
+$switcher_borders_color: transparentize(#161A26, 0.3);

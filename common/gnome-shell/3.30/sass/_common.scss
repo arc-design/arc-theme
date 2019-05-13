@@ -215,11 +215,11 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
+  border-radius: 3px;
   color: $fg_color;
-  background-color: transparentize($bg_color, 1);
-  border: none;
-  border-image: url("#{$asset_path}/misc/modal.svg") 9 9 9 67;
-  padding: 0 5px 6px 5px;
+  background-color: $modal_bg_color;
+  border: 1px solid $modal_borders_color;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
   .modal-dialog-content-box {
     padding: 20px 10px 10px 10px;
@@ -619,13 +619,13 @@ StScrollBar {
 .popup-menu {
   min-width: 15em;
   color: $fg_color;
-  border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
+  background-color: $panelmenu_bg_color;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
     background: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
     box-shadow: inset 0 -1px if($variant=='light', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15));
-    margin: 0 4px;
+    margin: 0;
 
     .popup-menu-item.selected {
       background-color: $selected_bg_color;
@@ -638,20 +638,19 @@ StScrollBar {
   .popup-menu-item {
     spacing: 12px;
 
-    &:ltr { padding: .4em 3em .4em 0em; }
-    &:rtl { padding: .4em 0em .4em 3em; }
+    &:ltr { padding: .4em 2em .4em 0em; }
+    &:rtl { padding: .4em 0em .4em 2em; }
 
     &:checked {
       font-weight: normal;
-      background: none;
-      box-shadow: none;
-      border-image: url("#{$asset_path}/menu/submenu-open.svg") 9 9 9 9;
+      background: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
+      box-shadow: inset 0 1px if($variant=='light', rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15));
     }
 
     &:active, &.selected {
       color: $selected_fg_color;
-      background-color: transparent;
-      border-image: url("common-assets/menu/menu-hover.svg") 9 9 1 1;
+      background-color: $selected_bg_color;
+      box-shadow: none;
     }
 
     &:insensitive {
@@ -667,7 +666,7 @@ StScrollBar {
   }
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
-    -boxpointer-gap: 0px;
+    -boxpointer-gap: 4px;
     margin-bottom: 1.75em;
   }
 }
@@ -679,12 +678,13 @@ StScrollBar {
 }
 
 .popup-menu-boxpointer {
-  -arrow-border-radius: 2px;
-  -arrow-background-color:  rgba(0,0,0,0.0);
+  -arrow-border-radius: 3px;
+  -arrow-background-color: $panelmenu_bg_color;
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(0,0,0,0.0);
-  -arrow-base: 0;
+  -arrow-border-color: $panelmenu_borders_color;
+  -arrow-base: 26px;
   -arrow-rise: 0;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .candidate-popup-boxpointer {
@@ -726,10 +726,10 @@ StScrollBar {
   min-height: 64px;
 
   color: $_shell_fg_color;
-  background: none;
-  border: none;
+  background: $popup_bg_color;
+  border: 1px solid $popup_borders_color;
   border-radius: 5px;
-  border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
 .osd-monitor-label { @include fontsize($font-size * 3); }
 
@@ -746,10 +746,10 @@ StScrollBar {
 
 .resize-popup {
   color: $osd_fg_color;
-  background: none;
-  border: none;
+  background: $popup_bg_color;
+  border: 1px solid $popup_borders_color;
   border-radius: 5px;
-	border-image: url("common-assets/misc/osd.svg") 9 9 9 9;
+	box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   padding: 12px;
 }
 
@@ -762,10 +762,10 @@ StScrollBar {
 }
 
 .switcher-list {
-  background: none;
-  border: none;
-  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+  background: $switcher_bg_color;
+  border: 1px solid $switcher_borders_color;
   border-radius: 3px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   padding: 20px;
 
   &-item-container { spacing: 8px; }
@@ -837,8 +837,10 @@ StScrollBar {
   &-group { padding: 12px; }
 
   &-container {
-    border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+    background-color: $switcher_bg_color;
+    border: 1px solid $switcher_borders_color;
     border-radius: 3px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
     padding-bottom: 24px;
   }
@@ -1337,24 +1339,28 @@ StScrollBar {
 }
 
 .message {
-  padding: 4px;
+  padding: 0;
   color: $fg_color;
-  border-image: url("#{$asset_path}/misc/message.svg") 9 9 9 9;
+  background-color: if($variant=='light', rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
+  border: 1px solid if($variant=='light', rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.30));
+  border-radius: 3px;
 
   &:hover, &:focus {
     color: $fg_color;
-    border-image: url("#{$asset_path}/misc/message-hover.svg") 9 9 9 9;
+    border-color: $selected_bg_color;
   }
 
   &:active {
     color: $selected_fg_color;
-    border-image: url("#{$asset_path}/misc/message-active.svg") 9 9 9 9;
+    background-color: $selected_bg_color;
+    border-color: $selected_bg_color;
   }
 
   &-icon-bin {
-    padding: 8px 0px 8px 8px;
+    padding: 12px 0px 12px 12px;
+    border-image: url("common-assets/misc/message-icon.svg") 9 9 9 9;
 
-    &:rtl { padding: 8px 8px 8px 0px; }
+    &:rtl { padding: 12px 12px 12px 0px; }
 
     > StIcon {
       //icon-size: 32px;
@@ -1959,12 +1965,12 @@ StScrollBar {
 .notification-banner:focus {
   @include fontsize($font-size);
   width: 34em;
-  margin: 5px;
-  padding: 10px;
+  margin: 10px;
+  padding: 6px 4px;
   color: $fg_color;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-image: url("#{$asset_path}/menu/menu.svg") 9 9 9 9;
+  background-color: $panelmenu_bg_color;
+  border: 1px solid $panelmenu_borders_color;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
 
   .notification-icon { padding: 5px; }
 
@@ -2385,12 +2391,13 @@ $legacy_icon_size: 24px;
 // Looking Glass
 //
 #LookingGlassDialog {
+  margin-top: 4px;
   spacing: 4px;
   padding: 8px 8px 10px 8px;
-  background-color: transparentize(black, 0.3);
-  border: 1px solid black;
-  border-image: url("common-assets/misc/bg.svg") 9 9 9 9;
+  background-color: $switcher_bg_color;
+  border: 1px solid $switcher_borders_color;
   border-radius: 2px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
   color: $osd_fg_color;
 
   & > #Toolbar {
