@@ -620,6 +620,7 @@ StScrollBar {
   min-width: 15em;
   color: $fg_color;
   background-color: $panelmenu_bg_color;
+  border-radius: 3px;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
