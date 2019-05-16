@@ -960,7 +960,7 @@ panel-toplevel.background {
 
     & notebook {
         color: white;
-        background-color: gtkopacity($panel_bg, 0.8);
+        background-color: transparentize($panel_bg, 0.8);
     }
 
     & button {

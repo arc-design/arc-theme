@@ -1,10 +1,5 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
-
-@function gtkopacity($c, $a) {
-  @return scale-color($c, $alpha: percentage(-1 + $a));
-}
-
 $base_color: if($variant =='light', %TXT_BG%, %HDR_BG2%);
 $base_bg_color: %BG%;
 // not implemented for GTK+2 theme:

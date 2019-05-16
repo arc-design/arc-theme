@@ -30,9 +30,8 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
 
   // transparent-mode
   &.transparent {
-    background-color: gtkopacity($panel_bg, 0.4);
     color: $selected_fg_color;
-
+    background-color: transparentize($panel_bg, 0.6);
   }
 
   button {
@@ -46,8 +45,8 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
 
     &:hover {
         box-shadow: gtkalpha($panel_bg, 0.4);
-        background-color: gtkopacity($panel_bg, 0.4);
-        border-color: gtkopacity($panel_bg, 0.4);
+        background-color: transparentize($panel_bg, 0.6);
+        border-color: transparentize($panel_bg, 0.6);
     }
   }
 
@@ -56,7 +55,7 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
 
   &.vertical button { padding: 4px 0; }
 
-  separator { background-color: gtkopacity($fg_color, 0.4); }
+  separator { background-color: transparentize($fg_color, 0.6); }
 
   &.vertical #tasklist-button { min-height: 32px; }
 
@@ -130,7 +129,7 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
     button.flat.launcher {
       &:hover {
         box-shadow: inset #{$_line} gtkalpha($fg_color, 0.4);
-        background-color: gtkopacity($fg_color, 0.4);
+        background-color: transparentize($fg_color, 0.6);
         border: none;
       }
       &:active,
@@ -337,11 +336,11 @@ $z-depth-4: rgba(0, 0, 0, 0.34);
 // Menu Button
 button.budgie-menu-launcher {
   // padding: 0 2px;
-  color: $base_bg_color;
+  color: white;
   border: none;
 
   &:hover {
-      background-color: gtkopacity($fg_color, 0.4);
+      background-color: transparentize($fg_color, 0.6);
       border: none;
     }
 }
@@ -367,7 +366,7 @@ button.raven-trigger {
     border: none;
 
     &:hover {
-      background-color: gtkopacity($fg_color, 0.4);
+      background-color: transparentize($fg_color, 0.6);
       border: none;
     }
 }
