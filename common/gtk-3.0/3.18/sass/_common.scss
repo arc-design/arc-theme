@@ -1091,6 +1091,11 @@ GtkComboBox {
   @extend %header_widgets;
 }
 
+.csd headerbar headerbar,
+.csd headerbar headerbar:backdrop {
+  background-color: transparent;
+}
+
 %header_separator {
   -GtkWidget-wide-separators: true;
   -GtkWidget-separator-width: 1px;

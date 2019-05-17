@@ -1115,6 +1115,11 @@ headerbar {
   @extend %titlebar;
 }
 
+.csd headerbar headerbar,
+.csd headerbar headerbar:backdrop {
+  background-color: transparent;
+}
+
 %header_separator {
   min-width: 1px;
   min-height: 1px;
