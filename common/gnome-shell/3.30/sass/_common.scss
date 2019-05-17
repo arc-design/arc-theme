@@ -619,7 +619,6 @@ StScrollBar {
 .popup-menu {
   min-width: 15em;
   color: $fg_color;
-  background-color: $panelmenu_bg_color;
   border-radius: 3px;
 
   .popup-menu-arrow { } //defined globally in the TOP BAR
@@ -667,7 +666,7 @@ StScrollBar {
   }
   //.popup-status-menu-item { font-weight: normal;  color: pink; } //dunno what that is
   &.panel-menu {
-    -boxpointer-gap: 4px;
+    -boxpointer-gap: 0px;
     margin-bottom: 1.75em;
   }
 }
@@ -680,12 +679,19 @@ StScrollBar {
 
 .popup-menu-boxpointer {
   -arrow-border-radius: 3px;
-  -arrow-background-color: $panelmenu_bg_color;
-  -arrow-border-width: 1px;
-  -arrow-border-color: $panelmenu_borders_color;
+  -arrow-background-color: transparent;
+  -arrow-border-width: 0;
+  -arrow-border-color: transparent;
   -arrow-base: 26px;
   -arrow-rise: 0;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+
+  .popup-menu-content {
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid $panelmenu_borders_color;
+    background-color: $panelmenu_bg_color;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .candidate-popup-boxpointer {
