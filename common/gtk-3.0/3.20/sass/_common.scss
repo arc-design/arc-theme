@@ -2623,20 +2623,20 @@ filechooserbutton:drop(active) {
 //
 .sidebar {
   border-style: none;
-  background-color: lighten($bg_color, 2%);
+  background-color: if($variant =='light', transparentize(darken($borders_color, 40%), 82%), $borders_color);
 
   @at-root %sidebar_left,
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 1px solid $borders_color;
+    border-right-style: none;
     border-left-style: none;
   }
 
   @at-root %sidebar_right,
   &:dir(rtl),
   &.right {
-    border-left: 1px solid $borders_color;
+    border-left-style: none;
     border-right-style: none;
   }
 
