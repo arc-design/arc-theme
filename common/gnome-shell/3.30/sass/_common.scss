@@ -315,7 +315,7 @@ StScrollBar {
 
   &-logout-icon {
     border: 0px solid transparent;
-    border-radius: 2px;
+    border-radius: 99px;
     width: 48px;
     height: 48px;
     background-size: contain;
@@ -507,8 +507,8 @@ StScrollBar {
     color: $warning_color;
   }
 
-  &-user-icon {
-    border-radius: 2px;
+  &-icon {
+    border-radius: 99px;
     background-size: contain;
     width: 48px;
     height: 48px;
