@@ -1918,7 +1918,7 @@ StScrollBar {
     background-color: transparent;
     background-image: url(common-assets/misc/page-indicator-active.svg); }
   &:checked .page-indicator-icon,
-  &:checked:active {
+  &:checked:active .page-indicator-icon {
     background-color: transparent;
     background-image: url(common-assets/misc/page-indicator-checked.svg); }
 }
