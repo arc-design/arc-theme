@@ -2172,6 +2172,36 @@ $legacy_icon_size: 24px;
   &:active, &:checked { @include button(osd-active); }
 
   &:grayed { @include button(osd-insensitive); }
+
+  &.enter-key {
+    background-image: url("common-assets/keyboard/key-enter.svg");
+
+    &:active, &:checked { background-image: url("common-assets/keyboard/key-enter-active.svg"); }
+  }
+
+  &.shift-key-lowercase { background-image: url("common-assets/keyboard/key-shift.svg"); }
+
+  &.shift-key-uppercase {
+    @include button(osd-active);
+    background-image: url("common-assets/keyboard/key-shift-uppercase.svg");
+  }
+
+  &.shift-key-uppercase:latched {
+    @include button(osd-active);
+    background-image: url("common-assets/keyboard/key-shift-latched-uppercase.svg");
+  }
+
+  &.hide-key {
+    background-image: url("common-assets/keyboard/key-hide.svg");
+
+    &:active, &:checked { background-image: url("common-assets/keyboard/key-hide-active.svg"); }
+  }
+
+  &.layout-key {
+    background-image: url("common-assets/keyboard/key-layout.svg");
+
+    &:active, &:checked { background-image: url("common-assets/keyboard/key-layout-active.svg"); }
+  }
 }
 
 .keyboard-subkeys { //long press on a key popup
