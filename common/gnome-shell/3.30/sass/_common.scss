@@ -910,6 +910,7 @@ StScrollBar {
   $_panel_fg_color: $_shell_fg_color;
 
   font-weight: bold;
+  font-feature-settings: "tnum";
   height: 2.1em;
   min-height: 27px;
   background-gradient-direction: none;
@@ -1240,6 +1241,7 @@ StScrollBar {
   padding: 0.1em;
   margin: 2px;
   border-radius: 12.5px;
+  font-feature-settings: "tnum";
 
   &:hover, &:focus { background-color: transparentize(black, 0.9); }
 
@@ -2355,6 +2357,7 @@ $legacy_icon_size: 24px;
 .screen-shield-clock-time {
   @include fontsize($font-size * 8);
   text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+  font-feature-settings: "tnum";
 }
 
 .screen-shield-clock-date { @include fontsize($font-size * 3); }
