@@ -2216,6 +2216,8 @@ $legacy_icon_size: 24px;
   -boxpointer-gap: 5px;
 }
 
+.emoji-panel .keyboard-key:latched { @include button(osd-active); }
+
 //
 // IBus Candidate Popup
 //
