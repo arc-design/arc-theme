@@ -2151,7 +2151,6 @@ $legacy_icon_size: 24px;
   @include fontsize($font-size * 1.56);
   font-weight: bold;
   border-radius: 3px;
-  box-shadow: none;
 
   @include button(osd);
 
