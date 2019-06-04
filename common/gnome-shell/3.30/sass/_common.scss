@@ -962,6 +962,7 @@ StScrollBar {
     border-color: transparent;
 
     .app-menu-icon {
+      -st-icon-style: symbolic;
       width: 0;
       height: 0;
       margin-left: 0px;
@@ -1085,6 +1086,7 @@ StScrollBar {
 }
 
 .system-menu-action {
+  -st-icon-style: symbolic;
   padding: 13px;
   color: $fg_color;
   border-radius: 32px; /* wish we could do 50% */
