@@ -2134,6 +2134,15 @@ $legacy_icon_size: 24px;
   border-width: 0;
   border-top-width: 1px;
   border-color: transparentize(black, 0.8);
+
+  .page-indicator {
+    padding: 4px 4px 8px;
+
+    .page-indicator-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .keyboard-layout {
