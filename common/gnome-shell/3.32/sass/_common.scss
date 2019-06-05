@@ -279,12 +279,36 @@ StScrollBar {
   }
 }
 
-.show-processes-dialog-subject,
-.mount-question-dialog-subject,
+.mount-dialog-subject,
 .end-session-dialog-subject { //this should be a generic header class
   @include fontsize($font-size * 1.2);
   font-weight: bold;
   color: $fg_color;
+}
+
+//
+// Message Dialog
+//
+.message-dialog {
+  &-main-layout {
+    padding: 12px 20px 0;
+    spacing: 12px;
+  }
+  &-content {
+    max-width: 28em;
+    spacing: 20px;
+  }
+  &-icon {
+    min-width: 48px;
+    icon-size: 48px;
+  }
+  &-title {
+    font-weight: bold;
+  }
+  &-subtitle {
+    color: $fg_color;
+    font-weight: bold;
+  }
 }
 
 //
@@ -383,38 +407,33 @@ StScrollBar {
 //
 .shell-mount-operation-icon { icon-size: 48px; }
 
-.show-processes-dialog,
-.mount-question-dialog {
+.mount-dialog {
   spacing: 24px;
-}
 
-.show-processes-dialog-subject,
-.mount-question-dialog-subject {
-  padding-top: 10px;
-  padding-left: 17px;
-  padding-bottom: 6px;
+  .message-dialog-title {
+    padding-top: 10px;
+    padding-left: 17px;
+    padding-bottom: 6px;
+    max-width: 34em;
 
-  &:rtl {
-    padding-left: 0px;
-    padding-right: 17px;
+    &:rtl {
+      padding-left: 0px;
+      padding-right: 17px;
+    }
+  }
+
+  .message-dialog-body {
+    padding-left: 17px;
+    width: 28em;
+
+    &:rtl {
+      padding-left: 0px;
+      padding-right: 17px;
+    }
   }
 }
 
-.mount-question-dialog-subject {
-    max-width: 500px;
-}
-
-.show-processes-dialog-description,
-.mount-question-dialog-description {
-  padding-left: 17px;
-  width: 28em;
-
-  &:rtl {
-    padding-right: 17px;
-  }
-}
-
-.show-processes-dialog-app-list {
+.mount-dialog-app-list {
   @include fontsize($font-size * 1.1);
   max-height: 200px;
   padding-top: 24px;
@@ -427,19 +446,19 @@ StScrollBar {
   }
 }
 
-.show-processes-dialog-app-list-item {
+.mount-dialog-app-list-item {
   color: darken($fg_color,10%);
   &:hover { color: $fg_color; }
   &:ltr { padding-right: 1em; }
   &:rtl { padding-left: 1em; }
 }
 
-.show-processes-dialog-app-list-item-icon {
+.mount-dialog-app-list-item-icon {
   &:ltr { padding-right: 17px; }
   &:rtl { padding-left: 17px; }
 }
 
-.show-processes-dialog-app-list-item-name {
+.mount-dialog-app-list-item-name {
   @include fontsize($font-size * 1.1);
 }
 
@@ -451,22 +470,22 @@ StScrollBar {
   width: 500px;
   //border: 3px solid $_bubble_borders_color;
 
-  &-main-layout {
+  .message-dialog-main-layout {
     spacing: 24px;
     padding: 10px;
   }
 
-  &-message-layout {
+  .message-dialog-content {
     spacing: 16px;
   }
 
-  &-headline {
+  .message-dialog-title {
     @include fontsize($font-size * 1.3);
     font-weight: bold;
     color: $fg_color;
   }
 
-  &-descritption:rtl {
+  &-description:rtl {
     text-align: right;
   }
 
@@ -564,30 +583,6 @@ StScrollBar {
 //
 .access-dialog {
   spacing: 30px;
-
-  &-main-layout {
-    padding: 12px 20px 0;
-    spacing: 12px;
-  }
-
-  &-content {
-    max-width: 28em;
-    spacing: 20px;
-  }
-
-  &-icon {
-    min-width: 48px;
-    icon-size: 48px;
-  }
-
-  &-title {
-    font-weight: bold;
-  }
-
-  &-subtitle {
-    color: $fg_color;
-    font-weight: bold;
-  }
 }
 
 //
@@ -595,16 +590,25 @@ StScrollBar {
 //
 .geolocation-dialog {
   spacing: 30px;
+}
 
-  &-main-layout { spacing: 12px; }
-  &-content { spacing: 20px; }
-  &-icon { icon-size: 48px; }
-  &-title { font-weight: bold; }
-
-  &-reason {
-    color: $fg_color;
-    font-weight: bold;
+//
+// Extension Dialog
+//
+.extension-dialog {
+  .message-dialog-main-layout {
+    spacing: 24px;
+    padding: 10px;
   }
+
+  .message-dialog-title { color: $fg_color; }
+}
+
+//
+// Inhibit Shortcuts Dialog
+//
+.inhibit-shortcuts-dialog {
+  spacing: 30px;
 }
 
 //
