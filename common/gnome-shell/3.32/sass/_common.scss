@@ -1500,6 +1500,13 @@ StScrollBar {
 .popup-menu-arrow { width: 16px; height: 16px; }
 .popup-menu-icon { icon-size: 16px; }
 
+//
+//Rubberband
+//
+.select-area-rubberband {
+  background-color: transparentize($selected_bg_color, 0.7);
+  border: 1px solid $selected_bg_color;
+}
 
 //
 //Close buttons
