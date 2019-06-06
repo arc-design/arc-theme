@@ -1799,12 +1799,20 @@ StScrollBar {
   .overview-icon {
     background-color: transparentize(black, 0.5);
     border-radius: 2px;
-    border: 0px solid;
+    padding: 6px;
+    border: 0px;
+    transition-duration: 0ms;
+    text-align: center;
   }
 
-  &:hover .overview-icon {
+  &:hover .overview-icon,
+  &:focus .overview-icon,
+  &:selected .overview-icon {
     background-color: transparentize(black, 0.3);
     color: $selected_bg_color;
+    transition-duration: 0ms;
+    border-image: none;
+    background-image: none;
   }
 
   &:active .overview-icon,
