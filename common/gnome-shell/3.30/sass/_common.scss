@@ -1888,7 +1888,7 @@ StScrollBar {
   }
 
   &:focus > .overview-icon {
-    background-color: $selected_bg_color;
+    background-color: lighten($dark_sidebar_bg, 3%);
   }
 }
 
@@ -1897,8 +1897,8 @@ StScrollBar {
   -arrow-background-color: darken($dark_sidebar_bg, 8%);
   -arrow-border-color: transparentize(darken($dark_sidebar_bg, 25%), 0.5);
   -arrow-border-width: 1px;
-  -arrow-base: 5;
-  -arrow-rise: 5;
+  -arrow-base: 24px;
+  -arrow-rise: 11px;
 }
 
 .app-folder-popup-bin { padding: 5px; }
