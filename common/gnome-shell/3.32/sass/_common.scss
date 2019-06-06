@@ -2490,7 +2490,7 @@ StScrollBar {
 }
 
 #lockDialogGroup {
-  background: #2e3436 url(misc/noise-texture.png);
+  background: $bg_color url("common-assets/misc/noise-texture.png");
   background-repeat: repeat;
 }
 
