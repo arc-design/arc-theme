@@ -1365,9 +1365,13 @@ StScrollBar {
     > StIcon {
       //icon-size: 32px;
       color: inherit;
+      icon-size: 1.09em;
+      -st-icon-style: symbolic;
     }
   }
 
+  &-secondary-bin { padding: 0 0.82em; }
+  &-secondary-bin > .event-time { padding-bottom: 0.13em; }
   &-secondary-bin,
   &-secondary-bin > .event-time {
     color: transparentize($fg_color, 0.4);
@@ -1415,13 +1419,13 @@ StScrollBar {
 }
 
 .media-message-cover-icon {
-  icon-size: 32px;
+  icon-size: 32px !important;
 
   &.fallback {
     color: $insensitive_fg_color;
     background-color: $bg_color;
     border-radius: 2px;
-    icon-size: 16px;
+    icon-size: 16px !important;
     padding: 8px;
     border: 1px solid $borders_color;
   }
