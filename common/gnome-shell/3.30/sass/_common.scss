@@ -1327,8 +1327,6 @@ StScrollBar {
   &-section,
   &-section-list { spacing: 0.7em; }
 
-  &-section-list-title-box { spacing: 0.4em; }
-
   &-placeholder {
     StIcon { width: 0; height: 0; }
     StLabel { color: $insensitive_fg_color; }
@@ -1337,28 +1335,6 @@ StScrollBar {
   &-clear-button.button {
     margin: 1.5em 1.5em 0;
     padding: 4px 12px;
-  }
-
-  &-section-close {
-
-    > StIcon {
-      icon-size: 18px;
-      border-radius: 0px;
-      color: transparent;
-      background-color: transparent;
-      background-image: url('#{$asset_path}/misc/message-close.svg');
-    }
-    &:hover > StIcon {
-      color: transparent;
-      background-color: transparent;
-      background-image: url('#{$asset_path}/misc/message-close-hover.svg');
-    }
-    &:active > StIcon {
-      color: transparent;
-      background-color: transparent;
-      background-image: url('#{$asset_path}/misc/message-close-active.svg');
-    }
-
   }
 }
 
