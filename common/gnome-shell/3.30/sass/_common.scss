@@ -1647,14 +1647,19 @@ StScrollBar {
   @include fontsize($font-size);
   color: $osd_fg_color;
   background-color: $dark_sidebar_bg;
-  border-color: rgba(0,0,0,0.4);
+  border: 1px solid rgba(0,0,0,0.4);
+  border-left: 0px;
   padding: 4px 0;
   border-radius: 0 3px 3px 0;
 
   &:rtl { border-radius: 3px 0 0 3px; }
 
   .right &,
-  &:rtl { padding: 4px 0; }
+  &:rtl {
+    border-left: 1px;
+    border-right: 0px;
+    padding: 4px 0;
+  }
 
   .top &, .bottom & { padding: 0; }
 
