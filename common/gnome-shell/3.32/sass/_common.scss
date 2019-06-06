@@ -1675,22 +1675,22 @@ StScrollBar {
 
 .search-section-separator {
   background-color: transparentize(white, 0.8);
-  -margin-horizontal: 1.5em;
   height: 1px;
+
+  .search-section:last-child & { background-color: transparent; }
 }
 
-.list-search-result-content { spacing: 12px; padding: 12px; }
+.list-search-result-content { spacing: 30px; padding: 1px; }
 
-.list-search-result-title { font-size: 1.5em; color: $_shell_fg_color; }
+.list-search-result-title { font-size: 1.5em; spacing: 12px; color: $_shell_fg_color; }
 
 .list-search-result-description { color: darken($_shell_fg_color, 20%); }
 
+.list-search-provider-details { width: 150px; color: darken($_shell_fg_color, 12%); margin-top: 0.24em; }
+
+.list-search-provider-content { spacing: 20px; }
+
 .search-provider-icon { padding: 15px; }
-.search-provider-icon-more {
-  width: 16px;
-  height: 16px;
-  background-image: url("common-assets/misc/more-results.svg");
-}
 
 //
 // Dash
