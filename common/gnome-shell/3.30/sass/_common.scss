@@ -1965,6 +1965,11 @@ StScrollBar {
   border-image: url("common-assets/dash/dash-left.svg") 9 9 9 9;
 }
 
+.workspace-thumbnails .placeholder {
+  background-image: url("common-assets/dash/dash-placeholder.svg");
+  background-size: contain;
+  height: 24px; }
+
 .workspace-thumbnail-indicator {
   border: 4px solid transparentize($selected_bg_color, 0.2);
   border-radius: 1px;
