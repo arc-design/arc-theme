@@ -1695,6 +1695,10 @@ StScrollBar {
 //
 // Dash
 //
+.app-menu,
+.app-well-menu {
+  max-width: 27.25em; }
+
 #dash {
   @include fontsize($font-size);
   color: $osd_fg_color;
