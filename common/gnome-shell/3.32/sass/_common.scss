@@ -1174,17 +1174,70 @@ StScrollBar {
   font-weight: bold;
 }
 
-.world-clocks-button:active .world-clocks-header,
-.weather-button:active .weather-header {
-  color: $selected_fg_color;
+.weather-header.location {
+  font-weight: bold;
+  @include fontsize($font-size * 0.875);
 }
 
-.world-clocks-grid {
+.world-clocks-button:active .world-clocks-header,
+.weather-button:active .weather-header {
+  color: transparentize($fg_color, 0.4);
+}
+
+.world-clocks-grid,
+.weather-grid {
   spacing-rows: 0.4em;
+  spacing-columns: 0.8em;
+}
+
+.weather-grid {
+  @include fontsize($font-size * 0.875);
 }
 
 .weather-box {
   spacing: 0.4em;
+}
+
+.world-clocks {
+  &-city {
+    font-weight: bold;
+    @include fontsize($font-size * 0.875);
+  }
+  &-time {
+    color: transparentize($fg_color, 0.2);
+    font-feature-settings: "tnum";
+    @include fontsize($font-size * 1.2);
+  }
+  &-timezone {
+    color: transparentize($fg_color, 0.4);
+    font-feature-settings: "tnum";
+    @include fontsize($font-size * 0.875);
+  }
+}
+
+.world-clocks-button:active {
+  .world-clocks-time {
+    color: transparentize($fg_color, 0.2);
+  }
+
+  .world-clocks-timezone {
+    color: transparentize($fg_color, 0.4);
+  }
+}
+
+.weather {
+  &-forecast-icon {
+    icon-size: 2.18em;
+  }
+
+  &-forecast-time {
+    color: transparentize($fg_color, 0.4);
+    @include fontsize($font-size * 0.75);
+  }
+}
+
+.weather-button:active .weather-forecast-time {
+  color: transparentize($fg_color, 0.4);
 }
 
 .calendar-month-label {

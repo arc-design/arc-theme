@@ -1181,7 +1181,7 @@ StScrollBar {
 
 .world-clocks-button:active .world-clocks-header,
 .weather-button:active .weather-header {
-  color: $selected_fg_color;
+  color: transparentize($fg_color, 0.4);
 }
 
 .world-clocks-grid {
