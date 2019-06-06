@@ -1461,6 +1461,7 @@ StScrollBar {
   box-shadow: none;
   background-color: transparent;
   color: transparent;
+  -shell-close-overlap: 12px;
 
   &:hover {
     background-image: url("common-assets/misc/close-hover.svg");
@@ -1469,10 +1470,6 @@ StScrollBar {
   &:active {
     background-image: url("common-assets/misc/close-active.svg");
   }
-}
-
-.window-close {
-  -shell-close-overlap: 12px;
 }
 
 //
