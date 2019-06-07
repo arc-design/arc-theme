@@ -1856,6 +1856,13 @@ StScrollBar {
   .overview-icon { icon-size: 96px; }
 }
 
+.system-action-icon {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  border-radius: 99px;
+  icon-size: 48px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+
 //.app-display { spacing: 20px; }
 
 //favorties | all toggle container
