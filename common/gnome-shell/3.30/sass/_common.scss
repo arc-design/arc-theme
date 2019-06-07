@@ -2134,6 +2134,23 @@ $legacy_icon_size: 24px;
 //
 // On-Screen Keyboard
 //
+.word-suggestions {
+  font-size: 13pt;
+  spacing: 12px;
+  min-height: 22pt;
+
+  StButton {
+    padding: 0.1em 0.5em;
+    border-radius: 2px;
+    color: #BAC3CF;
+
+    &:hover, &:focus, &:active {
+      background-color: #5294e2;
+      color: #ffffff;
+    }
+  }
+}
+
 #keyboard {
   background-color: $osd_bg_color;
   border-width: 0;
