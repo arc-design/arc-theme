@@ -1333,6 +1333,8 @@ StScrollBar {
   margin: 2px 6px;
   background-color: transparentize($fg_color,0.7);
   color: $bg_color;
+
+  &:focus { background-color: transparentize($fg_color,0.6); }
 }
 
 //
