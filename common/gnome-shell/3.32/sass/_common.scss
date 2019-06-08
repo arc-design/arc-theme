@@ -1159,7 +1159,6 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title,
 .events-section-title {
   border-radius: 3px;
   padding: .4em;
@@ -1176,7 +1175,6 @@ StScrollBar {
 .datemenu-today-button,
 .world-clocks-button,
 .weather-button,
-.message-list-section-title,
 .events-section-title {
   padding: 7px 10px 7px 10px;
   border: 1px solid transparentize($base_color, 1);
@@ -1194,7 +1192,6 @@ StScrollBar {
 
 .world-clocks-header,
 .weather-header,
-.message-list-section-title,
 .events-section-title {
   color: transparentize($fg_color, 0.6);
   font-weight: bold;
