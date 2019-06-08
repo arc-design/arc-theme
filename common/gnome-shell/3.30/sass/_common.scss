@@ -467,7 +467,7 @@ StScrollBar {
 //
 .prompt-dialog {
   //this is the width of the entire modal popup
-  width: 500px;
+  width: 34em;
   //border: 3px solid $_bubble_borders_color;
 
   .message-dialog-main-layout {
@@ -1502,9 +1502,9 @@ StScrollBar {
 // Network Dialogs
 //
 .nm-dialog {
-  max-height: 500px;
-  min-height: 450px;
-  min-width: 470px;
+  max-height: 34em;
+  min-height: 31em;
+  min-width: 32em;
 
   &-content {
     spacing: 20px;
