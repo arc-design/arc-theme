@@ -2,10 +2,12 @@
 
 Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Pantheon, Xfce, MATE, Cinnamon (>=3.4), Budgie Desktop (10.4 for GTK+3.22) etc.
 
-The NicoHood/arc-theme repository is a fork of the horst3180/arc-theme repository  which as been umaintained since March 2017.
-Its aim is to continue the maintenance of arc-theme. The two maintainers are the Arch-Linux and Debian & Ubuntu packaging maintainers.
+The arc-design/arc-theme repository is a fork of the horst3180/arc-theme repository  which as been umaintained since March 2017.
+Its aim is to continue the maintenance of arc-theme. The two administrators of the project are the Arch-Linux and Debian & Ubuntu packaging maintainers.
 
 It is strongly encouraged to submit pull-requests to suggest fixes and enhancements.
+
+Those that show good quality submissions will be invited to become maintainers.
 
 ## Arc is available in three variants
 
@@ -72,7 +74,7 @@ Install the theme with the following commands
 
 Clone the git repository with
 
-    git clone https://github.com/NicoHood/arc-theme --depth 1 && cd arc-theme
+    git clone https://github.com/arc-design/arc-theme --depth 1 && cd arc-theme
 
 #### 2. Build and install the theme
 
@@ -146,7 +148,7 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 
 ## Bugs
-If you find a bug, please report it at https://github.com/NicoHood/arc-theme/issues
+If you find a bug, please report it at https://github.com/arc-design/arc-theme/issues
 
 ## License
 Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
