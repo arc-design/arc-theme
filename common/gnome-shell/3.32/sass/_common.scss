@@ -1080,11 +1080,6 @@ StScrollBar {
 // a little unstructured mess:
 
 .system-switch-user-submenu-icon {
-  icon-size: 20px;
-  padding: 0 2px;
-}
-
-.system-switch-user-submenu-icon.default-icon {
   icon-size: 16px;
   padding: 0 4px;
 }
@@ -1198,17 +1193,70 @@ StScrollBar {
   font-weight: bold;
 }
 
+.weather-header.location {
+  font-weight: bold;
+  @include fontsize($font-size * 0.875);
+}
+
 .world-clocks-button:active .world-clocks-header,
 .weather-button:active .weather-header {
   color: transparentize($fg_color, 0.4);
 }
 
-.world-clocks-grid {
+.world-clocks-grid,
+.weather-grid {
   spacing-rows: 0.4em;
+  spacing-columns: 0.8em;
+}
+
+.weather-grid {
+  @include fontsize($font-size * 0.875);
 }
 
 .weather-box {
   spacing: 0.4em;
+}
+
+.world-clocks {
+  &-city {
+    font-weight: bold;
+    @include fontsize($font-size * 0.875);
+  }
+  &-time {
+    color: transparentize($fg_color, 0.2);
+    font-feature-settings: "tnum";
+    @include fontsize($font-size * 1.2);
+  }
+  &-timezone {
+    color: transparentize($fg_color, 0.4);
+    font-feature-settings: "tnum";
+    @include fontsize($font-size * 0.875);
+  }
+}
+
+.world-clocks-button:active {
+  .world-clocks-time {
+    color: transparentize($fg_color, 0.2);
+  }
+
+  .world-clocks-timezone {
+    color: transparentize($fg_color, 0.4);
+  }
+}
+
+.weather {
+  &-forecast-icon {
+    icon-size: 2.18em;
+  }
+
+  &-forecast-time {
+    color: transparentize($fg_color, 0.4);
+    @include fontsize($font-size * 0.75);
+  }
+}
+
+.weather-button:active .weather-forecast-time {
+  color: transparentize($fg_color, 0.4);
 }
 
 .calendar-month-label {
@@ -1389,6 +1437,10 @@ StScrollBar {
       icon-size: 1.09em;
       -st-icon-style: symbolic;
     }
+    > .fallback-window-icon {
+      width: 1.09em;
+      height: 1.09em;
+    }
   }
 
   &-secondary-bin { padding: 0 0.82em; }
@@ -1466,9 +1518,16 @@ StScrollBar {
 }
 
 // not really top bar only
-.popup-menu-arrow { width: 16px; height: 16px; }
+.popup-menu-arrow { icon-size: 16px; }
 .popup-menu-icon { icon-size: 16px; }
 
+//
+//Rubberband
+//
+.select-area-rubberband {
+  background-color: transparentize($selected_bg_color, 0.7);
+  border: 1px solid $selected_bg_color;
+}
 
 //
 //Close buttons
@@ -2172,6 +2231,15 @@ StScrollBar {
   border-width: 0;
   border-top-width: 1px;
   border-color: transparentize(black, 0.8);
+
+  .page-indicator {
+    padding: 4px 4px 8px;
+
+    .page-indicator-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .key-container {
@@ -2245,6 +2313,8 @@ StScrollBar {
   -boxpointer-gap: 5px;
 }
 
+.emoji-panel .keyboard-key:latched { @include button(osd-active); }
+
 //
 // IBus Candidate Popup
 //
@@ -2284,11 +2354,11 @@ StScrollBar {
 //
 // Auth Dialogs & Screen Shield
 //
-.framed-user-icon {
+.user-icon {
   background-size: contain;
   border: 0px solid transparent;
   color: $fg_color;
-  border-radius: 2px;
+  border-radius: 99px;
   &:hover {
     border-color: transparent;
     color: lighten($osd_fg_color,30%);
