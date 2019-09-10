@@ -1,3 +1,9 @@
+arc-solid-theme (20190910-0ubuntu1) eoan; urgency=medium
+
+  * Bump release
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 10 Sep 2019 22:38:05 +0100
+
 arc-solid-theme (20190330-0ubuntu1) disco; urgency=medium
 
   * Bump release
