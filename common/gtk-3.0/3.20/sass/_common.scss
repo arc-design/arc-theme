@@ -2825,25 +2825,26 @@ paned {
 //
 infobar {
   border-style: none;
-
+  
+  &.info { background-color: $success_color; }
+  &.question { background-color: $suggested_color; }
+  &.warning { background-color: $warning_color; }
+  &.error { background-color: $error_color; }
   &.info,
   &.question,
   &.warning,
   &.error {
-    background-color: $selected_bg_color;
     color: $selected_fg_color;
     caret-color: currentColor;
-
     button { @extend %selected-button }
-
     selection {
       color: $selected_bg_color;
       background-color: $selected_fg_color;
     }
-
     *:link { @extend %link_selected; }
   }
 }
+
 
 //
 // Buttons on selected backgrounds
