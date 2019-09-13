@@ -754,7 +754,9 @@ panel-toplevel.background {
   text-shadow: none;
   -gtk-icon-shadow: none;
 
-  button.flat { @extend %panelbutton; }
+  frame > border { border: 0; }
+  label { font-weight: normal; }
+  button { @extend %panelbutton; }
 }
 .xfce4-panel.panel menu {
   font-weight: normal;
