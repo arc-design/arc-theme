@@ -1,6 +1,6 @@
 AC_INIT(
     [arc-theme],
-    [20190910],
+    [20190917],
     [https://github.com/arc-design/arc-theme/issues],
     [arc-theme],
     [https://github.com/arc-design/arc-theme],

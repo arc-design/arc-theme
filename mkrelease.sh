@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-VERSION="20190910"
+VERSION="20190917"
 NAME="arc-theme"
 git-archive-all.sh --format tar --prefix ${NAME}-${VERSION}/ --verbose -t HEAD ${NAME}-${VERSION}.tar
 xz -9 "${NAME}-${VERSION}.tar"
