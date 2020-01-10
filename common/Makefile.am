@@ -62,33 +62,48 @@ if ENABLE_DARK
 		$(ithemedarkdir)/cinnamon/cinnamon.css
 endif # ENABLE_DARK
 
-endif # ENABLE_GNOME_SHELL
-
+endif # ENABLE_CINNAMON
 
 if ENABLE_GNOME_SHELL
+
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
+if ENABLE_TRANSPARENCY
 	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell.css;
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+		gnome-shell.css \
+		$(ithemedir)/gnome-shell/gnome-shell.css
+else
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-solid.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-solid.css;
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+		gnome-shell-solid.css \
+		$(ithemedir)/gnome-shell/gnome-shell.css
+endif # ENABLE_TRANSPARENCY
 
 	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		light-assets \
-		gnome-shell.css \
 		$(ithemedir)/gnome-shell
 
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gnome-shell
 
+if ENABLE_TRANSPARENCY
 	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-dark.css;
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+		gnome-shell-dark.css \
+		$(ithemedarkdir)/gnome-shell/gnome-shell.css
+else
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-solid-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-solid-dark.css;
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
+		gnome-shell-solid-dark.css \
+		$(ithemedarkdir)/gnome-shell/gnome-shell.css
+endif # ENABLE_TRANSPARENCY
 
 	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		dark-assets \
 		$(ithemedarkdir)/gnome-shell
-
-	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
-		gnome-shell-dark.css \
-		$(ithemedarkdir)/gnome-shell/gnome-shell.css
 endif # ENABLE_DARK
 
 endif # ENABLE_GNOME_SHELL

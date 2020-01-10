@@ -12,7 +12,9 @@ missing
 .idea/
 common/cinnamon/cinnamon-dark.css
 common/cinnamon/cinnamon.css
+common/gnome-shell/**/gnome-shell-solid-dark.css
 common/gnome-shell/**/gnome-shell-dark.css
+common/gnome-shell/**/gnome-shell-solid.css
 common/gnome-shell/**/gnome-shell.css
 common/gtk-3.0/**/*.css
 common/gtk-3.0/**/light/
