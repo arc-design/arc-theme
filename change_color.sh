@@ -34,6 +34,10 @@ unset JOBS
 
 while [[ "$#" -gt 0 ]]; do
 	case "$1" in
+		-t|--target-dir)
+			DEST_PATH_ROOT="${2}"
+			shift
+		;;
 		-o|--output)
 			OUTPUT_THEME_NAME="$2"
 			shift
@@ -128,7 +132,8 @@ INACTIVE_TXT_FG=$(mix "$TXT_FG" "$TXT_BG" 0.75)
 INACTIVE_TXT_BG=$(mix "$TXT_BG" "$BG" 0.75)
 
 OUTPUT_THEME_NAME=${OUTPUT_THEME_NAME-oomox-arc-$THEME}
-DEST_PATH="$HOME/.themes/${OUTPUT_THEME_NAME/\//-}"
+DEST_PATH_ROOT="${DEST_PATH_ROOT-$HOME/.themes}"
+DEST_PATH="$DEST_PATH_ROOT/${OUTPUT_THEME_NAME/\//-}"
 
 if [[ "$SRC_PATH" == "$DEST_PATH" ]]; then
 	echo "can't do that"
