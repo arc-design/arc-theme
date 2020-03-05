@@ -27,7 +27,7 @@ endif
 else
 
 $(light) $(dark):
-	$(INKSCAPE) --export-id-only --export-png="$@" --export-id="$(basename $(notdir $@))" --export-dpi=$(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) "$<" >/dev/null
+	$(INKSCAPE) --export-id-only --export-file="$@" --export-id="$(basename $(notdir $@))" --export-dpi=$(if $(filter $(OPTION_GTK2_HIDPI),true),192,96) "$<" >/dev/null
 if OPTIPNG
 	$(OPTIPNG) -o7 --quiet "$@"
 endif
