@@ -1,5 +1,7 @@
 # Arc Theme
 
+*This project needs new maintainers to continue. The current maintainers do not have the bandwidth to continue.  As such this project has now been put into archive readonly mode.*
+
 Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Pantheon, Xfce, MATE, Cinnamon (>=3.4), Budgie Desktop (10.4 for GTK+3.22) etc.
 
 The arc-design/arc-theme repository is a fork of the horst3180/arc-theme repository  which as been umaintained since March 2017.
